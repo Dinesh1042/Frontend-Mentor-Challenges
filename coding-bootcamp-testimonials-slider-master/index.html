@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  </head>
+  <body>
+    <section class="mainCont">
+      <div class="container">
+        <div class="textSlide">
+          <p id="testimonialsText">
+            “ I’ve been interested in coding for a while but never taken the
+            jump, until now. I couldn’t recommend this course enough. I’m now in
+            the job of my dreams and so excited about the future. ”
+          </p>
+          <div class="authour">
+            <p id="authourText">Tanya Sinclair</p>
+            <div id="position">ux designer</div>
+          </div>
+        </div>
+        <div class="imgSlide">
+          <img
+            id="image"
+            src="./images/image-tanya.jpg"
+            alt="image-tanya"
+            draggable="false"
+          />
+          <div class="arrow">
+            <button class="buttonEl" id="leftArrow">
+              <ion-icon name="chevron-back"></ion-icon>
+            </button>
+            <button class="buttonEl" id="rightArrow">
+              <ion-icon name="chevron-forward"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
