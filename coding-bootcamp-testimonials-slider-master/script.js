@@ -56,3 +56,5 @@ function showEl(id, key) {
 window.addEventListener("keyup", (e) => {
   showEl(null, e.key);
 });
+
+showEl()
