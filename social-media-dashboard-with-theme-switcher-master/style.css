@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+/* Basic Colors */
+
+:root {
+  --lime-green: hsl(163, 72%, 41%);
+  --bright-Red: hsl(356, 69%, 56%);
+  --faceBook-color: hsl(208, 92%, 53%);
+  --twitter-color: hsl(203, 89%, 53%);
+  --insta-color: linear-gradient(45deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  --youtube-color: hsl(348, 97%, 39%);
+  --dark-blue-bg: hsl(230, 17%, 14%);
+  --dark-blue-top-bg-pttern: hsl(232, 19%, 15%);
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+body {
+  color: aliceblue;
+  background-color: var(--dark-blue-bg);
+  transition: 0.5s ease background-color;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Dark Mode Theme */
+
+.box__head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background-color: var(--dark-blue-top-bg-pttern);
+  z-index: -1;
+  transition: 0.5s ease background-color;
+}
+.container .top__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .top__box .left__top h1 {
+  font-size: 25px;
+  transition: 0.5s ease color;
+}
+.container .top__box .left__top p {
+  font-size: 12px;
+  margin-top: 5px;
+  letter-spacing: 0.3px;
+  color: hsl(230, 22%, 74%);
+  font-weight: 700;
+}
+.container .top__box .right__top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .top__box .right__top p {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: hsl(230, 22%, 74%);
+}
+.container .top__box .switchCont {
+  height: 23px;
+  width: 48px;
+  background: linear-gradient(45deg, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  border-radius: 999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 10px;
+}
+.container .top__box .switchCont .switch {
+  height: 18px;
+  width: 18px;
+  background-color: hsl(228, 28%, 20%);
+  border-radius: 50%;
+  position: absolute;
+  left: 6%;
+  transition: 0.5s ease all;
+}
+.container .dashboard__view {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.container .dashboard__view .dashboardCont {
+  background-color: hsl(228, 28%, 20%);
+  cursor: pointer;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 250px;
+  transition: 0.5s ease;
+  transition-property: background-color, color;
+}
+.container .dashboard__view .dashboardCont:hover {
+  background-color: hsl(228, 26%, 27%);
+}
+.container .dashboard__view .dashboardCont .topline {
+  height: 3px;
+  width: 100%;
+  background-color: hsl(329, 70%, 58%);
+  position: absolute;
+  top: 0%;
+  left: 0;
+}
+.container .dashboard__view .dashboardCont .dashTop a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 11px;
+}
+.container .dashboard__view .dashboardCont .dashTop a p {
+  margin-left: 6px;
+  font-weight: 700;
+  color: hsl(228, 34%, 66%);
+  transition: 0.5s ease color;
+}
+.container .dashboard__view .dashboardCont .dashCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+.container .dashboard__view .dashboardCont .dashCenter h1 {
+  font-size: 45px;
+}
+.container .dashboard__view .dashboardCont .dashCenter p {
+  font-size: 10px;
+  letter-spacing: 4px;
+  color: hsl(230, 22%, 74%);
+  text-align: center;
+  transition: 0.5s ease color;
+}
+.container .dashboard__view .dashBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+.container .dashboard__view .dashBottom p {
+  font-weight: 700;
+  font-size: 10px;
+  margin-left: 5px;
+}
+.container .dashboard__view .facebookdash .topline {
+  background-color: hsl(208, 92%, 53%);
+}
+.container .dashboard__view .dashBottom p {
+  color: hsl(163, 72%, 41%);
+  letter-spacing: 1px;
+}
+.container .dashboard__view .twitterdash .topline {
+  background-color: hsl(203, 89%, 53%);
+}
+.container .dashboard__view .instadash .topline {
+  background: linear-gradient(45deg, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+}
+.container .dashboard__view .youtubedash .topline {
+  background: hsl(348, 97%, 39%);
+}
+.container .dashboard__view .youtubedash .dashBottom p {
+  color: hsl(356, 69%, 56%);
+}
+
+.overViewCont {
+  display: flex;
+  flex-direction: column;
+}
+.overViewCont header {
+  padding: 20px 0;
+}
+.overViewCont header h1 {
+  font-size: 20px;
+  transition: 0.5s ease color;
+}
+.overViewCont .overView {
+  display: grid;
+  grid-template-columns: repeat(4, 250px);
+  grid-gap: 1rem;
+  justify-content: space-between;
+}
+.overViewCont .overviewBox {
+  background-color: hsl(228, 28%, 20%);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  transition: 0.3s ease background-color;
+  transition-property: background-color, color;
+  cursor: pointer;
+}
+.overViewCont .overviewBox > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+.overViewCont .overviewBox:hover {
+  background-color: hsl(228, 26%, 27%);
+}
+.overViewCont .overviewBox > div .rates {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.overViewCont .overviewBox .overviewTop {
+  padding-bottom: 15px;
+}
+.overViewCont .overviewBox .overviewTop p {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: hsl(230, 22%, 74%);
+}
+.overViewCont .overviewBox .overviewBottom .rates p {
+  color: var(--lime-green);
+  margin-left: 3px;
+  font-size: 12px;
+}
+.overviewBox .overviewBottom .rates p.droprate {
+  color: hsl(356, 69%, 56%);
+}
+@media (max-width: 1150px) {
+  .container .dashboard__view {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+  }
+  .container .dashboard__view .dashboardCont {
+    width: 90%;
+    margin: 0 auto;
+    max-width: unset;
+  }
+  .overViewCont header {
+    padding: 20px;
+  }
+  .overViewCont {
+    margin-bottom: 30px;
+    padding-bottom: 40px;
+  }
+  .overViewCont .overView {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1rem;
+  }
+  .overViewCont .overView .overviewBox {
+    width: 90%;
+    margin: 0 auto;
+    max-width: unset;
+  }
+}
+@media (max-width: 572px) {
+  .container .top__box {
+    flex-direction: column;
+  }
+  .container .top__box > div {
+    width: 100%;
+  }
+  .container .top__box .darkmodeline {
+    height: 0.6px;
+    width: 100%;
+    background-color: hsl(230, 22%, 74%);
+    margin: 15px 0;
+  }
+  .container .top__box .right__top {
+    display: flex;
+    justify-content: space-between;
+  }
+  .container .dashboard__view {
+    margin-top: 40px;
+  }
+}
+
+/* Light mode */
+
+body[data-islightmode="true"] .container .top__box .switchCont .switch {
+  left: 56%;
+  background-color: hsl(0, 0%, 100%);
+}
+
+body[data-islightmode="true"] {
+  background-color: #fff;
+}
+body[data-islightmode="true"] .container .box__head {
+  background-color: hsl(225, 100%, 98%);
+}
+body[data-islightmode="true"] .container .top__box .left__top h1,
+body[data-islightmode="true"] .overViewCont header h1 {
+  color: hsl(230, 17%, 14%);
+}
+body[data-islightmode="true"] .container .dashboard__view .dashboardCont,
+body[data-islightmode="true"] .overViewCont .overviewBox {
+  background-color: hsl(227, 47%, 96%);
+  color: hsl(230, 17%, 14%);
+}
+
+body[data-islightmode="true"] .container .dashboard__view .dashboardCont:hover,
+body[data-islightmode="true"] .overViewCont .overviewBox:hover {
+  background-color: hsl(232, 33%, 91%);
+}
+
+body[data-islightmode="true"] .container .top__box .left__top p,
+body[data-islightmode="true"] .container .top__box .right__top p,
+body[data-islightmode="true"]
+  .container
+  .dashboard__view
+  .dashboardCont
+  .dashTop
+  a
+  p,
+body[data-islightmode="true"]
+  .container
+  .dashboard__view
+  .dashboardCont
+  .dashCenter
+  p,
+body[data-islightmode="true"] .overViewCont .overviewBox .overviewTop p {
+  color: hsl(228, 12%, 44%);
+}
