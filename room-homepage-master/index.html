@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Room homepage</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="topContainer">
+        <div class="topLeftImgCont">
+          <div class="nav" id="navEl">
+            <nav>
+              <div class="hamburgar" id="hamburgar">
+                <div class="line"></div>
+              </div>
+              <div class="img">
+                <img src="./images/logo.svg" alt="logo" />
+              </div>
+              <div class="lists" id="lists">
+                <img
+                  class="close"
+                  id="close"
+                  src="./images/icon-close.svg"
+                  alt=""
+                />
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">shop</a></li>
+                  <li><a href="#">about</a></li>
+                  <li><a href="#">contact</a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+          <div class="imgCont">
+            <img
+              id="imageEl"
+              data-imgNum="0"
+              src="./images/desktop-image-hero-1.jpg"
+              alt="desktop-image-hero-1"
+            />
+          </div>
+          <div class="navCont ImgNavcont">
+            <button data-navDir="left" id="imgContleft">
+              <ion-icon name="chevron-back"></ion-icon>
+            </button>
+            <button data-navDir="right" id="imgContright">
+              <ion-icon name="chevron-forward"></ion-icon>
+            </button>
+          </div>
+        </div>
+        <div class="textContMain">
+          <div class="textCont">
+            <h1 id="headings">Discover innovative ways to decorate</h1>
+            <p id="description">
+              We provide unmatched quality, comfort, and style for property
+              owners across the country. Our experts combine form and function
+              in bringing your vision to life Create a room in your own style
+              with our collection and make your property a reflection of you and
+              what you love.
+            </p>
+            <div class="shopNow">
+              <p>SHOP NOW</p>
+              <img src="./images/icon-arrow.svg" alt="" />
+            </div>
+          </div>
+
+          <div class="navCont TextNavcont">
+            <button data-navDir="left" id="TextContleft">
+              <ion-icon name="chevron-back"></ion-icon>
+            </button>
+            <button data-navDir="right" id="TextContright">
+              <ion-icon name="chevron-forward"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="bottomCont">
+        <div class="bottomLeft">
+          <img src="./images/image-about-dark.jpg" alt="image-about-dark" />
+        </div>
+        <div class="bottomCenter">
+          <div class="text">
+            <h4>ABOUT OUR FURNITURE</h4>
+            <p>
+              Our multifunctional collection blends design and function to suit
+              your individual taste. Make each room unique, or pick a cohesive
+              theme that best express your interests and what inspires you. Find
+              the furniture pieces you need, from traditional to contemporary
+              styles or anything in between. Product specialists are available
+              to help you create your dream space.
+            </p>
+          </div>
+        </div>
+        <div class="bottomRightCont">
+          <img src="./images/image-about-light.jpg" alt="image-about-light" />
+        </div>
+      </div>
+    </section>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
