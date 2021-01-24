@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+}
+body {
+  background-color: hsl(180, 52%, 96%);
+}
+
+.topBackground {
+  background: url("./images/bg-header-desktop.svg");
+  height: 100px;
+  width: 100%;
+  background-color: hsl(180, 29%, 50%);
+  background-size: cover;
+  object-fit: cover;
+  background-repeat: no-repeat;
+}
+.mainSearchCont {
+  min-height: 53px;
+  width: 100%;
+  margin-top: -27px;
+}
+.searchCont {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  width: 85%;
+  max-width: 1440px;
+  margin: 0% auto;
+  border-radius: 5px;
+  box-shadow: 0px 10px 15px -7px rgba(91, 164, 164, 0.5);
+  max-width: 700px;
+}
+.searchCont .searchBar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(180, 31%, 95%);
+  margin: 3px 8px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.tabs button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: rgb(91, 167, 167);
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  color: #fff;
+  transition: 0.3s ease background-color;
+}
+.tabs button img {
+  transform: scale(0.8);
+}
+.tabs p {
+  font-size: 11px;
+  padding: 5px;
+  font-weight: 700;
+  color: hsl(180, 29%, 50%);
+  margin-top: 3px;
+  letter-spacing: 0.5px;
+}
+.tabs button:hover {
+  background-color: hsl(180, 14%, 20%);
+}
+.clearCont {
+  padding-right: 15px;
+}
+.clearCont button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 12px;
+  text-transform: capitalize;
+  color: hsl(180, 29%, 50%);
+  background-color: transparent;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+.clearCont button:hover {
+  text-decoration: underline;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.container .jobListCont {
+  width: 85%;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0px 10px 15px -7px rgba(91, 164, 164, 0.5);
+  margin: 10px 0;
+  max-width: 700px;
+  transition: 0.3s ease transform;
+  position: relative;
+}
+.container .jobLeftCont {
+  padding: 20px;
+}
+.container .jobListCont:hover {
+  transform: scale(1.03);
+}
+.container .jobLeftCont .imgCont {
+  overflow: hidden;
+  margin-left: 4px;
+  display: flex;
+  margin-right: 1px;
+  align-items: center;
+}
+.container .jobLeftCont .imgCont img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  -webkit-user-drag: none;
+}
+.container .jobListCont .sideBar {
+  position: absolute;
+  width: 5px;
+  background-color: hsl(180, 29%, 50%);
+  height: 100%;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+}
+.container .jobListCont .sideBar.active {
+  visibility: visible;
+}
+.container .jobListCont .jobLeftCont {
+  display: flex;
+  position: relative;
+}
+.container .infoCont {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.jobLeftCont .infoContTop {
+  display: flex;
+  align-items: center;
+}
+.jobLeftCont .infoContTop .new-FeatureCont {
+  display: flex;
+}
+.jobLeftCont .infoContTop .new-FeatureCont p {
+  font-size: 7px;
+  background-color: hsl(180, 29%, 50%);
+  margin: 0 3px;
+  padding: 5px 6px;
+  font-weight: 700;
+  border-radius: 999px;
+  color: #fff;
+  letter-spacing: 0.8px;
+}
+.jobLeftCont .infoContTop .new-FeatureCont .featured {
+  background-color: hsl(180, 14%, 20%);
+}
+
+.infoCont .infoContTop p {
+  font-weight: 700;
+  color: hsl(180, 29%, 50%);
+  font-size: 13px;
+}
+.infoCont h2 {
+  font-size: 14px;
+  color: #000;
+  cursor: pointer;
+  padding: 8px 0;
+}
+.infoCont h2:hover {
+  color: hsl(180, 29%, 50%);
+}
+ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+}
+ul li {
+  font-size: 10px;
+  color: #0000009a;
+}
+ul .dot {
+  height: 4px;
+  width: 4px;
+  background-color: rgba(0, 0, 0, 0.521);
+  border-radius: 50%;
+}
+.jobRightCont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: hsl(180, 14%, 20%); */
+  padding: 0 10px;
+  flex-wrap: wrap;
+}
+.jobRightCont button {
+  margin: 3px 5px;
+  font-size: 12px;
+  background-color: hsl(180, 100%, 91%);
+  border: none;
+  outline: none;
+  padding: 5px;
+  cursor: pointer;
+  color: hsl(180, 29%, 50%);
+  font-weight: 700;
+  border-radius: 4px;
+  padding-bottom: 2px;
+}
+.jobRightCont button.selected {
+  background-color: hsl(180, 29%, 50%);
+  color: #fff;
+}
+.jobRightCont button:hover {
+  background-color: hsl(180, 29%, 50%);
+  color: #fff;
+}
+
+@media (max-width: 650px) {
+  .container .jobListCont {
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: visible;
+    margin: 25px 0;
+  }
+  .container .line {
+    width: 90%;
+    margin: 0 auto;
+    border-bottom: 1.5px solid rgba(0, 0, 0, 0.315);
+  }
+  .jobRightCont {
+    background-color: transparent;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .jobRightCont > button {
+    margin: 5px;
+  }
+  .container .imgCont {
+    position: absolute;
+    margin-top: -50px;
+    z-index: 11;
+  }
+  .container .imgCont img {
+    width: 30px;
+    height: 50px;
+  }
+  #container > div > div.jobLeftCont > div.imgCont > img {
+    height: 50px;
+    width: 50px;
+  }
+  .infoCont {
+    margin-top: 10px;
+  }
+}
+.tabs ion-icon {
+  font-weight: 700;
+}
+.tabs .cancel {
+  height: 1.5px;
+  width: 12px;
+  background-color: #fff;
+  display: flex;
+  transform: rotate(45deg);
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.tabs .cancel::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  transform: rotate(-90deg);
+}
