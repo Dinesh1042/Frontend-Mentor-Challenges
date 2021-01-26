@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="bg1"></div>
+      <div class="mobileCont">
+        <div class="mobile">
+          <div class="mobileTop">
+            <div class="topLeft">
+              <div class="backNavCont">
+                <div class="backNav"></div>
+              </div>
+              <div class="imgCont">
+                <img src="./images/avatar.jpg" alt="avatar" />
+              </div>
+              <div class="topDesc">
+                <h4>Samuel Green</h4>
+                <p>Available to Walk</p>
+              </div>
+            </div>
+            <div class="topRight">
+              <div class="settingCont"></div>
+            </div>
+          </div>
+          <!-- End Top Mobile -->
+          <div class="chatCont">
+            <div class="chats">
+              <div class="chatLeft">
+                <p>Thats sound great.I'd be happy with that.</p>
+              </div>
+              <div class="chatLeft">
+                <p>Could you send me pictures of your dog. please?</p>
+              </div>
+
+              <div class="chatRight chatImgCont">
+                <div class="dogImgCont">
+                  <img src="./images/dog-image-1.jpg" alt="dog-image-1" />
+                  <img src="./images/dog-image-2.jpg" alt="dog-image-2" />
+                  <img src="./images/dog-image-3.jpg" alt="dog-image-3" />
+                </div>
+              </div>
+
+              <div class="chatRight">
+                <p>Here are a few pictures. She's a happy girl!</p>
+              </div>
+
+              <div class="chatRight rightLast">
+                <p>Can you make it?</p>
+              </div>
+              <div class="chatLeft">
+                <p>
+                  She looks so happy! The time we discussed works. How long
+                  shall I take her out for?
+                </p>
+              </div>
+
+              <label class="chatLeft radioCont">
+                <div class="radioLeftCont">
+                  <input type="radio" name="time" />
+                  <div class="radioBox"></div>
+                  <p>30 minutes walk</p>
+                </div>
+                <div class="price">
+                  <h4>$29</h4>
+                </div>
+              </label>
+
+              <label class="chatLeft radioCont" id="radio2">
+                <div class="radioLeftCont">
+                  <input type="radio" name="time" id="radio2" />
+                  <div class="radioBox"></div>
+                  <p>1 hour walk</p>
+                </div>
+                <div class="price">
+                  <h4>$49</h4>
+                </div>
+              </label>
+            </div>
+          </div>
+          <!--  End ChatCont -->
+          <div class="formCont">
+            <form id="form">
+              <input
+                autocomplete="off"
+                type="text"
+                name="inputText"
+                id="inputText"
+                placeholder="Type a Message..."
+              />
+              <button type="submit">
+                <ion-icon name="chevron-forward"></ion-icon>
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- End mobile -->
+      </div>
+      <!-- End Mobile Cont  -->
+      <div class="textCont">
+        <div class="text">
+          <h1>Simple booking</h1>
+          <p>
+            Stay in touch with our dog walkers through the chat interface. This
+            makes it easy to discuss arrangements and make bookings. Once the
+            walk has been completed you can rate your walker and book again all
+            through the chat.
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  </body>
+</html>
