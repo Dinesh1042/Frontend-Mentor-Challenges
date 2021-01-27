@@ -370,3 +370,27 @@
     height: 500px;
   }
 }
+
+/* nav */
+.navCont {
+  position: absolute;
+  background-color: hsl(272, 64%, 93%);
+  border-radius: 4px;
+  right: 5%;
+  top: 7%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.navCont ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  width: 90px;
+}
+.navCont ul li {
+  padding: 8px;
+  font-size: 9px;
+  color: hsl(276, 55%, 52%);
+}
+.navCont ul li:hover {
+  background-color: hsl(270, 47%, 75%);
+}
