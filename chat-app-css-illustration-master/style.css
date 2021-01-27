@@ -398,5 +398,5 @@
   background-color: hsl(270, 47%, 75%);
 }
 .navCont[isnavopen="true"] {
-  height: fit-content;
+  height: 114px;
 }
