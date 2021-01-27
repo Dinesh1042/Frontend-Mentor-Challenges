@@ -378,19 +378,25 @@
   border-radius: 4px;
   right: 5%;
   top: 7%;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  height: 0;
+  overflow: hidden;
 }
 .navCont ul {
   list-style: none;
   display: flex;
   flex-direction: column;
   width: 90px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .navCont ul li {
   padding: 8px;
   font-size: 9px;
   color: hsl(276, 55%, 52%);
+  cursor: pointer;
 }
 .navCont ul li:hover {
   background-color: hsl(270, 47%, 75%);
+}
+.navCont[isnavopen="true"] {
+  height: fit-content;
 }
