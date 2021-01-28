@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive pricing component</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header>
+        <h1>Simple, traffic-based pricing</h1>
+        <p>Sign-up for our 30-day trail.No credit card required</p>
+      </header>
+      <div class="cardContainer">
+        <div class="card">
+          <div class="cardTop">
+            <h5 id="pageViews">100K PAGEVIEWS</h5>
+            <h1 id="price">$16.00 <span>/month</span></h1>
+          </div>
+          <div class="sliderCont">
+            <input
+              min="0"
+              max="100"
+              step="10"
+              type="range"
+              name="slider"
+              id="slider"
+              class="slider"
+            />
+          </div>
+          <div class="mobilePriceCont">
+            <h1 id="price2">$16.00 <span> / month</span></h1>
+          </div>
+          <div class="subscription">
+            <p>Monthly Billing</p>
+            <div class="toggleCont" id="toggleCont">
+              <div class="toggleBtn"></div>
+            </div>
+            <p class="yearly">
+              Yearly Billing
+              <span class="disCont"
+                >-25% <span class="discount">Discount</span></span
+              >
+            </p>
+          </div>
+          <div class="bottomCont">
+            <div class="bottomLeft">
+              <ul>
+                <li>
+                  <img src="./images/icon-check.svg" alt="icon-check" />
+                  <p>Unlimited websites</p>
+                </li>
+                <li>
+                  <img src="./images/icon-check.svg" alt="icon-check" />
+                  <p>100% data ownership</p>
+                </li>
+                <li>
+                  <img src="./images/icon-check.svg" alt="icon-check" />
+                  <p>Email report</p>
+                </li>
+              </ul>
+            </div>
+            <div class="bottomRight">
+              <button>Start my trails</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+  </body>
+</html>
