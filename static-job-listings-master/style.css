@@ -214,13 +214,12 @@ ul .dot {
 .jobRightCont {
   display: flex;
   align-items: center;
-  justify-content: center;
-  /* background-color: hsl(180, 14%, 20%); */
+  justify-content: space-evenly;
   padding: 0 10px;
   flex-wrap: wrap;
 }
 .jobRightCont button {
-  margin: 3px 5px;
+  margin: 5px 5px;
   font-size: 12px;
   background-color: hsl(180, 100%, 91%);
   border: none;

@@ -257,6 +257,8 @@ function createHTMLTags(person) {
       filterTags = [...new Set(filterTags)];
       searchBarActive();
       setJobList(filterTags);
+
+      addActive(targetText);
     });
   });
 
@@ -356,6 +358,14 @@ function searchBarActive() {
     return (searchCont.style.display = "flex");
   }
   return (searchCont.style.display = "none");
+}
+
+function addActive(value) {
+  const btn = document.querySelectorAll("button");
+
+  btn.forEach((item) => {
+    console.log(item.innerHTML);
+  });
 }
 
 searchBarActive();
