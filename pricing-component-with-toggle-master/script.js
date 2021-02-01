@@ -19,7 +19,7 @@ let isMonthlyPrice = false;
 pricingAttr.value = isMonthlyPrice;
 
 function togglePricing() {
-  return (isMonthlyPrice = isMonthlyPrice ? false : true);
+  return (isMonthlyPrice = !isMonthlyPrice);
 }
 
 function toggleResult() {

@@ -11,7 +11,7 @@ navContEl.setAttributeNode(navAttr);
 navBtnEl.addEventListener("click", showNav);
 
 function navToggle() {
-  return (isNavOpen = isNavOpen ? false : true);
+  return (isNavOpen = !isNavOpen);
 }
 
 function showNav() {

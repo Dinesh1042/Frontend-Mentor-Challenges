@@ -20,7 +20,6 @@ toggleContEl.setAttributeNode(isYearlyAttr);
 
 sliderEl.addEventListener("input", (e) => {
   moveBg(sliderEl.value);
-  console.log(isYearlyBilling);
   price(sliderEl.value, isYearlyBilling);
 });
 
@@ -36,7 +35,7 @@ function moveBg(value) {
 }
 
 function subscription() {
-  return (isYearlyBilling = isYearlyBilling ? false : true);
+  return (isYearlyBilling = !isYearlyBilling);
 }
 
 function price(value, isYearly) {

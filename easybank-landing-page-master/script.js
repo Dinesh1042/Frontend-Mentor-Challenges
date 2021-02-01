@@ -14,7 +14,7 @@ hamburgarEl.addEventListener("click", () => {
 });
 
 function navToggle() {
-  return (isNavOpened = isNavOpened ? false : true);
+  return (isNavOpened = !isNavOpened);
 }
 
 window.addEventListener("click", (e) => {
@@ -32,4 +32,3 @@ navLiTag.forEach((tag) => {
     resetNav();
   });
 });
-
