@@ -35,7 +35,7 @@ navEl.setAttributeNode(attr);
 hamburgarEl.addEventListener("click", toggleNav);
 
 function toggleNav() {
-  isNavOpen = isNavOpen ? false : true;
+  isNavOpen = !isNavOpen;
   return (attr.value = isNavOpen);
 }
 
@@ -119,3 +119,19 @@ function setElements(count) {
 //   }
 //   setTimeout(headerAnimation, 75);
 // }
+
+window.addEventListener("keyup", (e) => {
+  if (e.key === "ArrowRight") {
+    count++;
+    if (count > homePageDatas.length - 1) {
+      count = 0;
+    }
+  } else if (e.key === "ArrowLeft") {
+    count--;
+
+    if (count < 0) {
+      count = homePageDatas.length - 1;
+    }
+  }
+  return setElements(count);
+});
