@@ -26,10 +26,24 @@ window.addEventListener("click", (e) => {
     return;
   }
 });
-const formEl = document.getElementById("form")
-const inputTextEl = document.getElementById("inputText")
+const formEl = document.getElementById("form");
+const inputTextEl = document.getElementById("inputText");
+const chatsEl = document.getElementById("chats");
 
+formEl.addEventListener("submit", (e) => {
+  e.preventDefault();
+  return createChat();
+});
 
-function createChat(){
-  
+function createChat() {
+  let inputValue = inputTextEl.value;
+
+  const rightDiv = document.createElement("div");
+  rightDiv.classList.add("chatRight");
+
+  const para = document.createElement("p");
+  para.innerHTML = inputValue;
+  rightDiv.appendChild(para);
+  inputTextEl.value = "";
+  chatsEl.appendChild(rightDiv);
 }
