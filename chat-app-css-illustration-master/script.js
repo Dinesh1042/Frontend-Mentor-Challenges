@@ -28,3 +28,8 @@ window.addEventListener("click", (e) => {
 });
 const formEl = document.getElementById("form")
 const inputTextEl = document.getElementById("inputText")
+
+
+function createChat(){
+  
+}
