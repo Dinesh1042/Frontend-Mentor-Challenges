@@ -26,3 +26,5 @@ window.addEventListener("click", (e) => {
     return;
   }
 });
+const formEl = document.getElementById("form")
+const inputTextEl = document.getElementById("inputText")
