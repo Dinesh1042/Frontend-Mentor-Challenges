@@ -38,6 +38,8 @@ formEl.addEventListener("submit", (e) => {
 function createChat() {
   let inputValue = inputTextEl.value;
 
+  const chatCont = document.createElement("div");
+  chatCont.classList.add("userChat");
   const rightDiv = document.createElement("div");
   rightDiv.classList.add("chatRight");
 
@@ -45,5 +47,6 @@ function createChat() {
   para.innerHTML = inputValue;
   rightDiv.appendChild(para);
   inputTextEl.value = "";
-  chatsEl.appendChild(rightDiv);
+  chatCont.appendChild(rightDiv);
+  chatsEl.appendChild(chatCont);
 }

@@ -159,8 +159,16 @@
   display: flex;
   padding: 8px;
   padding-top: 10px;
-  overflow-y: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
+}
+.chatCont::-webkit-scrollbar{
+  width: 2px;
+  background-color:hsl(270, 47%, 75%);
+  border-radius: 999px;
+}
+.chatCont::-webkit-scrollbar-thumb{
+  background-color:hsl(281, 100%, 73%);
 }
 .chats {
   width: 100%;
@@ -337,7 +345,14 @@
   line-height: 25px;
   color: hsl(271, 15%, 43%);
 }
-
+.userChat > div{
+ width: 100%;
+  margin: 3px 0;   
+  text-align: right;
+}
+.userChat{
+  margin-bottom: 50px;
+}
 @media (max-width: 950px) {
   .container {
     align-items: center;
