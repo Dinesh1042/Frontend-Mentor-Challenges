@@ -6,8 +6,172 @@
   box-sizing: border-box;
   font-family: "Be Vietnam", sans-serif;
 }
+
+/* Hero Section */
+section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
 .heroSection {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  width: 100%;
+  /* max-width: 1100px ; */
+}
+.heroImg {
+  width: 520px;
+}
+.heroImg img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.heroSection header h1 {
+  color: hsl(228, 39%, 23%);
+  font-size: 55px;
+  line-height: 60px;
+}
+.para {
+  max-width: 350px;
+  margin: 20px 0;
+}
+.para p {
+  color: rgb(156, 156, 156);
+  font-size: 16px;
+  line-height: 25px;
+}
+.buttonCont button {
+  padding: 0.7rem 1rem;
+  background-color: hsl(12, 88%, 59%);
+  border: none;
+  outline: none;
+  border-radius: 99px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+.buttonCont {
+  margin-top: 30px;
+}
+.aboutSection .para {
+  color: rgb(156, 156, 156);
+}
+/* About section */
+
+.aboutSection .aboutText .topText .num {
+  background-color: hsl(12, 88%, 59%);
+  padding: 0.375rem 1.5rem;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 999px;
+}
+
+.aboutText .aboutPara p {
+  color: rgb(156, 156, 156);
+}
+
+.aboutSection header h1 {
+  color: hsl(228, 39%, 23%);
+  font-size: 40px;
+}
+.aboutSection {
+  display: flex;
+  justify-content: space-between;
+}
+.aboutSection .aboutText {
+  max-width: 600px;
+}
+.aboutSection .aboutText .topText {
+  display: flex;
+  align-items: center;
+}
+.aboutSection .topText h4 {
+  color: hsl(228, 39%, 23%);
+  margin-left: 12px;
+}
+.aboutText .aboutPara {
+  padding: 20px;
+  padding-bottom: 35px;
+  padding-left: 75px;
+}
+/* Media Query */
+
+@media (max-width: 900px) {
+  .heroSection {
+    flex-direction: column-reverse;
+    height: unset;
+    margin: 0% auto;
+  }
+  .heroSection header h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .heroTextContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .heroSection .para {
+    text-align: center;
+    width: 95%;
+    max-width: 600px;
+    margin: 15px 0;
+  }
+  .buttonCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .heroImg {
+    width: 100%;
+  }
+  .buttonCont {
+    margin-top: 5px;
+  }
+  header h1 {
+    line-height: 50px;
+  }
+  .aboutSection {
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutSection header {
+    width: 90%;
+  }
+  .aboutSection header h1 {
+    color: hsl(228, 39%, 23%);
+    text-align: center;
+    line-height: 30px;
+  }
+  .aboutSection .para {
+    width: 90%;
+    text-align: center;
+  }
+  .aboutSection .leftAbout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutSection .aboutText .topText {
+    display: flex;
+    background-color: hsla(12, 88%, 59%, 0.089);
+    margin-left: 20px;
+    border-radius: 99px 0 0 99px;
+    align-items: center;
+  }
+  .aboutSection {
+    padding: 0%;
+  }
+
+  .aboutText .aboutPara {
+    padding: 20px;
+    padding-bottom: 35px;
+  }
 }
