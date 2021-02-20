@@ -5,6 +5,7 @@
   padding: 0%;
   box-sizing: border-box;
   font-family: "Be Vietnam", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* Hero Section */
@@ -17,12 +18,12 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   width: 100%;
-  /* max-width: 1100px ; */
+  margin-top: 90px;
 }
 .heroImg {
   width: 520px;
+  user-select: none;
 }
 .heroImg img {
   width: 100%;
@@ -58,10 +59,15 @@ section {
 .buttonCont {
   margin-top: 30px;
 }
+/* About section */
+.aboutSection {
+  margin-top: 70px;
+  scroll-margin-top: 40px;
+}
+
 .aboutSection .para {
   color: rgb(156, 156, 156);
 }
-/* About section */
 
 .aboutSection .aboutText .topText .num {
   background-color: hsl(12, 88%, 59%);
@@ -99,6 +105,329 @@ section {
   padding-bottom: 35px;
   padding-left: 75px;
 }
+
+/* Slider */
+/* Mobile First Design For slider */
+
+.glider-contain {
+  width: 90%;
+  max-width: 1400px;
+}
+
+.glider-contain figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.glider-contain figure .nameCont p {
+  font-weight: 600;
+  color: hsl(228, 39%, 23%);
+}
+.glider-contain figure .nameCont {
+  padding: 1rem 0;
+}
+.glider-contain figure .imgCont {
+  height: 72px;
+  width: 72px;
+}
+.glider-contain .sliderAbout p {
+  text-align: center;
+  color: rgb(156, 156, 156);
+}
+#dots {
+  margin-top: 40px;
+}
+.glider-dot {
+  display: block;
+  cursor: pointer;
+  border-radius: 999px;
+  border: 1px solid hsl(12, 88%, 59%);
+  width: 12px;
+  height: 12px;
+  margin: 7px;
+  background-color: transparent;
+}
+.glider-dot:focus,
+.glider-dot:hover {
+  background: hsla(12, 88%, 59%, 0.342);
+}
+.glider-dot.active {
+  background: hsl(12, 88%, 59%);
+}
+.sliderSection header {
+  padding: 1rem 0;
+}
+
+.sliderSection header h1 {
+  color: hsl(228, 39%, 23%);
+  font-size: 40px;
+  text-align: center;
+}
+
+.EnrollBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0;
+}
+.EnrollBtn button {
+  padding: 0.5rem 0.8rem;
+  border: none;
+  outline: none;
+  background-color: hsl(12, 88%, 59%);
+  color: #fff;
+  border-radius: 99px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.3px;
+  font-weight: 500;
+}
+.getStartedCont {
+  background-color: hsl(12, 88%, 59%);
+  margin-top: 2rem;
+}
+.getstart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  max-width: 1100px;
+  margin: 0% auto;
+}
+.getStartedCont header {
+  width: 40%;
+  color: #fff;
+}
+.getStartedCont h1 {
+  font-size: 35px;
+}
+.getStartedCont button {
+  padding: 0.3rem 0.8rem;
+  border-radius: 99px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  color: hsl(12, 88%, 59%);
+  cursor: pointer;
+}
+.getStartedCont button:hover {
+  background-color: rgba(255, 255, 255, 0.863);
+}
+.footerCont {
+  background-color: hsl(233, 12%, 13%);
+  position: relative;
+  height: 100%;
+}
+
+.footerCont footer {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row-reverse;
+  padding: 2rem 1rem;
+  width: 100%;
+  height: 100%;
+}
+.footerCont footer .links {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  justify-content: space-between;
+  padding: 1rem;
+
+  align-items: flex-start;
+}
+.footerCont footer .links ul {
+  list-style: none;
+}
+.footerCont footer .links ul li {
+  margin: 10px 0;
+}
+.footerCont .logoNdFollow {
+  width: 90%;
+  max-width: 300px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column-reverse;
+  padding: 2rem;
+}
+.footerCont .logoNdFollow .follow {
+  width: 100%;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+.footerCont .logoNdFollow .follow ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.footerCont .logoCont {
+  margin-left: 1rem;
+}
+.copyRight {
+  padding: 1rem;
+  position: absolute;
+  bottom: 10%;
+  right: 20%;
+  display: none;
+}
+.copyRight p {
+  color: rgb(156, 156, 156);
+  font-size: 12px;
+}
+.footerCont .logoNdFollow .follow ul li a ion-icon {
+  color: #fff;
+  font-size: 25px;
+}
+.footerCont .logoNdFollow .follow ul li a ion-icon:hover {
+  color: hsl(12, 88%, 59%);
+}
+.footerCont footer .links ul a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.footerCont footer .links ul a:hover {
+  color: hsl(12, 88%, 59%);
+}
+.footerCont footer form input {
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 99px;
+  width: 100%;
+}
+.footerCont .inputCont {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1rem 0;
+  margin-top: 20px;
+  flex-direction: column;
+}
+.copyRight2 {
+  margin-top: 2rem;
+}
+.copyRight2 p {
+  color: rgb(156, 156, 156);
+  font-size: 12px;
+}
+.footerCont footer form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 300px;
+  width: 90%;
+}
+.footerCont footer form button {
+  border: none;
+  outline: none;
+  padding: 0.6rem 1.7rem;
+  border-radius: 99px;
+  background-color: hsl(12, 88%, 59%);
+  cursor: pointer;
+  color: #fff;
+  cursor: pointer;
+  height: 100%;
+  margin-left: 1rem;
+}
+
+/* Nav */
+.overLay {
+  display: none;
+}
+.navCont {
+  position: absolute;
+  width: 100%;
+  top: 0%;
+}
+.navCont nav {
+  max-width: 1100px;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.navLinks {
+  flex: 0.6;
+}
+.hamburgar {
+  display: none;
+}
+nav .logo {
+  display: flex;
+
+  margin-top: 10px;
+}
+.navLinks ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+.navLinks ul li {
+  position: relative;
+  cursor: pointer;
+}
+.navLinks ul li a {
+  color: hsl(228, 39%, 23%);
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease color;
+}
+.navCont .navButton button {
+  border: none;
+  outline: none;
+  padding: 0.6rem 1.7rem;
+  border-radius: 99px;
+  background-color: hsl(12, 88%, 59%);
+  cursor: pointer;
+  color: #fff;
+  cursor: pointer;
+}
+
+nav .navLinks ul li::after {
+  content: "";
+  height: 2px;
+  width: 60%;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: hsl(12, 88%, 59%);
+  transition: 0.3s ease transform;
+  border-radius: 99px;
+}
+nav .navLinks ul li:hover::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+nav .navLinks ul li:hover a {
+  color: rgb(156, 156, 156);
+}
+
+button {
+  transition: 0.3s ease;
+  transition-property: background-color, box-shadow;
+}
+button:hover {
+  box-shadow: rgba(242, 95, 58, 0.54) 0px 3px 8px;
+  background-color: hsla(12, 88%, 59%, 0.849);
+}
+
 /* Media Query */
 
 @media (max-width: 900px) {
@@ -106,6 +435,7 @@ section {
     flex-direction: column-reverse;
     height: unset;
     margin: 0% auto;
+    margin-top: 80px;
   }
   .heroSection header h1 {
     font-size: 40px;
@@ -147,7 +477,7 @@ section {
   .aboutSection header h1 {
     color: hsl(228, 39%, 23%);
     text-align: center;
-    line-height: 30px;
+    line-height: 40px;
   }
   .aboutSection .para {
     width: 90%;
@@ -173,5 +503,175 @@ section {
   .aboutText .aboutPara {
     padding: 20px;
     padding-bottom: 35px;
+  }
+  .sliderSection header h1 {
+    color: hsl(228, 39%, 23%);
+    font-size: 30px;
+    text-align: center;
+  }
+  .glider-contain {
+    width: 90%;
+    max-width: 510px;
+  }
+
+  .getstart {
+    flex-direction: column;
+  }
+  .getStartedCont header {
+    width: 80%;
+    text-align: center;
+  }
+  .getStartedCont header h1 {
+    font-size: 35px;
+  }
+  .getStartBtn {
+    margin: 2rem 0;
+    margin-bottom: 1rem;
+  }
+  .footerCont footer {
+    flex-direction: column;
+  }
+  .copyRight {
+    padding: 1rem;
+    position: unset;
+    display: flex;
+  }
+  .footerCont .logoNdFollow {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    padding: 0;
+  }
+  .footerCont .logoCont {
+    margin-top: 1rem;
+  }
+
+  .footerCont footer {
+    align-items: center;
+    justify-content: center;
+  }
+  .footerCont footer .links {
+    padding: 1rem 0;
+    max-width: 300px;
+    width: 70%;
+  }
+  .footerCont footer form {
+    max-width: 400px;
+  }
+  .footerCont .inputCont {
+    justify-content: center;
+    align-items: center;
+  }
+  .footerCont .logoNdFollow .follow {
+    margin-top: 0;
+  }
+  .copyRight2 {
+    display: none;
+  }
+
+  nav .navLinks {
+    position: absolute;
+  }
+  nav .navButton {
+    display: none;
+  }
+  .hamburgar {
+    display: flex;
+    cursor: pointer;
+  }
+  nav .logo {
+    z-index: 12;
+  }
+  .hamburgar .line {
+    height: 2px;
+    width: 30px;
+    position: relative;
+    background-color: hsl(228, 39%, 23%);
+  }
+  .hamburgar .line::after,
+  .hamburgar .line::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: hsl(228, 39%, 23%);
+  }
+  .hamburgar .line::after {
+    top: -8px;
+  }
+  .hamburgar .line::before {
+    bottom: -8px;
+  }
+  .hamburgar {
+    z-index: 11;
+    cursor: pointer;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navLinks {
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    max-width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -400px;
+    border-radius: 6px;
+    transition: 0.5s ease top;
+    z-index: 22;
+  }
+  .navLinks ul {
+    flex-direction: column;
+    padding: 2rem;
+    user-select: none;
+  }
+  .navLinks ul li {
+    padding: 0.8rem 0;
+    cursor: pointer;
+  }
+  .overLay {
+    z-index: -12;
+    display: flex;
+  }
+  .navCont {
+    padding: 0 1.5rem;
+  }
+  .navCont[isnavexpaned="true"] .navLinks {
+    top: 80px;
+  }
+  .navCont[isnavexpaned="true"] .overLay {
+    position: absolute;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    transition: 0.3s ease background-color;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.247);
+    top: 0;
+    left: 0;
+  }
+  nav .navLinks ul li::after {
+    bottom: 0;
+  }
+  .leftAbout {
+    margin-bottom: 40px;
+  }
+  .footerCont .logoCont {
+    margin-left: 0rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .heroSection .heroTextContent header h1 {
+    line-height: 45px;
+  }
+  .heroSection .heroTextContent {
+    margin-top: 30px;
+  }
+  .heroTextContent .para {
+    margin: 2.5rem 0;
+    margin-top: 1rem;
   }
 }

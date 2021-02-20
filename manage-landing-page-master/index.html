@@ -13,10 +13,39 @@
     />
 
     <title>Frontend Mentor | Manage landing page</title>
+    <link rel="stylesheet" href="./glider.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
   <body>
     <div class="mainCont">
+      <!-- Nav -->
+
+      <div class="navCont" id="navCont">
+        <div class="overLay"></div>
+        <nav>
+          <div class="logo">
+            <img src="./images//logo.svg" alt="logo" />
+          </div>
+          <div class="hamburgar" id="hamburgar">
+            <div class="line"></div>
+          </div>
+          <div class="navLinks" id="navLinks">
+            <ul>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#">Carrers</a></li>
+              <li><a href="#community">Community</a></li>
+            </ul>
+          </div>
+          <div class="navButton">
+            <button>Get Started</button>
+          </div>
+        </nav>
+      </div>
+
       <section class="heroSection">
         <div class="heroTextContent">
           <header>
@@ -41,7 +70,7 @@
           </div>
         </div>
       </section>
-      <section class="aboutSection">
+      <section class="aboutSection" id="about">
         <div class="leftAbout">
           <header>
             <h1>What’s different about Manage?</h1>
@@ -99,6 +128,182 @@
           <!-- About End -->
         </div>
       </section>
+
+      <section class="sliderSection" id="community">
+        <header>
+          <h1>What they've said</h1>
+        </header>
+        <div class="glider-contain multiple">
+          <div class="glider">
+            <!-- Slide 1 -->
+            <figure class="slide slide1">
+              <div class="imgCont">
+                <img src="./images/avatar-anisha.png" alt="avatar-anisha" />
+              </div>
+              <div class="nameCont">
+                <p>Anisha Li</p>
+              </div>
+              <div class="sliderAbout">
+                <p>
+                  “Manage has supercharged our team’s workflow. The ability to
+                  maintain visibility on larger milestones at all times keeps
+                  everyone motivated.”
+                </p>
+              </div>
+            </figure>
+            <!-- Slide 2 -->
+            <figure class="slide slide2">
+              <div class="imgCont">
+                <img src="./images/avatar-ali.png" alt="avatar-ali" />
+              </div>
+              <div class="nameCont">
+                <p>Ali Bravo</p>
+              </div>
+              <div class="sliderAbout">
+                <p>
+                  “We have been able to cancel so many other subscriptions since
+                  using Manage. There is no more cross-channel confusion and
+                  everyone is much more focused.”
+                </p>
+              </div>
+            </figure>
+            <!-- Slide 3 -->
+            <figure class="slide slide3">
+              <div class="imgCont">
+                <img src="./images/avatar-richard.png" alt="avatar-richard" />
+              </div>
+              <div class="nameCont">
+                <p>Richard Watts</p>
+              </div>
+              <div class="sliderAbout">
+                <p>
+                  “Manage allows us to provide structure and process. It keeps
+                  us organized and focused. I can’t stop recommending them to
+                  everyone I talk to!”
+                </p>
+              </div>
+            </figure>
+            <!-- Slide 4 -->
+            <figure class="slide slide4">
+              <div class="imgCont">
+                <img src="./images/avatar-shanai.png" alt="avatar-shanai" />
+              </div>
+              <div class="nameCont">
+                <p>Shanai Gough</p>
+              </div>
+              <div class="sliderAbout">
+                <p>
+                  “Their software allows us to track, manage and collaborate on
+                  our projects from anywhere. It keeps the whole team in-sync
+                  without being intrusive.”
+                </p>
+              </div>
+            </figure>
+          </div>
+
+          <!-- Slide end -->
+          <div id="dots" class="glider-dots"></div>
+        </div>
+      </section>
+
+      <div class="EnrollBtn">
+        <button>Get Started</button>
+      </div>
+
+      <div class="getStartedCont">
+        <div class="getstart">
+          <header>
+            <h1>Simplify how your team works today.</h1>
+          </header>
+          <div class="getStartBtn">
+            <button>Get Started</button>
+          </div>
+        </div>
+      </div>
+      <div class="footerCont">
+        <footer>
+          <div class="inputCont">
+            <form>
+              <input type="text" placeholder="Updates in your inbox..." />
+              <button type="submit">Go</button>
+            </form>
+            <div class="copyRight2">
+              <p>Copyright 2020.All Rights Reserved</p>
+            </div>
+          </div>
+          <div class="links">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">About Us</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Carees</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="logoNdFollow">
+            <div class="follow">
+              <ul>
+                <li>
+                  <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                </li>
+                <li>
+                  <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+                </li>
+                <li>
+                  <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                </li>
+                <li>
+                  <a href="#"><ion-icon name="logo-pinterest"></ion-icon></a>
+                </li>
+                <li>
+                  <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                </li>
+              </ul>
+            </div>
+            <div class="logoCont">
+              <img style="fill: #fff" src="./images/logo2.svg" alt="" />
+            </div>
+          </div>
+          <div class="copyRight">
+            <p>Copyright <span id="year">2020</span>.All Rights Reserved</p>
+          </div>
+        </footer>
+      </div>
     </div>
+    <script src="./glider.min.js"></script>
+    <script>
+      new Glider(document.querySelector(".glider"), {
+        slideToShow: 3,
+        slidesToScroll: 3,
+        draggable: true,
+        dots: "#dots",
+        autoplay: true,
+        responsive: [
+          {
+            breakpoint: 775,
+            settings: {
+              slidesToShow: "auto",
+              slidesToScroll: "auto",
+              itemWidth: 150,
+              duration: 0.25,
+            },
+          },
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              itemWidth: 300,
+              duration: 0.25,
+            },
+          },
+        ],
+      });
+    </script>
+    <script src="./script.js"></script>
   </body>
 </html>
