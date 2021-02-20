@@ -587,6 +587,7 @@ button:hover {
     height: 2px;
     width: 30px;
     position: relative;
+    transition: 0.3s ease transform;
     background-color: hsl(228, 39%, 23%);
   }
   .hamburgar .line::after,
@@ -595,6 +596,7 @@ button:hover {
     height: 100%;
     width: 100%;
     position: absolute;
+    transition: 0.3s ease transform;
     background-color: hsl(228, 39%, 23%);
   }
   .hamburgar .line::after {
@@ -661,6 +663,17 @@ button:hover {
   .footerCont .logoCont {
     margin-left: 0rem;
   }
+  .navCont[isnavexpaned="true"] .hamburgar .line {
+    background-color: transparent;
+  }
+  .navCont[isnavexpaned="true"] .hamburgar .line::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  .navCont[isnavexpaned="true"] .hamburgar .line::before {
+    transform: rotate(-45deg);
+    bottom: 0;
+  }
 }
 
 @media (max-width: 500px) {
@@ -674,4 +687,10 @@ button:hover {
     margin: 2.5rem 0;
     margin-top: 1rem;
   }
+}
+.mainCont {
+  background: url(./images/bg-tablet-pattern.svg);
+  background-size: 50%;
+  background-position: 600px -300px;
+  background-repeat: no-repeat;
 }
