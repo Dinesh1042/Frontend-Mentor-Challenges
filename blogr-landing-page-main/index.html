@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Blogr</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navigation Cont -->
+      <div id="navCont" class="navCont">
+        <nav>
+          <div class="navLeft">
+            <div class="logoCont">
+              <img src="./images/logo.svg" alt="logo" />
+            </div>
+            <div class="linksCont">
+              <ul class="dropDownCont">
+                <!-- 1 List  -->
+                <li class="listCont">
+                  <div class="title">
+                    <p>Product</p>
+                    <div class="arrow">
+                      <ion-icon name="chevron-down-outline"></ion-icon>
+                    </div>
+                  </div>
+
+                  <div class="productCont dropDown">
+                    <ul class="items">
+                      <li>Overview</li>
+                      <li>Pricing</li>
+                      <li>Marketplace</li>
+                      <li>Features</li>
+                      <li>Integrations</li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- 2 List -->
+                <li class="listCont">
+                  <div class="title">
+                    <p>Company</p>
+                    <div class="arrow">
+                      <ion-icon name="chevron-down-outline"></ion-icon>
+                    </div>
+                  </div>
+                  <div class="companyCont dropDown">
+                    <ul class="items">
+                      <li>About</li>
+                      <li>Team</li>
+                      <li>Blog</li>
+                      <li>Careers</li>
+                    </ul>
+                  </div>
+                </li>
+                <!-- 3 List -->
+                <li class="listCont">
+                  <div class="title">
+                    <p>Connect</p>
+                    <div class="arrow">
+                      <ion-icon name="chevron-down-outline"></ion-icon>
+                    </div>
+                  </div>
+                  <div class="connectCont dropDown">
+                    <ul class="items">
+                      <li>Contact</li>
+                      <li>Newsletter</li>
+                      <li>LinkedIn</li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+              <div class="btnCont">
+                <button class="loginBtn">Login</button>
+                <button class="signUpBtn">Sign Up</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="hamburgar" id="hamburgar">
+            <div class="line"></div>
+          </div>
+
+          <div class="navRight">
+            <div class="btnCont">
+              <button class="loginBtn">Login</button>
+              <button class="signUpBtn">Sign Up</button>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- Hero Section -->
+      <section class="heroSection" id="heroSection">
+        <div class="heroText">
+          <h1>A modern publishing platform</h1>
+          <p>Grow your audience and build your online brand</p>
+          <div class="buttonCont">
+            <button class="startFreeBtn">Start For Free</button>
+            <button class="learnMoreBtn">Learn More</button>
+          </div>
+        </div>
+      </section>
+      <!-- Illusatration Section -->
+      <section class="illustrationSection">
+        <div class="illustrationCont">
+          <h2 class="title">Designed for the future</h2>
+          <div class="futureCont">
+            <div class="illustrationLeft">
+              <div class="textCont1">
+                <h2>Introducing an extensible editor</h2>
+                <p>
+                  Blogr features an exceedingly intuitive interface which lets
+                  you focus on one thing: creating content. The editor supports
+                  management of multiple blogs and allows easy manipulation of
+                  embeds such as images, videos, and Markdown. Extensibility
+                  with plugins and themes provide easy ways to add functionality
+                  or change the looks of a blog.
+                </p>
+              </div>
+              <div class="textCont2">
+                <h2>Robust content management</h2>
+                <p>
+                  Flexible content management enables users to easily move
+                  through posts. Increase the usability of your blog by adding
+                  customized categories, sections, format, or flow. With this
+                  functionality, you’re in full control.
+                </p>
+              </div>
+            </div>
+            <div class="illustrationRight">
+              <img
+                class="desktopImg"
+                src="./images/illustration-editor-desktop.svg"
+                alt=""
+              />
+              <img
+                class="moblieImg"
+                src="./images/illustration-editor-mobile.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Infrastructure Section -->
+      <section class="infrastructureSection">
+        <div class="infrastructureCont">
+          <div class="infrastructureLeft">
+            <img
+              src="./images/illustration-phones.svg"
+              alt="illustration-phones"
+            />
+          </div>
+          <div class="infrastructureRight">
+            <div class="infrastructureText">
+              <h2>State of the Art Infrastructure</h2>
+              <p>
+                With reliability and speed in mind, worldwide data centers
+                provide the backbone for ultra-fast connectivity. This ensures
+                your site will load instantly, no matter where your readers are,
+                keeping your site competitive.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Laptopillustration -->
+      <section class="laptopIllustrationSection">
+        <div class="laptopIllustrationCont">
+          <div class="laptopIllustrtionLeft">
+            <img
+              class="desktopImg"
+              src="./images/illustration-laptop-desktop.svg"
+              alt="illustration-laptop-desktop"
+            />
+            <img
+              class="mobileImg"
+              src="./images/illustration-laptop-mobile.svg"
+              alt="illustration-laptop-mobile"
+            />
+          </div>
+          <div class="laptopIllustrationRight">
+            <div class="textCont1">
+              <h2>Free, open, simple</h2>
+              <p>
+                Blogr is a free and open source application backed by a large
+                community of helpful developers. It supports features such as
+                code syntax highlighting, RSS feeds, social media integration,
+                third-party commenting tools, and works seamlessly with Google
+                Analytics. The architecture is clean and is relatively easy to
+                learn.
+              </p>
+            </div>
+            <div class="textCont2">
+              <h2>Powerful tooling</h2>
+              <p>
+                Batteries included. We built a simple and straightforward CLI
+                tool that makes customization and deployment a breeze, but
+                capable of producing even the most complicated sites.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+      <section class="footSection">
+        <footer>
+          <div class="logo">
+            <img src="./images/logo.svg" alt="logo" />
+          </div>
+          <div class="productCont links">
+            <p>Product</p>
+            <ul>
+              <li><a href="#">Overview</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Marketplace</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Integrations</a></li>
+            </ul>
+          </div>
+          <!-- 2 Link -->
+          <div class="companyCont links">
+            <p>Company</p>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Team</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </div>
+          <!-- 3 link -->
+          <div class="connectCont links">
+            <p>Connect</p>
+            <ul>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Newsletter</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+        </footer>
+      </section>
+    </div>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+  </body>
+</html>
