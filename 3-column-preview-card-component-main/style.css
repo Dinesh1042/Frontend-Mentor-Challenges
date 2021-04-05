@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body section {
+  min-height: 100vh;
+  width: 100%;
+  background: #f2f2f2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body section .cardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+body section .cardContainer .card {
+  max-width: 305px;
+  max-height: 500px;
+  height: 500px;
+  padding: 2rem;
+}
+
+body section .cardContainer .card .title {
+  margin-top: 2.18rem;
+}
+
+body section .cardContainer .card .title h1 {
+  color: #f2f2f2;
+  font-family: "Big Shoulders Display", cursive;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+body section .cardContainer .card .para {
+  margin-top: 1.8rem;
+}
+
+body section .cardContainer .card .para p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body section .cardContainer .card .btnCont {
+  margin-top: 80px;
+}
+
+body section .cardContainer .card .btnCont button {
+  border: none;
+  outline: none;
+  background-color: #f2f2f2;
+  padding: 15px 30px;
+  border-radius: 99px;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #f2f2f2;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-transition-property: background-color, color;
+  transition-property: background-color, color;
+}
+
+body section .cardContainer .card .btnCont button:hover {
+  background-color: transparent;
+  color: #f2f2f2;
+}
+
+body section .cardContainer .card1 {
+  background-color: #e38826;
+}
+
+body section .cardContainer .card1 .btnCont button {
+  color: #e38826;
+}
+
+body section .cardContainer .card2 {
+  background: #006970;
+}
+
+body section .cardContainer .card2 .btnCont button {
+  color: #006970;
+}
+
+body section .cardContainer .card3 {
+  background: #004241;
+}
+
+body section .cardContainer .card3 .btnCont button {
+  color: #004241;
+}
+
+@media (max-width: 900px) {
+  body section {
+    padding: 3rem;
+  }
+  body section .cardContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body section .cardContainer .card {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 2.5rem;
+  }
+  body section .cardContainer .card .title {
+    margin-top: 1.8rem;
+  }
+  body section .cardContainer .card .para {
+    margin-top: 1.2rem;
+  }
+  body section .cardContainer .card .btnCont {
+    margin-top: 30px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
