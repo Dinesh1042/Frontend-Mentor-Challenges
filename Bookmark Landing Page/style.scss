@@ -1,0 +1,1026 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+$SoftBlue: hsl(231, 69%, 60%);
+$SoftRed: hsl(0, 94%, 66%);
+$GrayishBlue: hsl(229, 8%, 60%);
+$DarkBlue: hsl(229, 31%, 21%);
+$ButtonHover: hsl(231, 45%, 49%);
+
+@mixin tab {
+  @media (max-width: 920px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 600px) {
+    @content;
+  }
+}
+@mixin footerCss {
+  @media (max-width: 680px) {
+    @content;
+  }
+}
+@mixin ButtonCSS {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+  transition-property: background-color, color;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+body {
+  width: 100%;
+}
+body section.heroSection {
+  max-width: 1440px;
+  margin: 0% auto;
+  width: 100%;
+}
+
+// Hero Section
+
+body .heroSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem !important;
+  .heroTextCont {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    .heroText {
+      max-width: 475px;
+      h1 {
+        font-size: 43px;
+        letter-spacing: 0.2rem;
+        color: $DarkBlue;
+        font-weight: 500;
+      }
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+        font-size: 18px;
+        color: $GrayishBlue;
+        margin-top: 30px;
+      }
+      .ctaBtns {
+        margin-top: 30px;
+        button {
+          padding: 0.8rem 1.2rem;
+          @include ButtonCSS();
+        }
+        .chromeBtn {
+          color: #fff;
+          background-color: $SoftBlue;
+          &:hover {
+            background-color: #fff;
+            border-color: $SoftBlue;
+            color: $SoftBlue;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          }
+        }
+        .firefox {
+          color: $GrayishBlue;
+          background-color: #fff;
+          box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          margin-left: 15px;
+          &:hover {
+            border-color: $GrayishBlue;
+          }
+        }
+      }
+    }
+  }
+  @include tab() {
+    min-height: unset;
+    display: flex;
+    flex-direction: column-reverse;
+    .heroTextCont {
+      margin-top: 1rem;
+      .heroText {
+        text-align: center;
+      }
+    }
+  }
+  @include mobile() {
+    .heroTextCont {
+      padding: 1.6rem;
+      margin: 0% auto;
+      .heroText {
+        h1 {
+          font-size: 1.8rem;
+          letter-spacing: unset;
+        }
+
+        .ctaBtns {
+          button {
+            padding: 0.7rem 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+body section .heroImg {
+  position: relative;
+  width: 100%;
+  .heroBg {
+    height: 75%;
+    width: 76%;
+    position: absolute;
+    background: $SoftBlue;
+    top: 50%;
+    right: 0;
+    transform: translateY(-30%);
+    border-radius: 999px 0 0 999px;
+    z-index: -1;
+  }
+  @include tab() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.3rem;
+    img {
+      width: 100%;
+      max-width: 657px;
+    }
+  }
+}
+
+// Feature Section
+
+body .featureSection {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 1440px;
+  margin: 0% auto;
+  margin-top: 2.5rem;
+  header {
+    max-width: 600px;
+    text-align: center;
+    padding: 1.2rem;
+    h1 {
+      color: $DarkBlue;
+      font-size: 2rem;
+      letter-spacing: 0.2rem;
+      font-weight: 500;
+    }
+    p {
+      color: $GrayishBlue;
+      font-size: 18px;
+      line-height: 1.5;
+      margin-top: 30px;
+    }
+  }
+  @include mobile() {
+    header {
+      h1 {
+        font-size: 1.8rem;
+        letter-spacing: unset;
+      }
+    }
+  }
+}
+
+body .featureSection .featureCont {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .navigationCont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    width: max-content;
+    margin: 0% auto;
+    margin-bottom: 2rem;
+    > div:not(.navBar) {
+      border-bottom: 1px solid hsl(229, 8%, 80%);
+      padding: 1rem 2rem;
+      color: $GrayishBlue;
+      cursor: pointer;
+      transition: 0.3s ease background-color;
+      p {
+        font-size: 18px;
+        pointer-events: none;
+      }
+      &:hover {
+        background-color: hsl(229, 8%, 94%);
+        color: $SoftRed;
+      }
+      &.active {
+        color: #000;
+      }
+    }
+    .navBar {
+      position: absolute;
+      height: 3px;
+      width: 100%;
+      background: $SoftRed;
+      bottom: 0%;
+      left: 0%;
+      transition: 0.5s cubic-bezier(0.65, 0.05, 0.36, 1);
+      border-radius: 3px 3px 0 0;
+      transform: translate(-50%, -50%);
+    }
+    @include footerCss() {
+      flex-direction: column;
+      width: 90%;
+      > div:not(.navBar) {
+        margin: 0% auto;
+        width: 80% !important;
+      }
+    }
+  }
+}
+
+body .featureSection .featureDetailView {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  .textCont {
+    .textArea {
+      max-width: 475px;
+      padding: 1.2rem;
+      h1 {
+        font-size: 2rem;
+        color: $DarkBlue;
+        letter-spacing: 0.1rem;
+        font-weight: 500;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        color: $GrayishBlue;
+        margin-top: 30px;
+      }
+      button {
+        @include ButtonCSS();
+        background-color: $SoftBlue;
+        padding: 0.575rem 1.2rem;
+        color: #fff;
+        margin-top: 30px;
+        transition: 0.3s ease background-color;
+        &:hover {
+          background-color: $ButtonHover;
+        }
+      }
+    }
+    @include mobile() {
+      .textArea {
+        h1 {
+          font-size: 1.8rem;
+        }
+      }
+    }
+    @include tab() {
+      margin-top: 2rem;
+    }
+  }
+  > div {
+    margin: 0 auto;
+  }
+
+  .imgCont {
+    position: relative;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    max-height: 410px;
+    img {
+      object-fit: contain;
+    }
+    .bgShape {
+      position: absolute;
+      height: 75%;
+      width: 75%;
+      background-color: $SoftBlue;
+      left: 0%;
+      bottom: 0%;
+      z-index: -1;
+      border-radius: 0 999px 999px 0;
+      max-height: 500px;
+    }
+  }
+
+  @include tab() {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    .imgCont {
+      img {
+        width: 100%;
+        max-width: 536px;
+      }
+    }
+    .textCont {
+      .textArea {
+        max-width: 600px;
+        padding: 1.2;
+        h1 {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}
+
+// Download Section
+
+body .downloadSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  header {
+    text-align: center;
+    .textCont {
+      max-width: 600px;
+      padding: 1.2rem;
+      h1 {
+        font-size: 2rem;
+        color: $DarkBlue;
+        letter-spacing: 0.1rem;
+        font-weight: 500;
+      }
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+        color: $GrayishBlue;
+        margin-top: 30px;
+      }
+    }
+  }
+  @include tab() {
+    margin-top: 2rem;
+    .textCont {
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+// Cards
+
+body .downloadSection {
+  .downloadWrapperCont {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(257px, 1fr));
+    width: 90%;
+    grid-gap: 2rem;
+    max-width: 910px;
+
+    .card {
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1.5rem;
+      width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+        rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+      text-align: center;
+      position: relative;
+      border-radius: 1rem;
+
+      .description {
+        margin-top: 1.5rem;
+        h1 {
+          font-size: 1.4rem;
+          color: $DarkBlue;
+          letter-spacing: 0.1rem;
+          font-weight: 500;
+        }
+        p {
+          font-size: 1rem;
+          line-height: 1.5;
+          color: $GrayishBlue;
+        }
+      }
+      .ctaBtn {
+        width: 100%;
+        margin-top: 3.3rem;
+        button {
+          @include ButtonCSS();
+          background: $SoftBlue;
+          width: 100%;
+          color: #fff;
+          padding: 0.675rem 1rem;
+          border: 2px solid transparent;
+          &:hover {
+            background-color: #fff;
+            border-color: $SoftBlue;
+            color: $SoftBlue;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+          }
+        }
+      }
+      .dotBg {
+        position: absolute;
+        height: 5px;
+        background: url(./images/bg-dots.svg);
+        background-repeat: no-repeat;
+        width: 100%;
+        bottom: 28%;
+      }
+      &.firefox {
+        transform: translateY(2rem);
+      }
+      &.opera {
+        transform: translateY(4rem);
+      }
+    }
+  }
+  @include tab() {
+    .card {
+      &.firefox,
+      &.opera {
+        transform: translateY(0) !important;
+      }
+    }
+  }
+}
+
+// Faq Section
+body .faqSection {
+  margin-top: 8rem;
+  header {
+    .textArea {
+      max-width: 600px;
+      margin: 0% auto;
+      padding: 1.2rem;
+      text-align: center;
+      h1 {
+        color: $DarkBlue;
+        font-size: 2rem;
+        color: $DarkBlue;
+        letter-spacing: 0.1rem;
+        font-weight: 500;
+      }
+      p {
+        color: $GrayishBlue;
+        font-size: 18px;
+        line-height: 1.5;
+        margin-top: 30px;
+      }
+    }
+  }
+  @include tab() {
+    margin-top: 2rem;
+    .textArea {
+      h1 {
+        font-size: 1.8rem !important;
+        color: red;
+      }
+    }
+  }
+}
+
+// Faq
+
+body .faqSection {
+  .faqContainer {
+    max-width: 560px;
+    margin: 0% auto;
+    padding: 1.5rem;
+    .faq {
+      border-top: 1px solid hsl(229, 8%, 80%);
+
+      .questionContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+
+        p {
+          user-select: none;
+          transition: 1s ease color;
+        }
+        .iconContainer {
+          transition: 0.8s ease transform;
+          svg {
+            path {
+              stroke: $GrayishBlue;
+            }
+          }
+        }
+      }
+      .answerCont {
+        height: 0%;
+        max-height: 0px;
+        overflow: hidden;
+        transition: 0.8s ease max-height;
+        .answer {
+          padding: 1rem;
+          padding-bottom: 2rem;
+        }
+      }
+      &:last-child {
+        border-bottom: 1px solid hsl(229, 8%, 80%);
+      }
+      &.active {
+        .questionContainer {
+          p {
+            color: $SoftBlue;
+          }
+          .iconContainer {
+            transform: rotate(-180deg);
+            svg {
+              path {
+                stroke: $SoftBlue;
+              }
+            }
+          }
+        }
+        .answerCont {
+          height: 100%;
+          max-height: 500px;
+        }
+      }
+    }
+    p {
+      color: $GrayishBlue;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  }
+  .moreBtn {
+    text-align: center;
+    margin-top: 1rem;
+    button {
+      @include ButtonCSS();
+      background-color: $SoftBlue;
+      color: #fff;
+      padding: 0.67rem 1rem;
+      transition: 0.3s ease background-color;
+      &:hover {
+        background-color: $ButtonHover;
+      }
+    }
+  }
+}
+
+// Subscribe Cont
+
+body .subscribeCont {
+  margin-top: 3rem;
+  background: $SoftBlue;
+  padding: 3rem;
+  text-align: center;
+  .subscribe {
+    max-width: 450px;
+    margin: 0% auto;
+  }
+  header {
+    padding: 1rem;
+    color: #fff;
+    p {
+      font-size: 0.8rem;
+      letter-spacing: 5px;
+    }
+    h1 {
+      font-size: 1.8rem;
+      font-weight: normal;
+      margin-top: 1rem;
+      padding: 1rem 0;
+    }
+  }
+  @include mobile() {
+    padding: 2rem !important;
+  }
+}
+
+body .subscribeCont {
+  .subscribe {
+    .form {
+      display: grid;
+      grid-template-columns: auto 30%;
+      .inputCont {
+        background-color: #fff;
+        width: 100%;
+        position: relative;
+        max-width: 300px;
+        border-radius: 0.35rem;
+        border: 3px solid transparent;
+        input {
+          padding: 0.575rem 1rem;
+          padding-inline-end: 2rem;
+          width: 100%;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          font-size: 1rem;
+          line-height: 1.5;
+        }
+        .errorImg {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 8px;
+          display: none;
+        }
+        .errorMsg {
+          display: none;
+          position: absolute;
+          left: calc(0% - 3px);
+          width: calc(100% + 6px);
+          background-color: $SoftRed;
+          border-radius: 0 0 0.35rem 0.35rem;
+          p {
+            color: #fff;
+            padding: 0.5rem;
+            text-align: left;
+            font-size: 1rem;
+          }
+        }
+      }
+      &.error {
+        .inputCont {
+          border-color: $SoftRed;
+          border-radius: 0.35rem 0.35rem 0 0;
+        }
+        .errorImg {
+          display: flex;
+        }
+        .errorMsg {
+          display: flex;
+        }
+      }
+      button {
+        @include ButtonCSS();
+        color: #fff;
+        background-color: $SoftRed;
+        height: 100%;
+        width: 100%;
+        padding: 0.675rem 1rem;
+        transition: 0.3s ease background-color;
+        border: 2px solid transparent;
+        &:hover {
+          background-color: #fff;
+          border-color: $SoftRed;
+          color: $SoftRed;
+        }
+      }
+      @include mobile() {
+        max-width: 300px;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        .inputCont {
+          .errorMsg {
+            p {
+              font-size: 0.8rem;
+              padding: 0.3rem;
+            }
+          }
+        }
+        button {
+          margin-top: 1.5rem;
+          height: unset;
+        }
+      }
+    }
+  }
+}
+
+body footer {
+  background: $DarkBlue;
+  .footerCont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    max-width: 1100px;
+    margin: 0% auto;
+    .footerLeft {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      .ctaBtn {
+        margin-left: 2rem;
+        ul {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          list-style: none;
+          gap: 2rem;
+
+          li {
+            color: #fff;
+            font-size: 1rem;
+            text-align: center;
+            cursor: pointer;
+            letter-spacing: 0.2rem;
+            transition: 0.3s ease color;
+            &:hover {
+              color: $SoftRed;
+            }
+          }
+        }
+      }
+    }
+    .footerRight {
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        li {
+          margin: 0 15px;
+        }
+      }
+    }
+  }
+  @include footerCss() {
+    .footerCont {
+      flex-direction: column;
+      justify-content: center;
+      .footerLeft {
+        flex-direction: column;
+        .ctaBtn {
+          margin: 0% !important;
+          margin-top: 2rem !important;
+          ul {
+            grid-template-columns: 1fr;
+          }
+        }
+      }
+      .footerRight {
+        margin-top: 2rem;
+        ul {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 2rem;
+          li {
+            margin: 0% !important;
+          }
+        }
+        li:last-child {
+          margin: 0%;
+        }
+      }
+    }
+  }
+}
+
+// Navigation
+
+body .navContainer {
+  width: 100%;
+  nav {
+    max-width: 1200px;
+    margin: 0% auto;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      z-index: 1000;
+      img {
+        &.navActiveLogo {
+          display: none;
+        }
+      }
+    }
+    .hamburgar {
+      display: none;
+      z-index: 1000;
+    }
+    .navRight {
+      .links {
+        ul {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          list-style: none;
+          gap: 2rem;
+          li {
+            text-align: center;
+            font-size: 14px;
+            color: $GrayishBlue;
+            cursor: pointer;
+            user-select: none;
+            letter-spacing: 0.2rem;
+            &:hover {
+              color: $SoftRed;
+            }
+          }
+        }
+        display: flex;
+        align-items: center;
+        button {
+          @include ButtonCSS();
+          background-color: $SoftRed;
+          box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+            rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+          letter-spacing: 0.2rem;
+          color: #fff;
+          padding: 0.475rem 1.5rem;
+          font-size: 14px;
+          margin-left: 2.5rem;
+          border: 2px solid transparent;
+          &:hover {
+            border-color: $SoftRed;
+            background-color: transparent;
+            color: $SoftRed;
+          }
+        }
+      }
+      .icons {
+        display: none;
+      }
+    }
+  }
+  @include footerCss() {
+    nav {
+      width: 100%;
+    }
+    .logo {
+      img {
+        display: flex;
+      }
+    }
+    .hamburgar {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      height: 40px;
+      width: 40px;
+      .line {
+        height: 3px;
+        width: 30px;
+        background-color: $DarkBlue;
+        border-radius: 99px;
+        position: relative;
+        border-radius: 99px;
+        display: flex;
+        justify-content: flex-end;
+        transition: 0.3s ease;
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          height: 100%;
+          background-color: $DarkBlue;
+          border-radius: 99px;
+          display: block;
+          transition: 0.3s ease;
+        }
+        &::after {
+          width: 80%;
+          top: 8px;
+        }
+        &::before {
+          bottom: 8px;
+          width: 60%;
+        }
+      }
+    }
+    .navRight {
+      position: absolute;
+      height: 100vh;
+      width: 100%;
+      top: 0%;
+      left: 0%;
+      z-index: 100;
+      background-color: #2f354fe3;
+      display: none;
+      animation: navAnimation 0.8s ease;
+      .links {
+        flex-direction: column;
+        width: 80%;
+        max-width: 450px;
+        margin: 0% auto;
+        ul {
+          grid-template-columns: 1fr !important;
+          gap: unset !important;
+          margin-top: 25%;
+          width: 100%;
+          li {
+            font-size: 18px !important;
+            color: #fff !important;
+            letter-spacing: 0.2rem;
+            border-top: 1px solid $GrayishBlue;
+            padding: 1.5rem;
+            width: 100%;
+            &:last-child {
+              border-bottom: 1px solid $GrayishBlue;
+            }
+            &:hover {
+              background-color: hsla(233, 8%, 80%, 0.192);
+            }
+          }
+        }
+        button {
+          margin-left: 0 !important;
+          margin-top: 2rem;
+          background-color: transparent !important;
+          border: 2px solid #fff !important;
+          letter-spacing: 0.2rem;
+          width: 100%;
+          padding: 0.8rem 0.5rem !important;
+          font-size: 18px !important;
+          transition: 0.3s ease !important;
+          transition-property: color, border-color !important;
+          &:hover {
+            border-color: $SoftRed !important;
+          }
+        }
+      }
+    }
+    // Nav active
+
+    &.nav-active {
+      .logo {
+        img {
+          display: none;
+          &.navActiveLogo {
+            display: flex;
+          }
+        }
+      }
+      .hamburgar {
+        .line {
+          background-color: #fff;
+          &::after,
+          &::before {
+            background-color: #fff;
+          }
+          &::after {
+            width: 50%;
+            left: 8px;
+            transform: rotate(90deg);
+          }
+          &::before {
+            transform: rotate(-90deg);
+            width: 50%;
+            right: 7px;
+          }
+          transform: rotate(-45deg);
+        }
+      }
+      nav .navRight {
+        display: flex;
+        .icons {
+          position: absolute;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 2rem;
+          left: 50%;
+          bottom: 10%;
+          transform: translateX(-50%);
+        }
+      }
+      @include mobile() {
+        .navRight {
+          .links {
+            ul {
+              margin-top: 38%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes faqRipple {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+  }
+}
+@keyframes navAnimation {
+  0% {
+    opacity: 0;
+    top: -40px;
+  }
+}

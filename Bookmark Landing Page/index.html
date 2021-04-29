@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Bookmark landing page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="navContainer" id="navContainer">
+      <nav>
+        <div class="logo">
+          <img src="./images/logo-bookmark.svg" alt="logo-bookmark" />
+          <img
+            class="navActiveLogo"
+            src="./images/nav-logo-bookmark.svg"
+            alt="logo-bookmark"
+          />
+        </div>
+        <div class="hamburgar" id="hamburgar">
+          <div class="line"></div>
+        </div>
+        <div class="navRight">
+          <div class="links">
+            <ul>
+              <li>FEATURES</li>
+              <li>PRICING</li>
+              <li>CONTACT</li>
+            </ul>
+            <button>LOGIN</button>
+          </div>
+          <div class="icons">
+            <img src="./images/icon-facebook.svg" alt="icon-facebook" />
+            <img src="./images/icon-twitter.svg" alt="icon-twitter" />
+          </div>
+        </div>
+      </nav>
+    </div>
+    <section class="heroSection">
+      <div class="heroTextCont">
+        <div class="heroText">
+          <h1>A Simple Bookmark Manager</h1>
+          <p>
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
+          <div class="ctaBtns">
+            <button class="chromeBtn">Get it on Chrome</button>
+            <button class="firefox">Get it on Firefox</button>
+          </div>
+        </div>
+      </div>
+      <div class="heroImg">
+        <img src="./images/illustration-hero.svg" alt="illustration-hero" />
+        <div class="heroBg"></div>
+      </div>
+    </section>
+    <!-- Feature Section -->
+    <section class="featureSection">
+      <header>
+        <div class="featureText">
+          <h1>Features</h1>
+          <p>
+            Our aim is to make it quick and easy for you to access your
+            favourite websites. Your bookmarks sync between your devices so you
+            can access them on the go.
+          </p>
+        </div>
+      </header>
+      <div class="featureCont">
+        <div class="navigationCont" id="navigationCont">
+          <div
+            data-value="simpleBooking"
+            class="simpleBooking active"
+            id="featuresNav"
+          >
+            <p>Simple Bookmarking</p>
+          </div>
+          <div data-value="speedySearch" class="speedySearch" id="featuresNav">
+            <p>Speedy Searching</p>
+          </div>
+          <div data-value="easyShare" class="easyShare" id="featuresNav">
+            <p>Easy Sharing</p>
+          </div>
+          <div class="navBar" id="navBar"></div>
+        </div>
+        <div class="featureDetailView" id="featureDetailView">
+          <div class="imgCont">
+            <img
+              src="./images/illustration-features-tab-1.svg"
+              alt="illustration-features-tab-1"
+            />
+            <div class="bgShape"></div>
+          </div>
+          <div class="textCont">
+            <div class="textArea">
+              <h1>Bookmark in one click</h1>
+              <p>
+                Organize your bookmarks however you like. Our simple
+                drag-and-drop interface gives you complete control over how you
+                manage your favourite sites.
+              </p>
+              <button>More Info</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Download extension -->
+    <section class="downloadSection">
+      <header>
+        <div class="textCont">
+          <h1>Download the extension</h1>
+          <p>
+            We’ve got more browsers in the pipeline. Please do let us know if
+            you’ve got a favourite you’d like us to prioritize.
+          </p>
+        </div>
+      </header>
+      <div class="downloadWrapperCont">
+        <div class="chrome card">
+          <div class="imgCont">
+            <img src="./images/logo-chrome.svg" alt="logo-chrome" />
+          </div>
+          <div class="description">
+            <h1>Add to Chrome</h1>
+            <p>Minimum version 62</p>
+          </div>
+          <div class="dotBg"></div>
+          <div class="ctaBtn">
+            <button>Add & Install Extension</button>
+          </div>
+        </div>
+        <div class="firefox card">
+          <div class="imgCont">
+            <img src="./images/logo-firefox.svg" alt="logo-firefox" />
+          </div>
+          <div class="description">
+            <h1>Add to Fireox</h1>
+            <p>Minimum version 55</p>
+          </div>
+          <div class="dotBg"></div>
+          <div class="ctaBtn">
+            <button>Add & Install Extension</button>
+          </div>
+        </div>
+        <div class="opera card">
+          <div class="imgCont">
+            <img src="./images/logo-opera.svg" alt="logo-opera" />
+          </div>
+          <div class="description">
+            <h1>Add to Opera</h1>
+            <p>Minimum version 46</p>
+          </div>
+          <div class="dotBg"></div>
+          <div class="ctaBtn">
+            <button>Add & Install Extension</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FAQ Section -->
+    <section class="faqSection">
+      <header>
+        <div class="textArea">
+          <h1>Frequently Asked Questions</h1>
+          <p>
+            Here are some of our FAQs. If you have any other questions you’d
+            like answered please feel free to email us.
+          </p>
+        </div>
+      </header>
+      <div class="faqContainer" id="faqContainer"></div>
+      <div class="moreBtn">
+        <button>More Info</button>
+      </div>
+    </section>
+    <div class="subscribeCont">
+      <div class="subscribe">
+        <header>
+          <p>35,000+ ALREADY JOINED</p>
+          <h1>Stay up-to-date with what we're doing</h1>
+        </header>
+        <form id="form" autocomplete="off" class="form">
+          <div class="inputCont">
+            <input placeholder="Enter your email" type="text" id="userText" />
+            <div class="errorImg">
+              <img src="./images/icon-error.svg" alt="icon-error" />
+            </div>
+            <div class="errorMsg">
+              <p>Whoops. make sure that's an email</p>
+            </div>
+          </div>
+          <button>Contact Us</button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="footerCont">
+        <div class="footerLeft">
+          <div class="logo">
+            <img src="./images/logo-bookmark footer.svg" alt="logo-bookmark" />
+          </div>
+          <div class="ctaBtn">
+            <ul>
+              <li>FEATURES</li>
+              <li>PRICING</li>
+              <li>CONTACT</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footerRight">
+          <ul>
+            <li>
+              <a href="#"><img src="./images/icon-facebook.svg" alt="" /></a>
+            </li>
+            <li>
+              <a href="#"><img src="./images/icon-twitter.svg" alt="" /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
