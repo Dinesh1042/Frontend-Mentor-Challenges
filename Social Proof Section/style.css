@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Spartan", sans-serif;
+}
+body {
+  background-color: hsl(0, 0%, 100%);
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.container .topText {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+}
+.container .topText .lefttext {
+  max-width: 450px;
+}
+.container .topText .lefttext h1 {
+  font-size: 35px;
+  width: 300px;
+  color: hsl(300, 43%, 22%);
+}
+.container .topText .lefttext p {
+  color: hsl(303, 10%, 53%);
+  margin-top: 12px;
+}
+.cardsCont {
+  display: flex;
+}
+.starRatesCont {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+}
+.starRate {
+  display: flex;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background-color: hsl(300, 24%, 96%);
+  margin: 15px 0;
+  border-radius: 7px;
+}
+.starRate .rateText p {
+  font-weight: 700;
+  font-size: 12px;
+  color: hsl(300, 43%, 22%);
+  margin-left: 15px;
+  padding-right: 50px;
+}
+.starCont {
+  padding-left: 10px;
+}
+.starCont img {
+  height: 12px;
+  width: 12px;
+}
+.card {
+  background-color: hsl(300, 43%, 22%);
+  padding: 20px;
+  margin: 0 10px;
+  margin-top: 20px;
+  border-radius: 6px;
+  max-width: 330px;
+}
+.card .profileCont {
+  display: flex;
+  align-items: center;
+  padding: 10px 10px;
+}
+.card .profileCont img {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+.card .profileCont .name {
+  color: #fff;
+  font-weight: 700;
+  font-size: 11px;
+}
+.card .profileCont .verified {
+  color: hsl(303, 10%, 53%);
+  font-size: 10px;
+  margin-top: 3px;
+}
+.card .profileCont .nameCont {
+  margin-left: 10px;
+}
+.card .paraCont {
+  padding: 10px;
+  margin-top: 10px;
+}
+.card .paraCont p {
+  font-size: 11px;
+  font-weight: 300;
+  color: hsl(0, 0%, 100%);
+  line-height: 17px;
+}
+.cardsCont {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.starRate2 {
+  transform: translate(30px);
+}
+.starRate3 {
+  transform: translate(60px);
+}
+.card2 {
+  transform: translateY(30px);
+}
+.card3 {
+  transform: translateY(60px);
+}
+
+@media (max-width: 950px) {
+  .topText {
+    flex-direction: column;
+    text-align: center;
+  }
+  .container .topText .lefttext p {
+    margin: 25px 0;
+  }
+  .container .topText .lefttext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .topText .lefttext h1 {
+    text-align: center;
+  }
+  .cardsCont {
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .cardsCont {
+    width: 100%;
+  }
+  .card {
+    margin: 10px auto;
+    width: 100%;
+    max-width: 450px;
+  }
+  .starRatesCont {
+    width: 100%;
+  }
+  .starCont {
+    padding: 0;
+    padding: 5px 0;
+  }
+  .starRate {
+    flex-direction: column;
+    width: 100%;
+    max-width: 450px;
+    margin: 10px auto;
+  }
+  .starRate2 {
+    transform: translate(0);
+  }
+  .starRate3 {
+    transform: translate(0);
+  }
+  .starRate .rateText p {
+    padding: 0;
+  }
+  .card2 {
+    transform: translateY(0px);
+  }
+  .card3 {
+    transform: translateY(0px);
+  }
+}
