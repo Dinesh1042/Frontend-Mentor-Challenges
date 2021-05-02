@@ -22,6 +22,7 @@ This repository contains only [Frontend Mentor](https://www.frontendmentor.io/ch
 | 14   | [Social Media Dashboard](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Social%20Media%20Dashboard%20With%20Theme%20Switcher) |
 | 15   | [Social Proof Section](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Social%20Proof%20Section)                               |
 | 16   | [Static Job Listings](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Static%20Job%20Listings)                                 |
+| 17   | [Url Shortening](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/blob/main/Url%20Shortening/README.md)                                   |
 
 **These Challenges are builded with HTML, CSS (or) SCSS, JAVASCRIPT. No frontend frameworks used!**
 
