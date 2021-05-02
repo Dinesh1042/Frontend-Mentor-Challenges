@@ -25,7 +25,6 @@ body .hero {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
-  overflow: hidden;
 }
 
 body .hero__img {
