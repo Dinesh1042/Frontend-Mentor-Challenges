@@ -8,8 +8,8 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
 
 ### Links
 
-- Github: [Add solution URL here](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Url%20Shortening)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Github](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Url%20Shortening)
+- [Live site](https://your-live-site-url.com)
 
 ## My process
 
@@ -31,4 +31,4 @@ I have learned bit more about grid and flexbox.
 ## Author
 
 - Website - [Url Shortening](https://www.your-site.com)
-- Frontend Mentor - [Dinesh1042](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [Dinesh1042](https://www.frontendmentor.io/profile/Dinesh1042)
