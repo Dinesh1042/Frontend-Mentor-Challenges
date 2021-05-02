@@ -9,7 +9,7 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
 ### Links
 
 - [Github](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Url%20Shortening)
-- [Live site](https://your-live-site-url.com)
+- [Live site](https://url-shortener-mocha-seven.vercel.app/)
 
 ## My process
 
@@ -30,5 +30,5 @@ I have learned bit more about grid and flexbox.
 
 ## Author
 
-- Website - [Url Shortening](https://www.your-site.com)
+- Website - [Url Shortening](https://url-shortener-mocha-seven.vercel.app/)
 - Frontend Mentor - [Dinesh1042](https://www.frontendmentor.io/profile/Dinesh1042)
