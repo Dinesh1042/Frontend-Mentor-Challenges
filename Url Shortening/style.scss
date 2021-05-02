@@ -52,7 +52,6 @@ body {
 body .hero {
   display: flex;
   flex-direction: column-reverse;
-  overflow: hidden;
   &__img {
     width: 100%;
     overflow: hidden;
