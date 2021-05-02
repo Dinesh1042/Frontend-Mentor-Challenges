@@ -4,11 +4,11 @@ This is a solution to the [Shortly URL shortening API Challenge challenge on Fro
 
 ### Screenshot
 
-![](./Screenshot/screenshot.png)
+![screenshot](./Screenshot/screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Github: [Add solution URL here](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Url%20Shortening)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
