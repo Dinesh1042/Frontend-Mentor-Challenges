@@ -1,0 +1,849 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+
+$Cyan: hsl(180, 66%, 49%);
+$DarkVoliet: hsl(257, 27%, 26%);
+$Red: hsl(0, 87%, 67%);
+$Gray: hsl(0, 0%, 75%);
+$GrayishVoliet: hsl(257, 7%, 63%);
+$DarkBlue: hsl(255, 11%, 22%);
+$VeryDarkVoliet: hsl(260, 8%, 14%);
+$ButtonHover: hsl(179, 57%, 75%);
+$LightGrayBg: hsl(230, 25%, 95%);
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0%;
+  padding: 0%;
+  font-size: 1rem;
+  overflow-x: hidden;
+  max-width: 1440px;
+  margin: 0% auto;
+}
+
+@mixin tablet {
+  @media (min-width: 1100px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: 900px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 700px) {
+    @content;
+  }
+}
+@mixin tablet2($mq) {
+  @media (max-width: $mq) {
+    @content;
+  }
+}
+
+// Mobile First Design
+
+body .hero {
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: hidden;
+  &__img {
+    width: 100%;
+    overflow: hidden;
+    img {
+      width: 130%;
+      transform: translateX(13%);
+      max-width: 796px;
+      @include mobile() {
+        transform: translate(2%);
+      }
+    }
+  }
+  &__content {
+    text-align: center;
+    padding: 1rem;
+    .hero__text {
+      h1 {
+        font-size: 2.5em;
+        font-weight: bold;
+        line-height: 49px;
+        color: $DarkBlue;
+        margin-bottom: 0;
+      }
+      p {
+        line-height: 1.5;
+        color: $GrayishVoliet;
+        font-size: 1.125em;
+      }
+      .cta__button {
+        margin-top: 2.8rem;
+        a {
+          color: #fff;
+          text-decoration: none;
+          background-color: $Cyan;
+          font-weight: bold;
+          font-size: 1.25em;
+          padding: 0.75rem 2rem;
+          border-radius: 99px;
+          transition: 0.3s ease background-color;
+          &:hover {
+            background-color: $ButtonHover;
+          }
+        }
+      }
+    }
+  }
+  @include tablet() {
+    .hero__text {
+      h1 {
+        font-size: 4.5em !important;
+        margin-top: 0%;
+      }
+    }
+  }
+  @include desktop() {
+    max-width: 1140px;
+    margin: 0% auto;
+    padding-left: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    > div {
+      min-width: 100%;
+    }
+    &__img {
+      overflow: visible;
+      width: 100%;
+      img {
+        overflow: hidden;
+        width: 148%;
+        object-fit: cover;
+        transform: translateX(5%);
+      }
+    }
+    &__content {
+      padding: 0%;
+      margin-bottom: 4rem;
+      .hero__text {
+        text-align: left;
+        flex: 1;
+        h1 {
+          font-size: 3.5em;
+          line-height: 1.1;
+        }
+      }
+    }
+  }
+}
+
+// Form
+
+body .urlMaker {
+  padding: 1rem;
+  background: $LightGrayBg;
+  margin-top: 8rem;
+  .form {
+    background: $DarkVoliet url("./images/bg-shorten-mobile.svg") no-repeat;
+    background-position: right top;
+    padding: 1.5rem;
+    border-radius: 0.635rem;
+    background-size: contain;
+    .inputContainer {
+      position: relative;
+      input {
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.5;
+        outline: none;
+        border: 2px solid transparent;
+        padding: 0.625rem 1rem;
+        border-radius: 0.35rem;
+        margin-bottom: 10px;
+        &::placeholder {
+          color: $GrayishVoliet;
+        }
+      }
+      span {
+        position: absolute;
+        bottom: -25%;
+        left: 0%;
+        color: $Red;
+        font-size: 12px;
+        padding: 0.3rem;
+        display: none;
+        font-style: italic;
+        letter-spacing: 0.3px;
+      }
+    }
+    button {
+      border: none;
+      outline: none;
+      background-color: $Cyan;
+      color: #fff;
+      width: 100%;
+      font-size: 1.125em;
+      padding: 0.657rem;
+      border-radius: 0.35rem;
+      margin-top: 1rem;
+      cursor: pointer;
+      transition: 0.3s ease background-color;
+      .loader {
+        display: none;
+      }
+      &:hover {
+        background-color: $ButtonHover;
+      }
+    }
+
+    &.error {
+      .inputContainer {
+        input {
+          border-color: $Red;
+
+          &::placeholder {
+            color: hsl(0, 100%, 79%);
+          }
+        }
+        span {
+          display: flex;
+        }
+      }
+    }
+
+    &.loading {
+      button {
+        .btnText {
+          display: none;
+        }
+        .loader {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+
+          width: 93px;
+          margin: auto;
+          padding: 0.594rem;
+          .dot {
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background-color: #fff;
+            animation: 1.5s ease loader infinite forwards;
+            margin: auto;
+            &2 {
+              animation-delay: 0.5s;
+            }
+            &3 {
+              animation-delay: 0.8s;
+            }
+          }
+        }
+        &:hover {
+          background-color: $Cyan;
+        }
+      }
+    }
+
+    max-width: 1140px;
+    margin: 0 auto;
+    margin-top: -94px;
+    @include desktop() {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      padding: 3rem;
+      background: $DarkVoliet url("./images/bg-shorten-desktop.svg") no-repeat;
+      background-position: right top;
+      background-size: cover;
+      .inputContainer {
+        input {
+          margin-bottom: 0%;
+        }
+        span {
+          bottom: -60%;
+        }
+      }
+      button {
+        margin-top: 0%;
+        max-width: 190px;
+        padding: 0.6rem 2.6rem;
+        &.loading {
+          .loader {
+            align-items: center;
+            justify-content: center;
+            padding: 0.6rem 7.9rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Link lists
+
+body .urlMaker {
+  .shortenListCont {
+    max-width: 1140px;
+    margin: 0% auto;
+    .urlLists {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      list-style: none;
+      padding: 0;
+      .urlList {
+        border-radius: 0.63rem;
+        background-color: #fff;
+        box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+        .userUrl {
+          border-bottom: 1px solid hsl(228, 6%, 85%);
+          padding: 0 1rem;
+          p {
+            font-size: 1.125rem;
+            line-height: 1.5;
+            color: $VeryDarkVoliet;
+          }
+        }
+        .listRight {
+          padding: 1rem;
+          p {
+            margin-top: 0%;
+            color: $Cyan;
+            font-size: 1.125rem;
+            line-height: 1.5;
+          }
+          button {
+            border: none;
+            outline: none;
+            background-color: $Cyan;
+            color: #fff;
+            width: 100%;
+            font-size: 1.125em;
+            padding: 0.657rem;
+            border-radius: 0.35rem;
+            cursor: pointer;
+            transition: 0.3s ease background-color;
+            &:hover {
+              background-color: $ButtonHover !important;
+            }
+            &.copied:hover {
+              background-color: $DarkVoliet !important;
+            }
+          }
+        }
+      }
+    }
+    @include desktop() {
+      .urlList {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .userUrl {
+          border: none !important;
+          padding: 0 2rem !important;
+        }
+        .listRight {
+          display: flex;
+          align-items: center;
+          p {
+            margin-bottom: 0%;
+          }
+          button {
+            margin-left: 1rem;
+            padding: 0.406rem 1.6rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Statistics
+
+body .statisticsSection {
+  padding: 1rem;
+  background-color: $LightGrayBg;
+  header {
+    .textArea {
+      text-align: center;
+      max-width: 520px;
+      margin: 0% auto;
+      h1 {
+        font-size: 1.6875em;
+        font-weight: bold;
+        line-height: 49px;
+        color: $DarkBlue;
+        margin-top: 0;
+      }
+      p {
+        line-height: 1.5;
+        color: $GrayishVoliet;
+        font-size: 1.125em;
+      }
+    }
+  }
+}
+// Cards
+body .statisticsSection {
+  .cards {
+    max-width: 1140px;
+    margin: 0% auto;
+    margin-top: 5.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 5.6rem;
+    position: relative;
+    .card {
+      background-color: #fff;
+      border-radius: 0.63rem;
+      padding: 1.8rem;
+      padding-top: 0;
+      max-width: 500px;
+      margin: 0% auto;
+      z-index: 1;
+      &__img {
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: $DarkVoliet;
+        height: 90px;
+        width: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: -45px;
+      }
+      &__text {
+        margin-top: 2rem;
+        h1 {
+          font-size: 1.375rem;
+          font-weight: bold;
+          color: $DarkVoliet;
+        }
+        p {
+          font-size: 1.125rem;
+          color: $GrayishVoliet;
+          line-height: 1.5;
+        }
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 80%;
+      width: 0.6rem;
+      background: $Cyan;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    @include desktop() {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      &::after {
+        height: 0.6rem;
+        width: 80%;
+      }
+      text-align: left;
+      .card {
+        text-align: left;
+        &__img {
+          margin-left: unset !important;
+          margin-top: -45px;
+        }
+        &2 {
+          transform: translateY(3rem);
+        }
+        &3 {
+          transform: translateY(6rem);
+        }
+      }
+    }
+    @include tablet2(1000px) {
+      &::after {
+        opacity: 0;
+      }
+      .card {
+        &2 {
+          transform: translateY(0rem);
+        }
+        &3 {
+          transform: translateY(0rem);
+        }
+      }
+    }
+    @include tablet2(900px) {
+      &::after {
+        opacity: 1;
+      }
+    }
+
+    padding-bottom: 4rem;
+    @include desktop() {
+      padding-bottom: 8rem;
+    }
+  }
+}
+
+// Subscribe section
+
+body .subscribe {
+  background: $DarkVoliet url("./images/bg-shorten-mobile.svg") no-repeat;
+  background-position: top right;
+  background-size: contain;
+  padding: 4rem 1rem;
+  text-align: center;
+  padding-bottom: 5rem;
+
+  &__text {
+    h1 {
+      color: #fff;
+      font-size: 1.68em;
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      background-color: $Cyan;
+      font-weight: bold;
+      font-size: 1.25em;
+      padding: 0.75rem 2rem;
+      border-radius: 99px;
+      transition: 0.3s ease background-color;
+      margin-top: 1.5rem;
+      &:hover {
+        background-color: $ButtonHover;
+      }
+    }
+  }
+  @include desktop() {
+    background: $DarkVoliet url("./images/bg-shorten-desktop.svg") no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+}
+
+body footer {
+  background-color: hsl(266, 10%, 14%);
+  padding: 4rem;
+  text-align: center;
+  .footerCont {
+    max-width: 1140px;
+    margin: 0% auto;
+    .logo {
+      padding-right: 1rem;
+    }
+    .links {
+      div {
+        margin-top: 2rem;
+        > p {
+          color: #fff;
+          font-size: 1rem;
+          font-weight: bold;
+        }
+      }
+      ul {
+        margin-top: 1.5rem;
+        list-style: none;
+        padding: 0%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+
+        li {
+          a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: normal;
+            font-size: 1rem;
+            color: $GrayishVoliet;
+            &:hover {
+              color: $Cyan;
+            }
+          }
+        }
+      }
+    }
+    .followLinks {
+      margin-top: 2rem;
+      ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+        width: 170px;
+        margin: 0% auto;
+        padding: 0;
+        align-items: center;
+      }
+    }
+    @include desktop() {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      .links {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+        margin: auto;
+        margin-right: 4rem;
+        gap: 5rem;
+        justify-content: center;
+        > div {
+          margin-top: 0%;
+          p {
+            margin: 0%;
+          }
+        }
+      }
+      .logo {
+        text-align: left;
+      }
+      .followLinks {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+// NavBar
+
+body .navCont {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    max-width: 1140px;
+    margin: 0% auto;
+    .navLeft {
+      .logo {
+        display: flex;
+      }
+      .linkCont {
+        position: absolute;
+        display: none;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: 0.5s ease navAnimation;
+      }
+    }
+    .navRight {
+      display: none;
+    }
+    .hamburgar {
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      .line {
+        width: 30px;
+        height: 3px;
+        background-color: $DarkVoliet;
+        position: relative;
+        border-radius: 99px;
+        transition: 0.3s ease;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        &::after,
+        &::before {
+          content: "";
+          height: 3px;
+          position: absolute;
+          background-color: $DarkVoliet;
+          border-radius: 99px;
+          transition: 0.3s ease;
+        }
+        &::after {
+          top: 8px;
+          width: 80%;
+        }
+        &::before {
+          bottom: 8px;
+          width: 60%;
+        }
+      }
+    }
+  }
+  &.nav-active {
+    .linkCont {
+      display: flex !important;
+      background-color: $DarkVoliet;
+      width: 90%;
+      z-index: 100;
+      border-radius: 0.5rem;
+      top: 15%;
+      .links {
+        text-align: center;
+        width: 100%;
+        padding: 2rem 1rem;
+        ul {
+          padding: 0%;
+          list-style: none;
+          margin: 0%;
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 1rem;
+          border-bottom: 1px solid hsla(0, 0%, 75%, 0.514);
+          padding-bottom: 2rem;
+          li {
+            a {
+              color: #fff;
+              text-decoration: none;
+              font-size: 1.125rem;
+              line-height: 1.5;
+              transition: 0.3s ease color;
+              &:hover {
+                color: $Cyan;
+              }
+            }
+          }
+        }
+        .leftCtaButton {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 0.5rem;
+          button {
+            color: #fff;
+            text-decoration: none;
+            background-color: transparent;
+            font-weight: bold;
+            font-size: 1em;
+            padding: 0.55rem 2rem;
+            border-radius: 99px;
+            transition: 0.3s ease background-color;
+            border: none;
+            outline: none;
+            margin-top: 1rem;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            &.signup {
+              transition: 0.3s ease background-color;
+              background-color: $Cyan;
+              &:hover {
+                background-color: $ButtonHover;
+              }
+            }
+          }
+        }
+      }
+    }
+    .hamburgar {
+      .line {
+        transform: rotate(-45deg);
+        &::after {
+          width: 50%;
+          transform: rotate(90deg);
+          left: 8px;
+        }
+        &::before {
+          width: 50%;
+          transform: rotate(-90deg);
+          right: 7px;
+        }
+      }
+    }
+  }
+  @include desktop() {
+    .hamburgar {
+      display: none !important;
+    }
+    .navRight {
+      display: flex !important;
+      button {
+        color: hsl(247, 4%, 51%);
+        text-decoration: none;
+        background-color: transparent;
+        font-weight: bold;
+        font-size: 1em;
+        padding: 0.625rem 2rem;
+        border-radius: 99px;
+        transition: 0.3s ease background-color;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        letter-spacing: 0.1em;
+        &.login:hover {
+          color: $DarkVoliet;
+        }
+        &.signup {
+          background-color: $Cyan;
+          color: #fff;
+          margin-left: 1rem;
+          transition: 0.3s ease background-color;
+          &:hover {
+            background-color: $ButtonHover;
+          }
+        }
+      }
+    }
+    .navLeft {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .linkCont {
+      display: flex !important;
+      position: relative !important;
+      background-color: transparent !important;
+      .links {
+        padding: 0% !important;
+      }
+      ul {
+        border-bottom: none !important;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) !important;
+        padding-bottom: 0 !important;
+        list-style: none;
+        gap: 1rem;
+        li {
+          a {
+            transition: 0.3s ease color;
+            text-decoration: none;
+            color: hsl(247, 4%, 51%) !important;
+            &:hover {
+              color: $DarkVoliet !important;
+            }
+          }
+        }
+      }
+      .leftCtaButton {
+        display: none !important;
+      }
+    }
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 0.7;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+  100% {
+    opacity: 0.7;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes navAnimation {
+  0% {
+    opacity: 0.5;
+    top: 7%;
+  }
+}

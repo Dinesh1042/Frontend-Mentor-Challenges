@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Shortly URL shortening</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <div class="navCont" id="navCont">
+      <nav>
+        <div class="navLeft">
+          <div class="logo">
+            <img src="./images/logo.svg" alt="logo" />
+          </div>
+          <div class="linkCont">
+            <div class="links">
+              <ul>
+                <li><a href="#statisticsSection">Features</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Resources</a></li>
+              </ul>
+              <div class="leftCtaButton">
+                <button id="login" class="login">Login</button>
+                <button id="signup" class="signup">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="hamburgar" id="hamburgar">
+          <div class="line"></div>
+        </div>
+        <div class="navRight">
+          <button id="login" class="login">Login</button>
+          <button id="signup" class="signup">Sign Up</button>
+        </div>
+      </nav>
+    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero__content">
+        <div class="hero__text">
+          <h1>More than just shorter links</h1>
+          <p>
+            Build your brand’s recognition and get detailed insights on how your
+            links are performing.
+          </p>
+          <div class="cta__button">
+            <a href="#urlMaker">Get Started</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero__img">
+        <img src="./images/illustration-working.svg" alt="" />
+      </div>
+    </section>
+    <!-- Form Section -->
+    <section class="urlMaker" id="urlMaker">
+      <form id="form" class="form">
+        <div class="inputContainer">
+          <input
+            type="text"
+            name="url"
+            id="urlInput"
+            class="urlInput"
+            placeholder="Shorten a link here..."
+          />
+          <span id="errorMsg" class="errorMsg">Please add a link</span>
+        </div>
+        <button id="urlShortBtn" class="urlShortBtn">
+          <span class="btnText"> Shorten it! </span>
+          <div class="loader">
+            <div class="dot dot1"></div>
+            <div class="dot dot2"></div>
+            <div class="dot dot3"></div>
+          </div>
+        </button>
+      </form>
+      <div class="shortenListCont" id="shortenListCont">
+        <ul class="urlLists" id="urlLists"></ul>
+      </div>
+    </section>
+    <!-- Statistics Section -->
+    <section class="statisticsSection" id="statisticsSection">
+      <header>
+        <div class="textArea">
+          <h1>Advanced Statistics</h1>
+          <p>
+            Track how your links are performing across the web with our advanced
+            statistics dashboard.
+          </p>
+        </div>
+      </header>
+      <div class="cards">
+        <div class="card card1">
+          <div class="card__img">
+            <img
+              src="./images/icon-brand-recognition.svg"
+              alt="icon-brand-recognition"
+            />
+          </div>
+          <div class="card__text">
+            <h1>Brand Recognition</h1>
+            <p>
+              Boost your brand recognition with each click. Generic links don’t
+              mean a thing. Branded links help instil confidence in your
+              content.
+            </p>
+          </div>
+        </div>
+        <div class="card card2">
+          <div class="card__img">
+            <img
+              src="./images/icon-detailed-records.svg"
+              alt="icon-detailed-records"
+            />
+          </div>
+          <div class="card__text">
+            <h1>Detailed Records</h1>
+            <p>
+              Gain insights into who is clicking your links. Knowing when and
+              where people engage with your content helps inform better
+              decisions.
+            </p>
+          </div>
+        </div>
+        <div class="card card3">
+          <div class="card__img">
+            <img
+              src="./images/icon-fully-customizable.svg"
+              alt="icon-fully-customizable"
+            />
+          </div>
+          <div class="card__text">
+            <h1>Fully Customizable</h1>
+            <p>
+              Improve brand awareness and content discoverability through
+              customizable links, supercharging audience engagement.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="subscribe">
+      <div class="subscribe__text">
+        <h1>Boost your links today</h1>
+        <a href="#urlMaker">Get Started</a>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="footerCont">
+        <div class="logo">
+          <img src="./images/logo footer.svg" alt="logo" />
+        </div>
+        <div class="links">
+          <div class="feartures" id="features">
+            <p>Features</p>
+            <ul>
+              <li><a href="#">Link Shortening</a></li>
+              <li><a href="#">Branded Links</a></li>
+              <li><a href="#">Analytics</a></li>
+            </ul>
+          </div>
+          <div class="resources" id="resources">
+            <p>Resources</p>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Developers</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>
+          </div>
+          <div class="company" id="company">
+            <p>Company</p>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Our Teams</a></li>
+              <li><a href="#">Carrers</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="followLinks">
+          <ul>
+            <li>
+              <a href="#"
+                ><img src="./images//icon-facebook.svg" alt="icon-facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./images//icon-twitter.svg" alt="icon-twitter"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./images//icon-pinterest.svg" alt="icon-facebook"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="./images//icon-instagram.svg" alt="icon-facebook"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
