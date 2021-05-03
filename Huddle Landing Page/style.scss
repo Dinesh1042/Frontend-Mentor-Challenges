@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap");
+
+$Pink: hsl(322, 100%, 66%);
+$LightPink: hsl(321, 100%, 78%);
+$LightRed: hsl(0, 100%, 63%);
+$DarkCyan: hsl(192, 100%, 9%);
+$PaleBlue: hsl(207, 100%, 98%);
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+@mixin desktop() {
+  @media (min-width: 950px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: 800px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: 420px) {
+    @content;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0%;
+  ::selection {
+    background-color: rgb(234, 76, 137);
+    color: #fff;
+  }
+  h1 {
+    font-family: "Poppins", sans-serif;
+    color: $DarkCyan;
+  }
+  p {
+    color: $DarkCyan;
+    line-height: 1.5;
+  }
+}
+
+@mixin buttonReset($color, $background, $hoverColor) {
+  border: none;
+  outline: none;
+  color: $color;
+  background-color: $background;
+  cursor: pointer;
+  transition: 0.3s ease background-color;
+  font-size: 1rem;
+  user-select: none;
+  &:hover {
+    background-color: $hoverColor;
+  }
+}
+
+// Hero Section
+
+body .hero {
+  text-align: center;
+  margin-top: 2rem;
+  &__text {
+    padding: 1.5rem;
+    p {
+      max-width: 450px;
+      margin: 0% auto;
+    }
+    button {
+      @include buttonReset(#fff, $Pink, $LightPink);
+      padding: 0.75rem 2rem;
+      border-radius: 99px;
+      margin-top: 2rem;
+    }
+  }
+  @include tablet() {
+    &__text {
+      h1 {
+        font-size: 2.2rem;
+      }
+    }
+  }
+}
+
+// Img
+
+body .imgContainer {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 100%;
+    max-width: 850px;
+  }
+}
+
+// Stats
+
+body .statsContainer {
+  .stats {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    > div {
+      width: 180px;
+      margin: 0% auto;
+      .imgCont {
+        img {
+          width: 35px;
+          margin-left: 1rem;
+        }
+      }
+      .textCont {
+        text-align: center;
+        h1 {
+          font-family: "Open Sans", sans-serif;
+          font-size: 3.25em;
+          margin: 0%;
+        }
+        p {
+          margin: 0%;
+          font-size: 1rem;
+        }
+      }
+    }
+    @include tablet() {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+}
+
+// About
+
+body {
+  & .growTogether,
+  & .flowing,
+  & .yourUsers {
+    padding: 1.6rem;
+    .imgCont {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+    .textContainer {
+      margin-top: 2rem;
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      text-align: center;
+    }
+    .growTogether,
+    .flowing {
+      margin-top: 3rem;
+    }
+    @include desktop() {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0% auto;
+      padding: 5rem 0;
+      .textContainer {
+        text-align: left;
+        padding: 1rem;
+        padding-left: 3rem;
+      }
+      &.flowingConversation {
+        padding-left: 0rem !important;
+        padding-right: 3rem;
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+
+body .getStarted {
+  padding: 1.5rem;
+  .textCont {
+    text-align: center;
+    button {
+      @include buttonReset(#fff, $Pink, $LightPink);
+      padding: 0.75rem 2rem;
+      border-radius: 99px;
+      margin-top: 1rem;
+    }
+  }
+  @include tablet() {
+    padding: 3rem 1.5rem;
+  }
+}
+
+body .footerCont {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .curveBg {
+    width: 100%;
+    display: flex;
+    transform: translateY(3px);
+    img {
+      width: 100%;
+    }
+  }
+  .footerholder {
+    background: $DarkCyan;
+    width: 100%;
+  }
+  footer {
+    padding: 1.5rem;
+    max-width: 1100px;
+    margin: 0% auto;
+    h1,
+    p {
+      margin: 0%;
+      color: #fff;
+    }
+    .footersubscribe {
+      .textCont {
+        h1 {
+          font-size: 1.2rem;
+          letter-spacing: 0.1rem;
+        }
+        p {
+          margin-top: 1rem;
+        }
+      }
+      form {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        .inputContainer {
+          position: relative;
+          width: 100%;
+          input {
+            border: 2px solid transparent;
+            outline: none;
+            background-color: #fff;
+            width: 100%;
+            padding: 0.475rem 1rem;
+            line-height: 1.5;
+            border-radius: 0.35rem;
+            font-size: 1rem;
+            font-weight: 400;
+          }
+          span {
+            position: absolute;
+            left: 0%;
+            color: $LightRed;
+            font-size: 14px;
+            top: calc(100% + 5px);
+            display: none;
+          }
+        }
+        &.error {
+          .inputContainer {
+            input {
+              border-color: $LightRed;
+            }
+            span {
+              display: flex;
+            }
+          }
+        }
+        button {
+          @include buttonReset(#fff, $Pink, $LightPink);
+          padding: 0.75rem 2rem;
+          border-radius: 0.25rem;
+          margin-top: 1rem;
+          max-width: 200px;
+        }
+      }
+    }
+    .huddleFooter {
+      margin-top: 5rem;
+      .logo {
+        width: 200px;
+        img {
+          width: 100%;
+        }
+      }
+      .about {
+        margin-top: 1rem;
+      }
+      .contact {
+        margin-top: 3rem;
+        ul {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          li {
+            a {
+              display: flex;
+              align-items: center;
+              text-decoration: none;
+              &:last-child {
+                margin-top: 0.7rem;
+              }
+              p {
+                margin-left: 1rem;
+              }
+            }
+          }
+        }
+      }
+      .followLinks {
+        margin-top: 2rem;
+        ul {
+          list-style: none;
+          padding: 0;
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          width: 120px;
+          li {
+            a {
+              color: #fff;
+              text-decoration: none;
+              i {
+                font-size: 1.5rem;
+              }
+              &:hover {
+                color: cyan;
+              }
+            }
+          }
+        }
+      }
+    }
+    @include desktop() {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: flex-start;
+      .huddleFooter {
+        width: 100%;
+        margin-top: 0%;
+        .about {
+          max-width: 300px;
+        }
+      }
+      .footersubscribe {
+        form {
+          .inputContainer {
+            width: 100%;
+          }
+          input {
+            width: 100%;
+          }
+        }
+      }
+    }
+    @include tablet() {
+      .footersubscribe {
+        .form {
+          display: grid;
+          grid-template-columns: 1fr 30%;
+          gap: 2rem;
+        }
+      }
+    }
+  }
+}
+
+// Nav bar
+
+body .navCont {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0% auto;
+    .logo {
+      img {
+        width: 150px;
+      }
+    }
+    .ctaBtn {
+      button {
+        @include buttonReset($Pink, transparent, $Pink);
+        border: 1px solid $Pink;
+        border-radius: 99px;
+        padding: 0.45rem 1.5rem;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+    @include tablet() {
+      .logo {
+        img {
+          width: 180px;
+        }
+      }
+      .ctaBtn {
+        button {
+          padding: 0.55rem 2rem;
+        }
+      }
+    }
+    @include mobile() {
+      .logo {
+        img {
+          width: 100px !important;
+        }
+      }
+    }
+  }
+}
