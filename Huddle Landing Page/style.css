@@ -3,7 +3,7 @@
 *::after,
 *::before {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -55,9 +55,9 @@ body .hero__text button {
   transition: 0.3s ease background-color;
   font-size: 1rem;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   padding: 0.75rem 2rem;
   border-radius: 99px;
   margin-top: 2rem;
@@ -80,11 +80,11 @@ body .imgContainer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 body .imgContainer img {
@@ -97,13 +97,13 @@ body .statsContainer .stats {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   gap: 3rem;
 }
 
@@ -134,8 +134,8 @@ body .statsContainer .stats > div .textCont p {
 
 @media (min-width: 800px) {
   body .statsContainer .stats {
-    -ms-grid-columns: (1fr)[2] !important;
-        grid-template-columns: repeat(2, 1fr) !important;
+    -ms-grid-columns: (1fr) [2] !important;
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
@@ -153,11 +153,11 @@ body .yourUsers .imgCont {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 body .growTogether .imgCont img,
@@ -203,14 +203,18 @@ body .yourUsers .flowing {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     max-width: 1200px;
     margin: 0% auto;
     padding: 5rem 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
   }
   body .growTogether .textContainer,
   body .flowing .textContainer,
@@ -222,12 +226,11 @@ body .yourUsers .flowing {
   body .growTogether.flowingConversation,
   body .flowing.flowingConversation,
   body .yourUsers.flowingConversation {
-    padding-left: 0rem !important;
-    padding-right: 3rem;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    padding-right: 0rem !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+    -ms-flex-direction: row !important;
+    flex-direction: row !important;
   }
 }
 
@@ -249,9 +252,9 @@ body .getStarted .textCont button {
   transition: 0.3s ease background-color;
   font-size: 1rem;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   padding: 0.75rem 2rem;
   border-radius: 99px;
   margin-top: 1rem;
@@ -274,14 +277,14 @@ body .footerCont {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 body .footerCont .curveBg {
@@ -290,7 +293,7 @@ body .footerCont .curveBg {
   display: -ms-flexbox;
   display: flex;
   -webkit-transform: translateY(3px);
-          transform: translateY(3px);
+  transform: translateY(3px);
 }
 
 body .footerCont .curveBg img {
@@ -330,14 +333,14 @@ body .footerCont footer .footersubscribe form {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 body .footerCont footer .footersubscribe form .inputContainer {
@@ -386,9 +389,9 @@ body .footerCont footer .footersubscribe form button {
   transition: 0.3s ease background-color;
   font-size: 1rem;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   padding: 0.75rem 2rem;
   border-radius: 0.25rem;
   margin-top: 1rem;
@@ -427,14 +430,14 @@ body .footerCont footer .huddleFooter .contact ul {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 body .footerCont footer .huddleFooter .contact ul li a {
@@ -442,8 +445,8 @@ body .footerCont footer .huddleFooter .contact ul li a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-decoration: none;
 }
 
@@ -464,8 +467,8 @@ body .footerCont footer .huddleFooter .followLinks ul {
   padding: 0;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr) [3];
+  grid-template-columns: repeat(3, 1fr);
   width: 120px;
 }
 
@@ -489,11 +492,11 @@ body .footerCont footer .huddleFooter .followLinks ul li a:hover {
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    flex-direction: row-reverse;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
   body .footerCont footer .huddleFooter {
     width: 100%;
@@ -515,7 +518,7 @@ body .footerCont footer .huddleFooter .followLinks ul li a:hover {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 30%;
-        grid-template-columns: 1fr 30%;
+    grid-template-columns: 1fr 30%;
     gap: 2rem;
   }
 }
@@ -525,11 +528,11 @@ body .navCont nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding: 2rem;
   max-width: 1200px;
   margin: 0% auto;
@@ -549,9 +552,9 @@ body .navCont nav .ctaBtn button {
   transition: 0.3s ease background-color;
   font-size: 1rem;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   border: 1px solid #ff52bf;
   border-radius: 99px;
   padding: 0.45rem 1.5rem;

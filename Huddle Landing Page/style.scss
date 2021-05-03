@@ -176,15 +176,15 @@ body {
       max-width: 1200px;
       margin: 0% auto;
       padding: 5rem 0;
+      flex-direction: row-reverse;
       .textContainer {
         text-align: left;
         padding: 1rem;
         padding-left: 3rem;
       }
       &.flowingConversation {
-        padding-left: 0rem !important;
-        padding-right: 3rem;
-        flex-direction: row-reverse;
+        padding-right: 0rem !important;
+        flex-direction: row !important;
       }
     }
   }
