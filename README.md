@@ -23,6 +23,7 @@ This repository contains only [Frontend Mentor](https://www.frontendmentor.io/ch
 | 15   | [Social Proof Section](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Social%20Proof%20Section)                               |
 | 16   | [Static Job Listings](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Static%20Job%20Listings)                                 |
 | 17   | [Url Shortening](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/blob/main/Url%20Shortening/README.md)                                   |
+| 18   | [Huddle Landing Page](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Huddle%20Landing%20Page)                                 |
 
 **These Challenges are builded with HTML, CSS (or) SCSS, JAVASCRIPT. No frontend frameworks used!**
 
