@@ -1,0 +1,122 @@
+body main {
+  .productive {
+    margin-top: 4rem;
+    padding: 1.5rem;
+    &__image {
+      display: flex;
+      justify-content: center;
+      img {
+        width: 100%;
+        max-width: 33.93rem;
+      }
+    }
+
+    &__textHolder {
+      max-width: 670px;
+      margin: 0% auto;
+      @include breakPoint(desktop) {
+        margin: 0%;
+        margin-top: 2.5rem;
+      }
+      h2 {
+        text-align: center;
+        font-size: 1.1rem;
+        @include breakPoint(tablet) {
+          font-size: 2.5rem;
+        }
+        @include breakPoint(desktop) {
+          text-align: left;
+        }
+      }
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+        max-width: 600px;
+        @include breakPoint(tablet) {
+          font-size: 1.125rem;
+        }
+      }
+    }
+    .ctaBtn {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem 0;
+      @include breakPoint(tablet) {
+        justify-content: flex-start;
+      }
+      a {
+        color: $ModerateCyan;
+        padding: 0.47rem 0rem;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        border-bottom: 1px solid $ModerateCyan;
+        transition: 300ms ease-in-out opacity;
+        &:hover {
+          opacity: 0.75;
+        }
+      }
+    }
+    @include breakPoint(desktop) {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4rem !important;
+      max-width: 1440px;
+      margin: 0 auto;
+      margin-top: 5rem;
+    }
+  }
+}
+
+// Testimonial
+
+body main .testimonial {
+  margin: 0% auto;
+  margin-top: 3rem;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  max-width: 22.5rem;
+  @include breakPoint(tablet) {
+    margin-left: 0;
+    margin-top: 3rem;
+  }
+  > img {
+    width: 18px;
+  }
+  > p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  .user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 0.9rem;
+    img {
+      width: 40px;
+      border-radius: 50%;
+    }
+    h3,
+    p {
+      margin: 0%;
+    }
+    h3 {
+      font-size: 1rem;
+    }
+    p {
+      font-size: 0.8rem;
+      color: hsl(240, 4%, 58%);
+      margin-top: 3px;
+    }
+    .bio {
+      margin-left: 1rem;
+    }
+  }
+}

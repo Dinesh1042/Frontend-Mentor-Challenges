@@ -1,0 +1,130 @@
+body main .subscribe {
+  background: $DesaturatedBlue;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  margin-top: 3rem;
+  &__text {
+    max-width: 600px;
+    margin: 0% auto;
+    @include breakPoint(desktop) {
+      text-align: left;
+      p {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+
+  h1,
+  p {
+    color: #fff;
+  }
+
+  form {
+    margin-top: 2rem;
+    .inputContainer {
+      position: relative;
+      width: 100%;
+      input {
+        width: 80%;
+        padding: 0.475rem 1rem;
+        line-height: 1.5;
+        font-size: 1rem;
+        border: 2px solid $DesaturatedBlue;
+        border-radius: 0.35rem;
+        color: $VeryDarkBlue;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        outline-color: $VeryDarkBlue;
+
+        @include breakPoint(desktop) {
+          width: 100% !important;
+        }
+        @include breakPoint(tablet) {
+          width: 100%;
+        }
+      }
+      span {
+        position: absolute;
+        left: 10%;
+        font-size: 0.8rem;
+        color: $LightRed;
+        top: 100%;
+        display: none;
+        @include breakPoint(tablet) {
+          left: 0;
+        }
+      }
+    }
+    @include breakPoint(tablet) {
+      display: grid;
+      grid-template-columns: 1fr 32.5%;
+      gap: 1rem;
+      max-width: 600px;
+      margin: 0% auto;
+      margin-top: 2rem;
+    }
+    @include breakPoint(desktop) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 80%;
+      align-items: flex-start;
+      margin-right: 0%;
+    }
+    // From Error
+    &.error {
+      .inputContainer {
+        input {
+          border-color: $LightRed;
+          &::placeholder {
+            color: hsl(0, 94%, 79%);
+          }
+        }
+        span {
+          display: block;
+        }
+      }
+    }
+    button {
+      width: 80%;
+      border: none;
+      background-color: $BrightBlue;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      line-height: 1.5;
+      cursor: pointer;
+      border-radius: 0.35rem;
+      margin-top: 1.2rem;
+      transition: 300ms opacity ease-in-out;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      font-size: 1rem;
+      outline-color: $VeryDarkBlue;
+      @include breakPoint(tablet) {
+        margin-top: 0;
+        width: 100%;
+      }
+      @include breakPoint(desktop) {
+        display: flex;
+        width: unset;
+        margin-top: 0.1rem;
+      }
+      &:hover {
+        opacity: 0.75;
+      }
+    }
+  }
+  @include breakPoint(desktop) {
+    padding: 0%;
+    &__holder {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 5rem 6rem;
+      max-width: 1440px;
+      margin: 0% auto;
+    }
+    margin-top: 6.3rem;
+  }
+}

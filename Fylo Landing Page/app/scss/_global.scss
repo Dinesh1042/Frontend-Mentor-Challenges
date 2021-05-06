@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+$VeryDarkBlue: hsl(243, 87%, 12%);
+$DesaturatedBlue: hsl(238, 22%, 44%);
+$BrightBlue: hsl(224, 93%, 58%);
+$ModerateCyan: hsl(170, 45%, 43%);
+$LightGrayishBlue: hsl(240, 75%, 98%);
+$LightGray: hsl(0, 0%, 75%);
+$LightRed: hsl(0, 100%, 73%);
+
+body {
+  margin: 0%;
+  padding: 0%;
+  font-size: 1.125rem;
+  font-family: "Open Sans", sans-serif;
+  color: $DesaturatedBlue;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Raleway", sans-serif;
+  color: $VeryDarkBlue;
+}
+
+a:focus,
+button:focus,
+input:focus {
+  outline: 2px solid #bdbafa;
+}
+
+input,
+button {
+  font-family: "Open Sans", sans-serif;
+}
+
+$BreakPoints: (
+  "tablet": "40em",
+  "desktop": "60em",
+);
+
+@mixin breakPoint($size) {
+  @media (min-width: map-get($BreakPoints, $size)) {
+    @content;
+  }
+}

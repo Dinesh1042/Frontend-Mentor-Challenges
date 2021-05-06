@@ -1,0 +1,133 @@
+body main {
+  .hero {
+    padding: 2rem;
+    max-width: 1440px;
+    margin: 0% auto;
+    &__img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        max-width: 640px;
+        @include breakPoint(tablet) {
+          min-width: 400px;
+        }
+      }
+    }
+
+    &__textContent {
+      text-align: center;
+      max-width: 600px;
+      margin-top: 1.5rem;
+      margin: 0% auto;
+      @include breakPoint(tablet) {
+        margin: 0% auto;
+        margin-top: 3rem;
+      }
+      @include breakPoint(desktop) {
+        margin-top: 3rem;
+        margin-left: 1.68rem;
+      }
+      .hero__text {
+        h1 {
+          font-family: "Open Sans", sans-serif;
+          font-weight: bold;
+          font-size: 1.5rem;
+          color: $VeryDarkBlue;
+          @include breakPoint(tablet) {
+            font-size: 2.5rem;
+            margin-top: 0%;
+          }
+        }
+        p {
+          color: $DesaturatedBlue;
+          font-size: 1rem;
+          line-height: 1.5;
+          @include breakPoint(tablet) {
+            font-size: 1.125rem;
+          }
+        }
+      }
+
+      form {
+        margin-top: 2rem;
+        max-width: 535px;
+        .inputContainer {
+          position: relative;
+          input {
+            width: 100%;
+            padding: 0.475rem 1rem;
+            line-height: 1.5;
+            outline: none;
+            font-size: 1rem;
+            border: 2px solid $DesaturatedBlue;
+            border-radius: 0.25rem;
+            color: $VeryDarkBlue;
+            &:focus {
+              outline: 3px solid #bdbafa;
+            }
+          }
+          span {
+            position: absolute;
+            left: 0%;
+            font-size: 0.8rem;
+            color: $LightRed;
+            top: 100%;
+            display: none;
+          }
+        }
+        // From Error
+        &.error {
+          .inputContainer {
+            input {
+              border-color: $LightRed;
+              &::placeholder {
+                color: hsl(0, 94%, 79%);
+              }
+            }
+            span {
+              display: block;
+            }
+          }
+        }
+        button {
+          width: 100%;
+          border: none;
+          background-color: $BrightBlue;
+          color: #fff;
+          padding: 0.5rem 1rem;
+          line-height: 1.5;
+          cursor: pointer;
+          border-radius: 0.25rem;
+          margin-top: 1rem;
+          transition: 300ms opacity ease-in-out;
+          font-size: 1rem;
+          &:hover {
+            opacity: 0.75;
+          }
+        }
+        @include breakPoint(tablet) {
+          display: grid;
+          grid-template-columns: 1fr 32.5%;
+          gap: 1rem;
+          margin: 0% auto;
+          margin-top: 2rem;
+          button {
+            margin-top: 0;
+          }
+        }
+        @include breakPoint(desktop) {
+          margin-left: 0%;
+        }
+      }
+      @include breakPoint(desktop) {
+        text-align: left;
+      }
+    }
+    @include breakPoint(desktop) {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+}
