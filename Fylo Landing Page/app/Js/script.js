@@ -1,4 +1,4 @@
-const formsEl = document.querySelectorAll("#form");
+const formsEl = document.querySelectorAll(".form");
 
 formsEl.forEach((form) => form.addEventListener("submit", validateForm));
 
