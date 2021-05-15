@@ -1,0 +1,493 @@
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  margin: 0%;
+  padding: 0%;
+  padding: 2rem 0;
+}
+
+@media (max-width: 28rem) {
+  body {
+    padding: 0;
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin: 0%;
+}
+
+main {
+  max-width: 33.75rem;
+  width: 90%;
+  margin: 0% auto;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main > div,
+main header {
+  width: 100%;
+}
+
+main header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main header .title h1 {
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+  -webkit-transition: 1200ms ease;
+  transition: 1200ms ease;
+  -webkit-transition-property: color;
+  transition-property: color;
+}
+
+main header .theme__switcher {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main header .theme__switcher > p {
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin: 0%;
+  margin-right: 1.375rem;
+  margin-bottom: 0.1rem;
+  -webkit-transition: 1200ms ease;
+  transition: 1200ms ease;
+  -webkit-transition-property: color;
+  transition-property: color;
+}
+
+main header .theme__switcher .themeContainer {
+  width: 100%;
+}
+
+main header .theme__switcher .themeContainer > .nameLabels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5rem;
+}
+
+main header .theme__switcher .themeContainer > .nameLabels label {
+  color: #fff;
+  font-size: 0.875rem;
+  cursor: pointer;
+  -webkit-transition: 1200ms ease;
+  transition: 1200ms ease;
+  -webkit-transition-property: color;
+  transition-property: color;
+}
+
+main header .theme__switcher .themeContainer .themeSwitch {
+  position: relative;
+  width: 4.5rem;
+  height: 1.625rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+main header .theme__switcher .themeContainer .themeSwitch input {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+main header .theme__switcher .themeContainer .themeSwitch label {
+  width: 100%;
+  height: 100%;
+  background-color: #232c43;
+  cursor: pointer;
+  -webkit-transition: 1200ms ease;
+  transition: 1200ms ease;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 1000ms;
+          transition-duration: 1000ms;
+}
+
+main header .theme__switcher .themeContainer .themeSwitch label[for="theme3"] {
+  border-top-right-radius: 99px;
+  border-bottom-right-radius: 99px;
+}
+
+main header .theme__switcher .themeContainer .themeSwitch label[for="theme1"] {
+  border-top-left-radius: 99px;
+  border-bottom-left-radius: 99px;
+}
+
+main header .theme__switcher .themeContainer .themeSwitch .switch {
+  position: absolute;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: #d03f2f;
+  border-radius: 50%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 7%;
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+  cursor: pointer;
+}
+
+main header .theme__switcher .themeContainer .themeSwitch #theme1:checked ~ .switch {
+  left: 5%;
+}
+
+main header .theme__switcher .themeContainer .themeSwitch #theme2:checked ~ .switch {
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+main header .theme__switcher .themeContainer .themeSwitch #theme3:checked ~ .switch {
+  left: calc(95% - 1.25rem);
+}
+
+body main .displayContainer {
+  background-color: #182034;
+  border-radius: 0.5rem;
+  color: #fff;
+  position: relative;
+  text-align: right;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  height: 128px;
+  max-height: 128px;
+  -webkit-transition: 1200ms ease;
+  transition: 1200ms ease;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+}
+
+body main .displayContainer p {
+  margin: 0%;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  opacity: 0.75;
+  -webkit-transition: 1200ms ease;
+  transition: 1200ms ease;
+  -webkit-transition-property: color;
+  transition-property: color;
+}
+
+body main .displayContainer h2 {
+  font-size: 3rem;
+  margin-top: 1rem;
+  -webkit-transition: 1200ms ease;
+  transition: 1200ms ease;
+  -webkit-transition-property: color;
+  transition-property: color;
+}
+
+body main .displayContainer span {
+  position: absolute;
+  left: 3%;
+  top: 70%;
+  opacity: 0.5;
+  -webkit-transition: 1200ms ease;
+  transition: 1200ms ease;
+  -webkit-transition-property: color;
+  transition-property: color;
+}
+
+body main .buttonWrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: #232c43;
+  border-radius: 0.5rem;
+  margin-top: 1.43rem;
+  -webkit-transition: 1200ms ease;
+  transition: 1200ms ease;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+}
+
+@media (max-width: 28rem) {
+  body main .buttonWrapper {
+    padding: 1.2rem;
+    gap: 1.2rem;
+  }
+}
+
+body main .buttonWrapper button {
+  background-color: #b4a597;
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0%;
+  cursor: pointer;
+  outline-offset: 4px;
+  -webkit-transition: 1200ms ease;
+  transition: 1200ms ease;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  font-family: inherit;
+}
+
+body main .buttonWrapper button span {
+  display: block;
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  background-color: #eae3dc;
+  color: #444b5a;
+  -webkit-transition: 1200ms ease;
+  transition: 1200ms ease;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+  padding: 0.688rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+body main .buttonWrapper button:active span {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+body main .buttonWrapper button.reset {
+  grid-column: span 2;
+}
+
+body main .buttonWrapper button.equalTo {
+  grid-column: span 2;
+}
+
+body main .buttonWrapper button.equalTo span, body main .buttonWrapper button.reset span, body main .buttonWrapper button.delete span {
+  font-size: 1.25rem;
+}
+
+body main .buttonWrapper button.equalTo span, body main .buttonWrapper button.reset span {
+  padding: 1.16rem 1rem;
+}
+
+body main .buttonWrapper button.equalTo {
+  background-color: #93261a;
+}
+
+body main .buttonWrapper button.equalTo span {
+  background-color: #d03f2f;
+  color: #fff;
+}
+
+body main .buttonWrapper button.reset, body main .buttonWrapper button.delete {
+  background-color: #404e72;
+}
+
+body main .buttonWrapper button.reset span, body main .buttonWrapper button.delete span {
+  background-color: #637097;
+  color: #fff;
+}
+
+body {
+  position: relative;
+}
+
+body .themeBg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  z-index: -5;
+  -webkit-transition: 1500ms ease clip-path;
+  transition: 1500ms ease clip-path;
+}
+
+body .themeBg.active {
+  z-index: -2;
+  -webkit-clip-path: circle(100% at 50% 50%) !important;
+          clip-path: circle(100% at 50% 50%) !important;
+}
+
+body .themeBg#theme1Bg {
+  background: #3a4764;
+}
+
+body .themeBg#theme2Bg {
+  background: #e6e6e6;
+}
+
+body .themeBg#theme3Bg {
+  background: #160628;
+}
+
+body.theme2Bg-active main header .title h1 {
+  color: #35352c;
+}
+
+body.theme2Bg-active main header .theme__switcher > p {
+  color: #35352c;
+}
+
+body.theme2Bg-active main header .theme__switcher .nameLabels label {
+  color: #35352c;
+}
+
+body.theme2Bg-active main header .theme__switcher .themeSwitch label {
+  background-color: #d1cccc;
+}
+
+body.theme2Bg-active main .displayContainer {
+  background-color: #ededed;
+}
+
+body.theme2Bg-active main .displayContainer > h2,
+body.theme2Bg-active main .displayContainer span,
+body.theme2Bg-active main .displayContainer p {
+  color: #35352c;
+}
+
+body.theme2Bg-active main .buttonWrapper {
+  background-color: #d1cccc;
+}
+
+body.theme2Bg-active main .buttonWrapper > button {
+  background-color: #a69d91;
+}
+
+body.theme2Bg-active main .buttonWrapper > button span {
+  background-color: #e5e4e1;
+}
+
+body.theme2Bg-active main .buttonWrapper > button.reset, body.theme2Bg-active main .buttonWrapper > button.delete {
+  background-color: #1b5f65;
+}
+
+body.theme2Bg-active main .buttonWrapper > button.reset span, body.theme2Bg-active main .buttonWrapper > button.delete span {
+  background-color: #377f86;
+}
+
+body.theme2Bg-active main .buttonWrapper > button.equalTo {
+  background-color: #893901;
+}
+
+body.theme2Bg-active main .buttonWrapper > button.equalTo span {
+  background-color: #ca5502;
+}
+
+body.theme3Bg-active main header .title h1 {
+  color: #ffe53d;
+}
+
+body.theme3Bg-active main header .theme__switcher > p {
+  color: #ffe53d;
+}
+
+body.theme3Bg-active main header .theme__switcher .nameLabels label {
+  color: #ffe53d;
+}
+
+body.theme3Bg-active main header .theme__switcher .themeSwitch label {
+  background-color: #1d0934;
+}
+
+body.theme3Bg-active main header .theme__switcher .themeSwitch .switch {
+  background-color: #00e0d1;
+}
+
+body.theme3Bg-active main .displayContainer {
+  background-color: #1d0934;
+}
+
+body.theme3Bg-active main .displayContainer > h2,
+body.theme3Bg-active main .displayContainer span,
+body.theme3Bg-active main .displayContainer p {
+  color: #ffe53d;
+}
+
+body.theme3Bg-active main .buttonWrapper {
+  background-color: #1d0934;
+}
+
+body.theme3Bg-active main .buttonWrapper > button {
+  background-color: #871c9c;
+}
+
+body.theme3Bg-active main .buttonWrapper > button span {
+  background-color: #341c4f;
+  color: #ffe53d;
+}
+
+body.theme3Bg-active main .buttonWrapper > button.reset, body.theme3Bg-active main .buttonWrapper > button.delete {
+  background-color: #bc15f4;
+}
+
+body.theme3Bg-active main .buttonWrapper > button.reset span, body.theme3Bg-active main .buttonWrapper > button.delete span {
+  background-color: #58077d;
+}
+
+body.theme3Bg-active main .buttonWrapper > button.equalTo {
+  background-color: #6cf9f2;
+}
+
+body.theme3Bg-active main .buttonWrapper > button.equalTo span {
+  background-color: #00e0d1;
+  color: #1b2428;
+}
+/*# sourceMappingURL=style.css.map */

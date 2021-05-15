@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Calculator app</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <script defer src="./dist/script/script.js"></script>
+  </head>
+  <body class="theme1Bg-active">
+    <main>
+      <header>
+        <div class="title">
+          <h1>calc</h1>
+        </div>
+        <div class="theme__switcher">
+          <p>THEME</p>
+
+          <div class="themeContainer">
+            <div class="nameLabels">
+              <label for="theme1">1</label>
+              <label for="theme2">2</label>
+              <label for="theme3">3</label>
+            </div>
+            <div class="themeSwitch">
+              <input type="radio" id="theme1" name="theme" />
+              <input type="radio" id="theme2" name="theme" />
+              <input type="radio" id="theme3" name="theme" />
+              <label for="theme1"></label>
+              <label for="theme2"></label>
+              <label for="theme3"></label>
+              <div class="switch"></div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="displayContainer">
+        <p class="history" id="history"></p>
+        <h2 class="current" id="current">0</h2>
+        <span class="temp" id="temp"></span>
+      </div>
+
+      <div class="buttonWrapper">
+        <button data-value="7" class="number">
+          <span>7</span>
+        </button>
+
+        <button data-value="8" class="number">
+          <span>8</span>
+        </button>
+
+        <button data-value="9" class="number">
+          <span>9</span>
+        </button>
+
+        <button class="delete" id="deleteBtn">
+          <span> DEL </span>
+        </button>
+
+        <button data-value="4" class="number">
+          <span> 4 </span>
+        </button>
+
+        <button data-value="5" class="number">
+          <span> 5 </span>
+        </button>
+
+        <button data-value="6" class="number">
+          <span> 6 </span>
+        </button>
+
+        <button data-value="+" class="operator">
+          <span> + </span>
+        </button>
+
+        <button data-value="1" class="number">
+          <span> 1 </span>
+        </button>
+
+        <button data-value="2" class="number">
+          <span> 2 </span>
+        </button>
+
+        <button data-value="3" class="number">
+          <span> 3 </span>
+        </button>
+
+        <button data-value="-" class="operator">
+          <span> - </span>
+        </button>
+
+        <button data-value="." class="number">
+          <span> . </span>
+        </button>
+
+        <button data-value="0" class="number">
+          <span> 0 </span>
+        </button>
+
+        <button data-value="/" class="operator">
+          <span> / </span>
+        </button>
+
+        <button data-value="*" class="operator">
+          <span> x </span>
+        </button>
+
+        <button class="reset" id="resetBtn">
+          <span> RESET </span>
+        </button>
+
+        <button class="equalTo" id="equalToBtn">
+          <span> = </span>
+        </button>
+      </div>
+    </main>
+    <div class="themeBg active" id="theme1Bg"></div>
+    <div class="themeBg" id="theme2Bg"></div>
+    <div class="themeBg" id="theme3Bg"></div>
+  </body>
+</html>

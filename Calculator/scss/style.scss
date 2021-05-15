@@ -1,0 +1,430 @@
+@import "varaibles";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+@mixin transition($property) {
+  transition: 1200ms ease;
+  transition-property: $property;
+}
+
+@mixin mobile {
+  @media (max-width: 28rem) {
+    @content;
+  }
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  margin: 0%;
+  padding: 0%;
+  padding: 2rem 0;
+  @include mobile() {
+    padding: 0;
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin: 0%;
+}
+
+main {
+  max-width: 33.75rem;
+  width: 90%;
+  margin: 0% auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+// header
+
+main > div,
+main header {
+  width: 100%;
+}
+
+main header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  .title {
+    h1 {
+      font-size: 2rem;
+      color: #fff;
+      font-weight: 700;
+      margin-bottom: 0.1rem;
+      @include transition(color);
+    }
+  }
+  .theme__switcher {
+    display: flex;
+    align-items: flex-end;
+    > p {
+      color: #fff;
+      font-size: 0.875rem;
+      font-weight: 700;
+      margin: 0%;
+      margin-right: 1.375rem;
+      margin-bottom: 0.1rem;
+      @include transition(color);
+    }
+    .themeContainer {
+      width: 100%;
+      > .nameLabels {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem;
+        label {
+          color: #fff;
+          font-size: 0.875rem;
+          cursor: pointer;
+          @include transition(color);
+        }
+      }
+      .themeSwitch {
+        position: relative;
+        input {
+          position: absolute;
+          opacity: 0;
+          visibility: hidden;
+        }
+        width: 4.5rem;
+        height: 1.625rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        label {
+          width: 100%;
+          height: 100%;
+          background-color: $Verydarkdesaturatedblue2Theme1;
+          cursor: pointer;
+          @include transition(background-color);
+          transition-duration: 1000ms;
+          &[for="theme3"] {
+            border-top-right-radius: 99px;
+            border-bottom-right-radius: 99px;
+          }
+          &[for="theme1"] {
+            border-top-left-radius: 99px;
+            border-bottom-left-radius: 99px;
+          }
+        }
+        .switch {
+          position: absolute;
+          height: 1.25rem;
+          width: 1.25rem;
+          background-color: $RedSwitchTheme1;
+          border-radius: 50%;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 7%;
+          transition: 300ms ease;
+          cursor: pointer;
+        }
+        //  switch
+        #theme1:checked ~ .switch {
+          left: 5%;
+        }
+        #theme2:checked ~ .switch {
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+        }
+        #theme3:checked ~ .switch {
+          left: calc(95% - 1.25rem);
+        }
+      }
+    }
+  }
+}
+
+// Display
+
+body main .displayContainer {
+  background-color: $Verydarkdesaturatedblue3Theme1;
+  border-radius: 0.5rem;
+  color: #fff;
+  position: relative;
+  text-align: right;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  height: 128px;
+  max-height: 128px;
+  @include transition(background-color);
+
+  p {
+    margin: 0%;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    opacity: 0.75;
+    @include transition(color);
+  }
+  h2 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    @include transition(color);
+  }
+  span {
+    position: absolute;
+    left: 3%;
+    top: 70%;
+    opacity: 0.5;
+    @include transition(color);
+  }
+}
+
+// Buttons
+
+body main .buttonWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: $Verydarkdesaturatedblue2Theme1;
+  border-radius: 0.5rem;
+  margin-top: 1.43rem;
+  @include transition(background-color);
+
+  @include mobile() {
+    padding: 1.2rem;
+    gap: 1.2rem;
+  }
+
+  button {
+    background-color: $normalKeyShadowTheme1;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 0%;
+    cursor: pointer;
+    outline-offset: 4px;
+    @include transition(background-color);
+    font-family: inherit;
+    span {
+      display: block;
+      border-radius: 0.5rem;
+      font-size: 2rem;
+      background-color: $normalKeyBackgroundTheme1;
+      color: $textColorTheme1;
+      @include transition(background-color);
+      transition-property: color, background-color;
+      transform: translateY(-4px);
+      padding: 0.688rem;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      pointer-events: none;
+    }
+    &:active span {
+      transform: translateY(-2px);
+    }
+    &.reset {
+      grid-column: span 2;
+    }
+    &.equalTo {
+      grid-column: span 2;
+    }
+    &.equalTo,
+    &.reset,
+    &.delete {
+      span {
+        font-size: 1.25rem;
+      }
+    }
+    &.equalTo,
+    &.reset {
+      span {
+        padding: 1.16rem 1rem;
+      }
+    }
+    &.equalTo {
+      background-color: $EqualToKeyShadowTheme1;
+      span {
+        background-color: $EqualToKeyTheme1;
+        color: #fff;
+      }
+    }
+    &.reset,
+    &.delete {
+      background-color: $ResetKeyShadowTheme1;
+      span {
+        background-color: $ResetKeyTheme1;
+        color: #fff;
+      }
+    }
+  }
+}
+
+// Themes
+
+body {
+  position: relative;
+}
+
+body .themeBg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  left: 0%;
+  z-index: -5;
+  transition: 1500ms ease clip-path;
+  &.active {
+    z-index: -2;
+    clip-path: circle(100% at 50% 50%) !important;
+  }
+  &#theme1Bg {
+    background: $VerydarkdesaturatedblueTheme1;
+  }
+  &#theme2Bg {
+    background: hsl(0, 0%, 90%);
+  }
+  &#theme3Bg {
+    background: hsl(268, 75%, 9%);
+  }
+}
+
+// Theme 2
+
+body.theme2Bg-active main {
+  header {
+    .title {
+      h1 {
+        color: $textColorTheme2;
+      }
+    }
+    .theme__switcher {
+      > p {
+        color: $textColorTheme2;
+      }
+      .nameLabels {
+        label {
+          color: $textColorTheme2;
+        }
+      }
+      .themeSwitch {
+        label {
+          background-color: $Verydarkdesaturatedblue2Theme2;
+        }
+      }
+    }
+  }
+}
+
+// Theme 2 - display
+
+body.theme2Bg-active main {
+  .displayContainer {
+    background-color: $Verydarkdesaturatedblue3Theme2;
+    > h2,
+    span,
+    p {
+      color: $textColorTheme2;
+    }
+  }
+}
+
+// Keypad
+
+body.theme2Bg-active main .buttonWrapper {
+  background-color: $Verydarkdesaturatedblue2Theme2;
+
+  > button {
+    background-color: $normalKeyShadowTheme2;
+    span {
+      background-color: $normalKeyBackgroundTheme2;
+    }
+
+    &.reset,
+    &.delete {
+      background-color: $ResetKeyShadowTheme2;
+      span {
+        background-color: $ResetKeyTheme2;
+      }
+    }
+    &.equalTo {
+      background-color: $EqualToKeyShadowTheme2;
+      span {
+        background-color: $EqualToKeyTheme2;
+      }
+    }
+  }
+}
+
+// Theme 3
+
+body.theme3Bg-active main {
+  header {
+    .title {
+      h1 {
+        color: $LightYelloText;
+      }
+    }
+    .theme__switcher {
+      > p {
+        color: $LightYelloText;
+      }
+      .nameLabels {
+        label {
+          color: $LightYelloText;
+        }
+      }
+      .themeSwitch {
+        label {
+          background-color: $Verydarkdesaturatedblue3Theme3;
+        }
+        .switch {
+          background-color: $EqualToKeyTheme3;
+        }
+      }
+    }
+  }
+}
+
+// Theme 2 Display
+
+body.theme3Bg-active main {
+  .displayContainer {
+    background-color: $Verydarkdesaturatedblue3Theme3;
+    > h2,
+    span,
+    p {
+      color: $LightYelloText;
+    }
+  }
+}
+
+body.theme3Bg-active main .buttonWrapper {
+  background-color: $Verydarkdesaturatedblue3Theme3;
+
+  > button {
+    background-color: $normalKeyShadowTheme3;
+    span {
+      background-color: $normalKeyBackgroundTheme3;
+      color: $LightYelloText;
+    }
+
+    &.reset,
+    &.delete {
+      background-color: $ResetKeyShadowTheme3;
+      span {
+        background-color: $ResetKeyTheme3;
+      }
+    }
+    &.equalTo {
+      background-color: $EqualToKeyShadowTheme3;
+      span {
+        background-color: $EqualToKeyTheme3;
+        color: hsl(198, 20%, 13%);
+      }
+    }
+  }
+}
