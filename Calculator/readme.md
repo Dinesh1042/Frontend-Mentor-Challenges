@@ -7,7 +7,7 @@
 ### Links
 
 - [Github](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Calculator)
-- [Calculator live site](https://your-live-site-url.com)
+- [Calculator live site](https://calculator-one-kappa.vercel.app/)
 
 ## My process
 
@@ -26,5 +26,5 @@
 
 ## Author
 
-- Website - [Calculator App](https://www.your-site.com)
+- Website - [Calculator App](https://calculator-one-kappa.vercel.app/)
 - Frontend Mentor - [Dinesh1042](https://www.frontendmentor.io/profile/Dinesh1042)
