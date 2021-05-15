@@ -25,7 +25,7 @@ This repository contains only [Frontend Mentor](https://www.frontendmentor.io/ch
 | 17   | [Url Shortening](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/blob/main/Url%20Shortening/README.md)                                   |
 | 18   | [Huddle Landing Page](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Huddle%20Landing%20Page)                                 |
 | 19   | [Fylo Landing Page](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Fylo%20Landing%20Page)                                     |
-
+| 20   | [Calculator](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Calculator)                                                       |
 
 **These Challenges are builded with HTML, CSS (or) SCSS, JAVASCRIPT. No frontend frameworks used!**
 
