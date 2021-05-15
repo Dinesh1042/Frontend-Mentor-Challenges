@@ -6,7 +6,7 @@
 
 ### Links
 
-- [Github](https://your-solution-url.com)
+- [Github](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Calculator)
 - [Calculator live site](https://your-live-site-url.com)
 
 ## My process
