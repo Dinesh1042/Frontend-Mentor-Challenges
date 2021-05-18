@@ -1,0 +1,165 @@
+$MainBackground: hsl(233, 47%, 7%);
+$CardBackground: hsl(244, 38%, 16%);
+$Accent: hsl(277, 64%, 61%);
+$Heading: hsl(0, 0%, 100%);
+$Paragraph: hsla(0, 0%, 100%, 0.75);
+$StatsHeading: hsla(0, 0%, 100%, 0.6);
+@import "breakpoints";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Lexend Deca", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $MainBackground;
+  color: $Paragraph;
+}
+h1,
+h2,
+h3 {
+  font-family: "Inter", sans-serif;
+  color: $Heading;
+}
+
+//
+
+body .card {
+  display: flex;
+  justify-content: space-between;
+  max-height: 27.8125rem;
+  background: $CardBackground;
+  max-width: 69.375rem;
+  width: 90%;
+  border-radius: 0.5rem;
+
+  @include breakpoint(large) {
+    display: grid;
+    grid-template-columns: 1fr 40%;
+    overflow: hidden;
+    max-height: unset;
+  }
+  @include breakpoint(medium) {
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 37rem;
+    text-align: center;
+    margin: 4rem 0;
+  }
+}
+
+// Card Text
+
+body .card {
+  &__text {
+    padding: 4.4rem;
+    padding-top: 2.8rem;
+    @include breakpoint(small) {
+      padding: 2rem;
+    }
+    h1 {
+      font-size: 2.3rem;
+      letter-spacing: -0.28px;
+      margin-bottom: 0%;
+      font-weight: 550;
+      @include breakpoint(small) {
+        font-size: 1.8rem;
+      }
+      span {
+        color: $Accent;
+      }
+    }
+    p {
+      font-size: 0.9375rem;
+      width: 90%;
+      letter-spacing: -0.2px;
+      margin-top: 1.65rem;
+      line-height: 1.6;
+      font-weight: 300;
+      @include breakpoint(medium) {
+        width: 90%;
+        margin: 0% auto;
+        margin-top: 1.65rem;
+      }
+    }
+    .stats {
+      display: flex;
+      margin-top: 4.2rem;
+      justify-content: space-between;
+      width: 82%;
+      p {
+        font-family: "Inter", sans-serif;
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin: 0%;
+        color: $Heading;
+      }
+      span {
+        font-size: 0.875rem;
+        letter-spacing: -5%;
+        font-weight: lighter;
+        color: $Paragraph;
+      }
+      @include breakpoint(medium) {
+        margin: 0% auto;
+        margin-top: 4.2rem;
+      }
+      @include breakpoint(small) {
+        display: grid;
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+        padding-bottom: 1rem;
+        p {
+          margin: auto;
+        }
+      }
+    }
+  }
+}
+
+// Card Image
+
+body .card {
+  &__img {
+    background: $Accent;
+    border-radius: 0 0.5rem 0.5rem 0;
+    &::after {
+      content: url(../../images/image-header-desktop.jpg);
+      mix-blend-mode: multiply;
+      opacity: 0.75;
+    }
+  }
+  @include breakpoint(large) {
+    &__img {
+      position: relative;
+      &::after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(../../images/image-header-desktop.jpg);
+      }
+    }
+  }
+  @include breakpoint(medium) {
+    &__img {
+      border-radius: 0.5rem 0.5rem 0 0;
+      height: 16vw;
+      height: clamp(15rem, 45vw, 22rem);
+    }
+  }
+}
