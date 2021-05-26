@@ -27,6 +27,7 @@ This repository contains only [Frontend Mentor](https://www.frontendmentor.io/ch
 | 19   | [Fylo Landing Page](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Fylo%20Landing%20Page)                                     |
 | 20   | [Calculator](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Calculator)                                                       |
 | 21   | [Stats Preview](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Stats%20Preview)                                               |
+| 22   | [Project Tracker](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Project%20Tracking)                                          |
 
 
 **These Challenges are builded with HTML, CSS (or) SCSS, JAVASCRIPT. No frontend frameworks used!**
