@@ -1,0 +1,191 @@
+.header__nav {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 1.5rem;
+    background: $heroBg;
+
+    @include breakpoint(medium) {
+      padding: 2.5rem 2.5rem;
+      padding-top: 2.2rem;
+    }
+
+    > a img {
+      width: clamp(124px, 20vw, 170px);
+    }
+  }
+}
+
+// Hamburgar menu
+
+.header__nav .hamburgar__menu {
+  cursor: pointer;
+  height: 1.6rem;
+  width: 1.9rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  @include breakpoint(medium) {
+    display: none;
+  }
+
+  img {
+    position: absolute;
+    width: 2rem;
+    opacity: 0;
+    transition: 700ms ease;
+  }
+
+  .menu__line {
+    height: 2px;
+    width: 1.5rem;
+    background: $white;
+    pointer-events: none;
+    position: relative;
+    transition: 300ms ease opacity;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: $white;
+      pointer-events: none;
+    }
+    &::after {
+      top: 0.5rem;
+    }
+    &::before {
+      bottom: 0.5rem;
+    }
+  }
+
+  &:hover {
+    img {
+      opacity: 1;
+    }
+    .menu__line {
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    img {
+      transform: rotate(30deg);
+    }
+  }
+}
+
+// Main menu
+
+.header__menu {
+  position: absolute;
+  background: $white;
+  width: 88%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  top: 13%;
+  padding: 1.5rem;
+  padding-bottom: 2.4rem;
+  clip-path: circle(0% at 100% 0%);
+  transition: 450ms ease clip-path;
+  z-index: 10;
+
+  @include breakpoint(medium) {
+    position: static;
+    background: transparent;
+    transition: none;
+    clip-path: circle(100% at 50% 50%);
+    padding: 0%;
+    transform: none;
+    width: unset;
+    display: flex;
+    align-items: center;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  ul {
+    display: grid;
+    gap: 2.1rem;
+
+    @include breakpoint(medium) {
+      grid-template-columns: repeat(3, 1fr);
+      margin-right: 2.3rem;
+      gap: 2.4rem;
+    }
+  }
+  a {
+    font-size: 1.17rem;
+    letter-spacing: 0.01em;
+
+    color: $veryDarkGrayishBlue;
+
+    @include breakpoint(medium) {
+      color: $white;
+      opacity: 0.8;
+      transition: 300ms ease color;
+      &:hover {
+        opacity: 1;
+        color: $yellow;
+      }
+    }
+  }
+
+  .cta__btn {
+    margin-top: 2rem;
+    position: relative;
+
+    @include breakpoint(medium) {
+      margin-top: 0%;
+      margin: 0 0.6rem;
+    }
+
+    button {
+      display: inline-block;
+      padding: 1.1em 1.7em;
+      border: none;
+      font-size: 1rem;
+      background-color: $yellow;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: 300ms ease background-color, color 300ms ease;
+      color: $desaturatedBlue;
+      &:hover {
+        background-color: lighten($yellow, 20);
+      }
+      @include breakpoint(medium) {
+        background-color: $white;
+        &:hover {
+          color: #fff;
+          background-color: #ffffff28;
+        }
+      }
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    background: $white;
+    height: 27px;
+    width: 27px;
+    bottom: 99%;
+    right: 0%;
+    clip-path: polygon(100% 1%, 0% 100%, 100% 100%);
+  }
+}
+
+.header__nav {
+  &.nav-active {
+    .header__menu {
+      clip-path: circle(100% at 50% 50%);
+    }
+  }
+}

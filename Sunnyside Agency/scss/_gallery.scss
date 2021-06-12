@@ -1,0 +1,23 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 4rem;
+
+  @include breakpoint(medium) {
+    margin-top: 9rem;
+  }
+
+  img {
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    object-fit: cover;
+    max-height: 448px;
+  }
+
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(4, 1fr);
+    img {
+      aspect-ratio: auto;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.hero {
+  //   height: 90.5vh;
+  height: 55vh;
+  width: 100%;
+  background: $heroBg;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(-1px);
+
+  @include breakpoint(small) {
+    height: 70vh;
+  }
+  @include breakpoint(medium) {
+    height: 83.5vh;
+  }
+}
+
+.hero .orange__glass {
+  width: 115%;
+  z-index: -1;
+  position: absolute;
+  top: 54.5%;
+  left: 50.5%;
+  transform: translate(-50%);
+  transition: 300ms ease;
+  animation: 400ms ease rotate;
+  animation-delay: 300ms;
+
+  &:hover {
+    margin-top: 2rem;
+  }
+
+  @include breakpoint(small) {
+    width: 80%;
+    top: 55.5%;
+  }
+
+  @include breakpoint(medium) {
+    width: 70%;
+    top: 45.5%;
+  }
+
+  @include breakpoint(large) {
+    width: 60%;
+    top: 41.5%;
+  }
+}
+
+.hero {
+  text-align: center;
+  &__text {
+    margin-top: 3.1rem;
+
+    @include breakpoint(medium) {
+      margin-top: 3.7rem;
+    }
+
+    h1 {
+      color: $white;
+    }
+    img {
+      z-index: 1;
+      margin-top: 1rem;
+
+      @include breakpoint(medium) {
+        margin-top: 3rem;
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: translate(-50%) rotate(30deg);
+  }
+}

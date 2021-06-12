@@ -1,0 +1,53 @@
+.footer__wrapper {
+  padding: 3rem 2.5rem;
+  padding-bottom: 5rem;
+  background: $moderateCyan;
+  text-align: center;
+
+  @include breakpoint(medium) {
+    padding: 3.5rem 2.5rem;
+    padding-bottom: 5rem;
+  }
+
+  a > img {
+    margin-top: 1rem;
+    width: 175px;
+  }
+
+  .links {
+    margin-top: 2.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0% auto;
+    max-width: 300px;
+    margin-top: 2.3rem;
+
+    a {
+      color: lighten($desaturatedCyan, 3);
+      transform: scaleY(1.1);
+      transition: 300ms ease color;
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+
+  .socialLinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 10rem;
+    margin: 0% auto;
+    margin-top: 5.5rem;
+    i {
+      font-size: 1.5rem;
+      color: $desaturatedCyan;
+      transition: 450ms ease transform, 450ms ease color;
+      &:hover {
+        color: $white;
+        transform: scale(1.3);
+      }
+    }
+  }
+}

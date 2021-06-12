@@ -1,0 +1,82 @@
+.testimonial__container {
+  margin-top: 1.7rem;
+  padding: 1rem;
+  text-align: center;
+
+  @include breakpoint(medium) {
+    max-width: 1170px;
+    margin: 0% auto;
+    margin-top: 5rem;
+  }
+  @include breakpoint(large) {
+    max-width: 1170px;
+    margin: 0% auto;
+    margin-top: 7.7rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+    letter-spacing: 0.28em;
+    color: $darkGrayishBlue;
+
+    @include breakpoint(medium) {
+      // margin-top: 1.25rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  .testimonial {
+    margin-top: 3.6rem;
+    padding: 0.5rem;
+    display: grid;
+    gap: 4.4rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+    @include breakpoint(medium) {
+      margin-top: 4.4rem;
+      gap: 1.5rem;
+    }
+
+    .card {
+      img {
+        border-radius: 100%;
+        width: 70px;
+      }
+
+      p {
+        max-width: 50ch;
+        margin: 0% auto;
+        margin-top: 1.85rem;
+        transform: scaleY(1.1);
+        line-height: 1.65;
+        color: $veryDarkGrayishBlue;
+
+        @include breakpoint(medium) {
+          margin-top: 3.7rem;
+        }
+      }
+
+      .author {
+        margin-top: 2.4rem;
+
+        @include breakpoint(medium) {
+          margin-top: 4.4rem;
+        }
+
+        h3 {
+          margin: 0rem;
+          font-size: 1.125rem;
+          font-weight: 900;
+          color: $desaturatedBlue;
+        }
+
+        p {
+          margin: 0% auto;
+          font-size: 0.9rem;
+          margin-top: 0.5rem;
+          color: $grayishBlue;
+        }
+      }
+    }
+  }
+}
