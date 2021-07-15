@@ -1,0 +1,260 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  width: 100%;
+  min-height: 100vh;
+  @include breakpoint(medium) {
+    justify-content: center;
+    margin-top: 0rem;
+    position: relative;
+    padding-top: 2rem;
+  }
+}
+
+.brand-logo {
+  @include breakpoint(medium) {
+    margin-bottom: 9.5rem;
+  }
+}
+
+.form-container {
+  background: $white;
+  padding: 2rem 1.5rem;
+  border-radius: 1.25rem;
+  margin-top: 2.3rem;
+  max-width: 31.25rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  @include breakpoint(medium) {
+    display: grid;
+    grid-template-columns: auto 48%;
+    width: 90%;
+    max-width: 57.5rem;
+    padding: 2rem;
+    gap: 2rem;
+    margin-top: 2rem;
+    transform: translateY(-6.5rem);
+  }
+}
+
+.row1 {
+  padding: 0 0.5rem;
+  @include breakpoint(medium) {
+    padding: 0rem 1rem;
+    padding-top: 1rem;
+  }
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  position: relative;
+  @include breakpoint(medium) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.form-label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: $dark-grayish-cyan-2;
+  cursor: default;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.15rem 1rem;
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: right;
+  border: 2px solid transparent;
+  border-radius: 0.25rem;
+  outline: none;
+  background-color: $input-bg; // 203 50 97
+  color: $very-dark-cyan;
+  &:focus {
+    border-color: $strong-cyan;
+  }
+
+  &.error {
+    border-color: $danger;
+  }
+}
+
+.form-control {
+  &.icon {
+    background-repeat: no-repeat;
+    background-position: left calc(1rem + 0.1875rem) center;
+    background-size: auto;
+  }
+  &.icon-dollar {
+    background-image: url(../../images/icon-dollar.svg);
+  }
+  &.icon-person {
+    background-image: url(../../images/icon-person.svg);
+  }
+}
+
+.invalid-feedback {
+  position: absolute;
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: $danger;
+  top: 0;
+  text-align: right;
+}
+
+.form-control.error + .invalid-feedback {
+  display: block;
+}
+
+// Select Tip
+
+.form-check-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.875rem;
+  margin-top: 0.55rem;
+
+  @include breakpoint(medium) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  label {
+    cursor: pointer;
+    border-radius: 0.3rem;
+    overflow: hidden;
+    position: relative;
+  }
+
+  input[type="radio"] {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: -100;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  span {
+    background-color: $very-dark-cyan;
+    color: $white;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.4rem;
+    text-align: center;
+    transition: 300ms ease background-color, 300ms ease color;
+    user-select: none;
+    width: 100%;
+  }
+
+  input[type="radio"]:checked + span {
+    background-color: $strong-cyan;
+    color: $very-dark-cyan;
+  }
+
+  .form-input input {
+    height: 100%;
+    & + .invalid-feedback {
+      display: none;
+    }
+  }
+}
+
+// Total People
+
+.form-group.total-people {
+  margin-top: 2rem;
+  @include breakpoint(medium) {
+    margin-top: 2.3rem;
+  }
+}
+
+// Row - 2
+
+.row2 {
+  margin-top: 2.3rem;
+  background-color: $very-dark-cyan;
+  border-radius: 0.7rem;
+  padding: 2.4rem 1.5rem;
+  padding-bottom: 1.5rem;
+  @include breakpoint(medium) {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.8rem 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .col {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  p {
+    margin: 0%;
+  }
+
+  .content {
+    p {
+      font-weight: bold;
+      color: $white;
+    }
+    span {
+      font-size: 0.8rem;
+      font-weight: bold;
+      color: $dark-grayish-cyan-2;
+    }
+  }
+
+  .amount {
+    display: flex;
+
+    p,
+    span {
+      font-size: 2rem;
+      font-weight: bold;
+      color: $strong-cyan;
+      @include breakpoint(medium) {
+        font-size: 2.9rem;
+      }
+    }
+  }
+
+  .col2 {
+    margin-top: 1.2rem;
+    @include breakpoint(medium) {
+      margin-top: 1.65rem;
+    }
+  }
+
+  .cta-reset {
+    margin-top: 2rem;
+    .btn-reset {
+      display: block;
+      width: 100%;
+      font-size: 1.2rem;
+      font-weight: bold;
+      font-family: inherit;
+      padding: 0.5rem;
+      border: none;
+      outline: none;
+      background-color: $strong-cyan;
+      color: $very-dark-cyan;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      transition: 300ms ease background-color;
+      &:hover,
+      &:focus {
+        background-color: lighten($strong-cyan, 20);
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator - Frontend Mentor</title>
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./dist/css/style.css" />
+    <script defer src="./dist/script/main.bundle.js"></script>
+  </head>
+  <body>
+    <section class="hero">
+      <header class="brand-logo">
+        <a href="/">
+          <img src="./images/logo.svg" alt="splitter" />
+        </a>
+      </header>
+      <form class="form-container" autocomplete="off" id="form">
+        <div class="row row1">
+          <div class="form-group">
+            <label class="form-label" for="bill">Bill</label>
+            <input
+              type="number"
+              id="bill"
+              class="form-control icon icon-dollar"
+              name="billAmount"
+              min="1"
+              data-inputName="Bill amount"
+            />
+            <div class="invalid-feedback">This is required</div>
+          </div>
+          <div class="form-group">
+            <p class="form-label">Select Tip %</p>
+            <div class="form-check-wrapper">
+              <label>
+                <input type="radio" name="tip" class="form-check" value="5" />
+                <span>5%</span>
+              </label>
+              <label>
+                <input type="radio" name="tip" class="form-check" value="10" />
+                <span>10%</span>
+              </label>
+              <label>
+                <input type="radio" name="tip" class="form-check" value="15" />
+                <span>15%</span>
+              </label>
+              <label>
+                <input type="radio" name="tip" class="form-check" value="25" />
+                <span>25%</span>
+              </label>
+              <label>
+                <input type="radio" name="tip" class="form-check" value="50" />
+                <span>50%</span>
+              </label>
+              <div class="form-input">
+                <input
+                  type="number"
+                  name="customTip"
+                  id="customTip"
+                  placeholder="Custom"
+                  class="form-control"
+                  min="1"
+                />
+                <div class="invalid-feedback">This is required</div>
+              </div>
+            </div>
+          </div>
+          <div class="form-group total-people">
+            <label class="form-label" for="noOfPeople">Number of People</label>
+            <input
+              type="number"
+              name="noOfPeople"
+              id="noOfPeople"
+              class="form-control icon icon-person"
+              min="1"
+              data-inputName="Number of People"
+            />
+            <div class="invalid-feedback">This is required</div>
+          </div>
+        </div>
+        <div class="row row2">
+          <div class="total-wrapper">
+            <div class="col col1">
+              <div class="content">
+                <p>Tip Amount</p>
+                <span>/ person</span>
+              </div>
+
+              <div class="amount">
+                <span>$</span>
+                <p id="tipAmount">0.00</p>
+              </div>
+            </div>
+            <div class="col col2">
+              <div class="content">
+                <p>Total</p>
+                <span>/ person</span>
+              </div>
+
+              <div class="amount">
+                <span>$</span>
+                <p id="totalTipAmount">0.00</p>
+              </div>
+            </div>
+          </div>
+          <div class="cta-reset">
+            <button class="btn btn-reset" type="reset">RESET</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
