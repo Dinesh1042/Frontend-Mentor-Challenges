@@ -29,6 +29,7 @@ This repository contains only [Frontend Mentor](https://www.frontendmentor.io/ch
 | 21   | [Stats Preview](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Stats%20Preview)                                               |
 | 22   | [Project Tracker](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Project%20Tracking)                                          |
 | 23   | [SunnySide Agency](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Sunnyside%20Agency)                                         |
+| 24   | [Tip Calculator](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Tip%20Calculator)                                             |
 
 
 **These Challenges are builded with HTML, CSS (or) SCSS, JAVASCRIPT. No frontend frameworks used!**
