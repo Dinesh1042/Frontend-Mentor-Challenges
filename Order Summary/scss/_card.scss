@@ -1,0 +1,148 @@
+.card {
+  background-color: #fff;
+  border-radius: 1.3125rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  max-width: 28.125rem;
+  overflow: hidden;
+  width: 95%;
+}
+
+.card-body {
+  padding: 2rem;
+  padding-bottom: 1rem;
+  @include breakPoint() {
+    padding: 3rem;
+    padding-bottom: 2rem;
+  }
+}
+
+.card-title {
+  color: $dark-blue;
+  font-size: 1.62rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  margin: 0;
+  text-align: center;
+}
+
+.card-text {
+  color: $desaturated-blue;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.005em;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.btn {
+  background-color: #fff;
+  border-radius: 0.45rem;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-family: inherit;
+  font-size: 0.98rem;
+  font-weight: 700;
+  outline: none;
+  padding: 0.9rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: 300ms ease background-color;
+  width: 100%;
+}
+
+.bg-blue {
+  background-color: $bright-blue;
+  margin-top: 2rem;
+  min-height: 50px;
+  position: relative;
+
+  div {
+    left: 0;
+    position: absolute;
+    right: auto;
+    transition: 300ms;
+    width: 100%;
+  }
+
+  .hidden-content {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+  &:focus,
+  &:hover {
+    background-color: $purple;
+    .hidden-content {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .visible-content {
+      opacity: 0;
+      transform: scale(0.75);
+    }
+  }
+}
+
+.bg-transparent {
+  background-color: transparent;
+  color: $desaturated-blue;
+  font-size: 1rem;
+  font-weight: 900;
+  margin-top: 1.2rem;
+  transition: 300ms ease opacity;
+  &:focus {
+    box-shadow: 0 0 3px $desaturated-blue;
+    opacity: 0.75;
+  }
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+.plan-wrap {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.3rem;
+  padding: 1.5rem;
+  .col-1 {
+    align-items: center;
+    display: flex;
+    .plan-text {
+      margin-left: 1.2rem;
+    }
+    p {
+      color: $dark-blue;
+      font-size: 1rem;
+      font-weight: 900;
+      letter-spacing: 0.005rem;
+      margin: 0;
+    }
+    span {
+      color: $desaturated-blue;
+      display: inline-block;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+  }
+  .col-2 {
+    a {
+      border-radius: 0.25rem;
+      border: 1px solid transparent;
+      color: $dark-blue;
+      font-size: 0.9rem;
+      outline: none;
+      padding: 0.125rem;
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: $purple;
+      }
+      &:focus {
+        border-color: $desaturated-blue;
+      }
+    }
+  }
+}
