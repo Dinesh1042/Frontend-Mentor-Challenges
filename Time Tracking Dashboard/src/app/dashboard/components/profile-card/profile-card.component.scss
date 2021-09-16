@@ -1,0 +1,87 @@
+@import "src/scss/_variables.scss";
+@import "src/scss/_breakpoint.scss";
+
+.card {
+  background: $dark-blue;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-body {
+  background: $blue;
+  border-radius: 1rem;
+  padding: 1.8rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  @include breakPoint(lg) {
+    flex-direction: column;
+    padding: 2.8rem 2rem;
+    align-items: unset;
+  }
+  .card-img {
+    display: flex;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    width: 4rem;
+    transform: translateX(-3px);
+    @include breakPoint(sm) {
+      width: 4.875rem;
+    }
+    img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+    }
+  }
+  .card-text {
+    @include breakPoint(lg) {
+      margin-top: 1.7rem;
+    }
+    span {
+      color: $pale-blue;
+      font-size: 0.9375rem;
+    }
+    .card-title {
+      color: #fff;
+      font-size: 2.5rem;
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      font-weight: normal;
+      letter-spacing: 0.02em;
+      margin-top: 1rem;
+      margin: 0;
+    }
+  }
+}
+
+.card-footer {
+  padding: 2rem;
+  .list-group {
+    margin: 0;
+    display: flex;
+    gap: 1.625rem;
+    justify-content: space-between;
+
+    @include breakPoint(sm) {
+      justify-content: space-around;
+    }
+
+    @include breakPoint(lg) {
+      justify-content: unset;
+      flex-direction: column;
+    }
+
+    .list-group-item a {
+      color: $pale-blue;
+      font-size: 1rem;
+      transition: 200ms ease color;
+      &:focus,
+      &:hover,
+      &.active {
+        color: #fff;
+      }
+    }
+  }
+}
