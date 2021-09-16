@@ -1,0 +1,24 @@
+<div class="card" *ngIf="user$ | async as user">
+  <div class="card-body">
+    <div class="card-img">
+      <img [src]="user.photoURL" [alt]="user.name" />
+    </div>
+    <div class="card-text">
+      <span>Report for</span>
+      <h1 class="card-title">{{ user.name }}</h1>
+    </div>
+  </div>
+  <div class="card-footer">
+    <ul class="list-group">
+      <li class="list-group-item">
+        <a routerLink="/report/daily" routerLinkActive="active">Daily</a>
+      </li>
+      <li class="list-group-item">
+        <a routerLink="/report/weekly" routerLinkActive="active">Weekly</a>
+      </li>
+      <li class="list-group-item">
+        <a routerLink="/report/monthly" routerLinkActive="active">Monthly</a>
+      </li>
+    </ul>
+  </div>
+</div>

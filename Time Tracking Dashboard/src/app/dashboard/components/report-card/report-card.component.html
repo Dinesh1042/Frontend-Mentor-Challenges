@@ -1,0 +1,24 @@
+<div class="card" *ngIf="report" [style.background]="report.background">
+  <div class="card-header">
+    <div
+      class="icon"
+      [style.backgroundImage]="'url(' + report.icon + ')'"
+      @pulse
+    ></div>
+  </div>
+  <div class="card-body">
+    <div class="card-body-top">
+      <h5 class="card-title">{{ report.title }}</h5>
+      <button class="btn btn-primary">
+        <img src="assets/icons/icon-ellipsis.svg" />
+      </button>
+    </div>
+    <div class="card-text" *ngIf="timeFrame">
+      <h2><span [numberCountAnimation]="timeFrame.current"></span>hrs</h2>
+      <p>
+        Last {{ modifyTimeFrame(timeFrame.timeFrame) }} -
+        <span [numberCountAnimation]="timeFrame.previous"></span>hrs
+      </p>
+    </div>
+  </div>
+</div>
