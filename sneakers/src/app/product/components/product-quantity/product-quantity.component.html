@@ -1,0 +1,21 @@
+<div class="cta-btns">
+  <div class="cart-quantity-btn">
+    <button (click)="decreaseProductQuantity()" class="btn">
+      <img src="assets/icons/icon-minus.svg" alt="" />
+    </button>
+    <span class="quantity">
+      {{ shoppingCartItem?.quantity || localQuantity }}
+    </span>
+    <button (click)="increaseProductQuantity()" class="btn">
+      <img src="assets/icons/icon-plus.svg" alt="" />
+    </button>
+  </div>
+  <button
+    [disabled]="!shoppingCartItem && !localQuantity"
+    (click)="shoppingCartItem ? removeFromCart() : addToCart()"
+    class="btn btn-cart"
+  >
+    <img src="assets/icons/icon-cart-white.svg" alt="" />
+    <span>{{ shoppingCartItem ? "Remove from cart" : "Add to cart" }}</span>
+  </button>
+</div>

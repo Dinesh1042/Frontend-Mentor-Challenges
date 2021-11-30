@@ -1,0 +1,128 @@
+@import "src/scss/_variables.scss";
+@import "src/scss/_breakpoints.scss";
+
+.main-img {
+  display: none;
+  @include breakpoint(md) {
+    display: flex;
+    border-radius: 1rem;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@include breakpoint(md) {
+  .carousel {
+    max-width: 27.8125rem;
+  }
+}
+
+.carousel-thumbnails {
+  display: none;
+  @include breakpoint(md) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+    .slide {
+      user-select: none;
+      display: flex;
+      border-radius: 0.5rem;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: 250ms ease-in-out opacity;
+      &.active {
+        border-color: $orange;
+        img {
+          opacity: 0.5;
+          &:hover {
+            opacity: 0.5;
+          }
+        }
+      }
+      &:hover {
+        img {
+          opacity: 0.75;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.swiper {
+  height: 300px;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.swiper-carousel {
+  position: relative;
+  .carousel-navigation {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    user-select: none;
+    pointer-events: none;
+    .btn {
+      border: none;
+      border-radius: 50%;
+      padding: 0.8rem 1rem;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1/1;
+      transition: 300ms ease background-color, 300ms ease transform;
+      cursor: pointer;
+      pointer-events: all;
+
+      img {
+        width: 0.6rem;
+      }
+
+      &.nav {
+        &-next {
+          img {
+            transform: translateX(1px);
+          }
+        }
+        &-prev {
+          img {
+            transform: translateX(-1px);
+          }
+        }
+      }
+
+      &.in-active {
+        opacity: 0.75;
+        cursor: default;
+      }
+
+      &:not(.in-active):hover {
+        background-color: lighten($orange, 30);
+        transform: scale(1.05);
+      }
+    }
+  }
+  @include breakpoint(md) {
+    display: none;
+  }
+}

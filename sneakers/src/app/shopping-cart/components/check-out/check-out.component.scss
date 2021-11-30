@@ -1,0 +1,62 @@
+@import "src/scss/_variables.scss";
+@import "src/scss/_breakpoints.scss";
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 1.5rem;
+  @include breakpoint(xl) {
+    padding-inline: 0;
+  }
+}
+
+header {
+  h2 {
+    margin: 0;
+  }
+  margin-bottom: 1.5rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  .col-1 {
+    order: 1;
+  }
+  @include breakpoint(md) {
+    .col-1 {
+      order: unset;
+    }
+    grid-template-columns: 50% 1fr;
+  }
+  @include breakpoint(lg) {
+    grid-template-columns: 55% 1fr;
+  }
+  @include breakpoint(xl) {
+    grid-template-columns: 60% 1fr;
+  }
+}
+
+.empty-cart {
+  text-align: center;
+  margin-top: 1rem;
+  &-img img {
+    width: 100%;
+    max-width: 350px;
+  }
+  h5 {
+    margin-block: 1rem;
+    font-size: 1.5rem;
+  }
+  p {
+    max-width: 30ch;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  .btn {
+    margin: 0 auto;
+    width: fit-content;
+  }
+}

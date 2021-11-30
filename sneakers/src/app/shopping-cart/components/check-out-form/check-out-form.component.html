@@ -1,0 +1,41 @@
+<form [formGroup]="shippingForm" class="form" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name" class="form-label">Name</label>
+    <input formControlName="name" class="form-control" id="name" type="text" />
+
+    <div class="invalid-feedback">Name is required.</div>
+  </div>
+
+  <div class="form-group">
+    <label for="doorNo" class="form-label">Door no</label>
+    <input
+      formControlName="doorNo"
+      class="form-control"
+      id="doorNo"
+      type="number"
+    />
+    <div class="invalid-feedback">Door no is required.</div>
+  </div>
+  <div class="form-group">
+    <label for="address" class="form-label">Address</label>
+    <input
+      formControlName="address"
+      class="form-control"
+      id="address"
+      type="text"
+    />
+    <div class="invalid-feedback">Address is required.</div>
+  </div>
+  <div class="form-group">
+    <label for="city" class="form-label">City</label>
+    <input formControlName="city" class="form-control" id="city" type="text" />
+    <div class="invalid-feedback">City is required.</div>
+  </div>
+  <button
+    type="submit"
+    [disabled]="shippingForm.invalid"
+    class="btn btn-primary"
+  >
+    Place Order
+  </button>
+</form>

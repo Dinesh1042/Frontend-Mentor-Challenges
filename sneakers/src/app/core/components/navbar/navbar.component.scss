@@ -1,0 +1,202 @@
+@import "src/scss/_variables.scss";
+@import "src/scss/_breakpoints.scss";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.02rem 1.4rem;
+  padding-left: 1.1rem;
+  max-width: $max-width;
+  margin: 0 auto;
+  position: relative;
+  @include breakpoint(md) {
+    padding: 1.8rem 0;
+    margin: 0 auto;
+    border-bottom: 1px solid $gray-300;
+  }
+}
+
+@include breakpoint(md) {
+  .navbar {
+    padding-inline: 1.4rem;
+  }
+}
+
+.navbar-brand {
+  margin-left: 0.7rem;
+  @include breakpoint(md) {
+    margin-left: 0;
+  }
+}
+
+.navbar-collapse {
+  position: fixed;
+  height: 100vh;
+  width: 66%;
+  background: $white;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  padding: 1.1rem;
+  transform: translateX(-100%);
+  nav-index: -1;
+  transition: 800ms ease transform, 500ms ease opacity;
+  max-width: 350px;
+  opacity: 0;
+  // TODO: Disable table index when nav is in-active
+  .list-group {
+    margin-top: 2.9rem;
+    margin-left: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    &-item {
+      position: relative;
+      a {
+        font-weight: bold;
+        color: $darkGrayishBlue;
+        letter-spacing: 0.07em;
+        transition: 200ms ease color;
+        &:hover,
+        &:focus {
+          color: $orange;
+        }
+        @include breakpoint(md) {
+          font-size: 0.9rem;
+          font-weight: normal;
+          letter-spacing: 0.04em;
+          &:hover {
+            color: $veryDarkBlue;
+          }
+        }
+      }
+      @include breakpoint(md) {
+        padding: 0;
+      }
+    }
+    @include breakpoint(md) {
+      flex-direction: row;
+      margin-top: unset;
+      margin-left: unset;
+      padding: unset;
+      margin: 0;
+      gap: 2rem;
+      height: 100%;
+      &-item {
+        height: 100%;
+      }
+    }
+  }
+  &.active {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+  @include breakpoint(md) {
+    position: static;
+    height: unset;
+    width: unset;
+    background: $white;
+    z-index: unset;
+    transform: unset;
+    transition: none;
+    opacity: 1;
+    max-width: unset;
+    margin-left: 1rem;
+    padding: 0;
+  }
+  @include breakpoint(lg) {
+    margin-left: 3.6rem;
+  }
+}
+
+.btn {
+  border: none;
+  background-color: transparent;
+  display: flex;
+  cursor: pointer;
+  padding: 0.45rem;
+  border-radius: 0.25rem;
+  transition: 200ms ease background-color;
+  &:hover,
+  &:focus {
+    background-color: $gray-200;
+  }
+}
+
+.navbar-col-1 {
+  display: flex;
+  align-items: flex-start;
+}
+
+.navbar-col-2 {
+  display: flex;
+  align-items: center;
+  .shopping-cart {
+    position: relative;
+    margin-right: 0.9rem;
+    &-quantity {
+      position: absolute;
+      background-color: $orange;
+      color: $white;
+      font-weight: bold;
+      padding: 0.1rem 0.5rem;
+      border-radius: 99px;
+      top: 0;
+      right: 0;
+      font-size: 0.8rem;
+    }
+    @include breakpoint(md) {
+      margin-right: 2.2rem;
+    }
+  }
+  .user {
+    display: flex;
+  }
+  .user-img {
+    width: 1.8rem;
+    width: clamp(1.8rem, 7vw, 3.4rem);
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: 200ms ease border-color;
+    &:hover {
+      border-color: $orange;
+    }
+  }
+}
+
+.backdrop {
+  background-color: transparentize($black, 0.25);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 15;
+  top: 0;
+  left: 0;
+  display: none;
+  &.active {
+    display: unset;
+  }
+}
+
+.nav-spy {
+  position: absolute;
+  display: none;
+  @include breakpoint(md) {
+    display: unset;
+    background-color: $orange;
+    transition: 650ms ease-in-out left, 500ms ease-in-out opacity,
+      350ms ease-in-out width;
+    bottom: 0;
+    height: 3px;
+    border-radius: 3px;
+  }
+}
+
+@include breakpoint(md) {
+  .navbar-toggler,
+  .btn-close {
+    display: none;
+  }
+}

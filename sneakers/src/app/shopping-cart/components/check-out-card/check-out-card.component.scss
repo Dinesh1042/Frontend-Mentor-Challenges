@@ -1,0 +1,122 @@
+@import "src/scss/_variables.scss";
+@import "src/scss/_breakpoints.scss";
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0.5rem);
+  z-index: 40;
+  width: 100%;
+  @include breakpoint(sm) {
+    justify-content: flex-end;
+    transform: translate(-50%, -0.5rem);
+    padding-right: 1.5rem;
+  }
+  @include breakpoint(xl) {
+    padding-right: 0;
+  }
+}
+
+.card {
+  background-color: $white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 95%;
+  @include breakpoint(sm) {
+    max-width: 22.5rem;
+  }
+  border-radius: 0.5rem;
+  &-header {
+    padding: 1.2rem;
+    border-bottom: 1px solid $gray-200;
+    h5 {
+      margin: 0;
+      font-size: 1rem;
+      color: $veryDarkBlue;
+    }
+  }
+  &-body {
+    padding: 1.5rem 1.2rem;
+
+    .cart-list {
+      margin: 0;
+    }
+
+    .cart-list-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      p {
+        margin: 0;
+        font-size: 1rem;
+      }
+
+      .col-1 {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        .cart-item-price-wrap {
+          display: flex;
+          gap: 0.5rem;
+          margin-top: 0.4rem;
+        }
+        .cart-img {
+          border-radius: 0.25rem;
+          overflow: hidden;
+          display: flex;
+          img {
+            width: 50px;
+          }
+        }
+      }
+
+      .col-2 {
+        .btn-remove {
+          border: none;
+          background-color: transparent;
+          display: flex;
+          padding: 0.5rem;
+          cursor: pointer;
+          border-radius: 0.25rem;
+          transition: 250ms ease background-color;
+          #deleteIcon {
+            transition: 250ms ease-in-out fill;
+          }
+          &:hover {
+            background-color: transparentize($red, 0.85);
+            #deleteIcon {
+              fill: $red;
+            }
+          }
+          &:focus {
+            outline-color: $red;
+            outline-width: 1px;
+            outline-style: solid;
+            background-color: transparentize($red, 0.85);
+            #deleteIcon {
+              fill: $red;
+            }
+          }
+        }
+      }
+    }
+    .empty-cart {
+      p {
+        text-align: center;
+        margin-block: 3rem;
+      }
+    }
+  }
+
+  &-footer {
+    padding-inline: 1.2rem;
+    padding-top: 0.35rem;
+    padding-bottom: 1.5rem;
+    width: 100%;
+  }
+}

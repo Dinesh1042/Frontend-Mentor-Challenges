@@ -1,0 +1,64 @@
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-col-1">
+      <button
+        (click)="navActive = !navActive"
+        class="btn navbar-toggler"
+        type="button"
+      >
+        <img src="assets/icons/icon-menu.svg" alt="" />
+      </button>
+      <a routerLink="/" class="navbar-brand">
+        <img src="assets/logo.svg" alt="The Sneakers company" />
+      </a>
+      <div class="navbar-collapse" [class.active]="navActive">
+        <button (click)="navActive = false" class="btn btn-close" type="button">
+          <img src="assets/icons/icon-close.svg" alt="" />
+        </button>
+        <ul class="list-group">
+          <li
+            *ngFor="let navigationLink of navigationLinks"
+            class="list-group-item"
+            (mouseover)="mouseOverNav($event)"
+            (mouseleave)="navSpyActive = false"
+          >
+            <a [href]="navigationLink.url">{{ navigationLink.name }}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="navbar-col-2">
+      <button
+        #checkOutButton
+        (click)="toggleCheckOutCard()"
+        class="btn shopping-cart"
+        type="button"
+      >
+        <span
+          class="shopping-cart-quantity"
+          *ngIf="shoppingCart | async as shoppingCart"
+          >{{ shoppingCart.cartQuantity }}</span
+        >
+        <img src="assets/icons/icon-cart.svg" alt="" />
+      </button>
+      <div class="user" *ngIf="user$ | async as user; else anonymousUser">
+        <img class="user-img" [src]="user.photoURL" [alt]="user.displayName" />
+      </div>
+      <ng-template #anonymousUser>
+        <img />
+      </ng-template>
+    </div>
+    <div
+      [style.width.px]="navSpyWidth"
+      [style.left.px]="navSpyLeft"
+      [style.opacity]="navSpyActive ? 1 : 0"
+      class="nav-spy"
+    ></div>
+  </div>
+</nav>
+<div
+  class="backdrop"
+  (click)="navActive = false"
+  [class.active]="navActive"
+></div>
+<ng-template #checkOutCard></ng-template>

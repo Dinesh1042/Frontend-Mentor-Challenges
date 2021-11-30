@@ -1,0 +1,122 @@
+@import "src/scss/_variables.scss";
+@import "src/scss/_breakpoints.scss";
+
+@include breakpoint(md) {
+  .container {
+    max-width: $max-width;
+    margin: 0 auto;
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    padding: 1.5rem;
+    gap: 2rem;
+  }
+}
+
+@include breakpoint(lg) {
+  .container {
+    padding: 3rem;
+  }
+}
+
+.product-detail {
+  padding: 1.5rem;
+
+  @include breakpoint(md) {
+    padding: 0;
+  }
+  @include breakpoint(lg) {
+    margin-left: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  @include breakpoint(xl) {
+    margin-left: 3rem;
+  }
+
+  .company-title {
+    margin: 0;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+    @include breakpoint(md) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .title {
+    font-size: 1.8rem;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin-top: 0rem;
+    margin-bottom: 0.85rem;
+    color: $veryDarkBlue;
+    @include breakpoint(md) {
+      font-size: 2.1rem;
+      margin-bottom: 2rem;
+      letter-spacing: 0.045em;
+    }
+    @include breakpoint(lg) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0rem;
+    margin-bottom: 1.8rem;
+    color: $darkGrayishBlue;
+    @include breakpoint(md) {
+      font-size: 1rem;
+      margin-bottom: 0.9rem;
+    }
+  }
+
+  .price-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    margin-bottom: 1.3rem;
+    @include breakpoint(md) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 2.2rem;
+    }
+    & * {
+      letter-spacing: 0.04em;
+    }
+
+    .col-1 {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      .price {
+        font-size: 1.75rem;
+        margin: 0;
+      }
+      .badge {
+        font-weight: bold;
+        background-color: transparentize($orange, 0.8);
+        padding: 0.3rem;
+        border-radius: 0.25rem;
+        display: flex;
+        font-size: 0.9rem;
+        padding-bottom: 0.27rem;
+        align-items: center;
+        justify-content: center;
+        color: $orange;
+      }
+    }
+    .original-price {
+      margin: 0;
+      margin-top: 0.5rem;
+    }
+  }
+
+  .quantity {
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,30 @@
+@import "src/scss/_variables.scss";
+@import "src/scss/_breakpoints.scss";
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.alert {
+  position: relative;
+  padding: 1rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  max-width: 500px;
+}
+
+.alert-success {
+  color: $green;
+  background-color: #d1e7dd;
+  border-color: #badbcc;
+}
+
+.btn {
+  margin-top: 2rem;
+  @include breakpoint(sm) {
+    max-width: fit-content;
+  }
+}

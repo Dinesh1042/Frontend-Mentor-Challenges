@@ -1,0 +1,34 @@
+<div class="card order-summary-card">
+  <div class="card-header">
+    <h5 class="card-title">Order Summary</h5>
+  </div>
+
+  <div class="card-body">
+    <ul class="cart-list">
+      <li
+        *ngFor="let cartItem of shoppingCart.shoppingCartItems"
+        class="cart-list-item"
+      >
+        <div class="cart-img">
+          <img [src]="cartItem.productImages[0]" [alt]="cartItem.title" />
+        </div>
+        <div class="cart-item-content">
+          <p class="item-title text-muted">{{ cartItem.title }}</p>
+          <div class="cart-item-price-wrap">
+            <p class="item-price-quantity text-muted">
+              {{ cartItem.price | currency }} x {{ cartItem.quantity }}
+            </p>
+            <p class="cart-item-total text-bold">
+              {{ cartItem.itemTotal | currency }}
+            </p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="card-footer">
+    <h5>Order Total</h5>
+    <p class="text-bold">{{ shoppingCart.cartTotal | currency }}</p>
+  </div>
+</div>

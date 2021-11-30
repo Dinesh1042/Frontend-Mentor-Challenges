@@ -1,0 +1,94 @@
+@import "src/scss/_variables.scss";
+@import "src/scss/_breakpoints.scss";
+
+.cta-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  @include breakpoint(sm) {
+    align-items: stretch;
+    flex-direction: row;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  @include breakpoint(md) {
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: unset;
+  }
+
+  @include breakpoint(lg) {
+    align-items: stretch;
+    flex-direction: row;
+  }
+
+  .cart-quantity-btn {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    background-color: transparentize($orange, 0.92);
+    border-radius: 0.25rem;
+    overflow: hidden;
+    .quantity {
+      align-self: center;
+      color: $darkGrayishBlue;
+      font-weight: bold;
+    }
+    .btn {
+      border: none;
+      background-color: transparentize($orange, 0.88);
+      padding: 1rem 1.4rem;
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      cursor: pointer;
+      transition: 250ms ease background-color;
+      &:hover,
+      &:focus {
+        background-color: transparentize($orange, 0.78);
+      }
+    }
+  }
+  .btn-cart {
+    width: 100%;
+    background-color: $orange;
+    color: $white;
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 1rem;
+    justify-content: center;
+    border-radius: 0.35rem;
+    cursor: pointer;
+    font-family: inherit;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    gap: 0.85rem;
+    transition: 250ms ease background-color;
+    img {
+      width: 1rem;
+    }
+    span {
+      font-size: 0.98rem;
+    }
+    &:hover,
+    &:focus {
+      background-color: lighten($orange, 7);
+    }
+
+    &:disabled {
+      pointer-events: none;
+      cursor: default;
+      opacity: 0.65;
+    }
+
+    @include breakpoint(sm) {
+      margin-top: unset;
+    }
+  }
+}

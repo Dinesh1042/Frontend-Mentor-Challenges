@@ -1,0 +1,22 @@
+<div class="container" *ngIf="product$ | async as product">
+  <product-carousel [images]="product.productImages"></product-carousel>
+  <div class="product-detail">
+    <p class="company-title text-orange">{{ product.company | uppercase }}</p>
+    <h2 class="title">{{ product.title }}</h2>
+    <p class="description">{{ product.description }}</p>
+    <div class="price-container">
+      <div class="col-1">
+        <h5 class="price">{{ product.price | currency }}</h5>
+        <span class="badge"> {{ product.offerPercentage }}% </span>
+      </div>
+      <div class="col-2">
+        <p class="original-price text-muted text-striked">
+          {{ product.originalPrice | currency }}
+        </p>
+      </div>
+    </div>
+    <div class="quantity">
+      <product-quantity [product]="product"></product-quantity>
+    </div>
+  </div>
+</div>

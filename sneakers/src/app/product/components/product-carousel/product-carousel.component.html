@@ -1,0 +1,47 @@
+<div class="carousel">
+  <div (click)="openImageViewer()" class="main-img">
+    <img [src]="images[activeSlideIndex]" alt="" />
+  </div>
+  <div class="swiper-carousel">
+    <swiper
+      (slideChange)="onSlideChange($event)"
+      class="swiper"
+      [config]="swiperConfig"
+      [allowTouchMove]="true"
+      (click)="openImageViewer()"
+    >
+      <ng-template *ngFor="let img of images" swiperSlide>
+        <img [src]="img" alt="" />
+      </ng-template>
+    </swiper>
+    <div class="carousel-navigation">
+      <button
+        [class.in-active]="activeSlideIndex === 0"
+        (click)="slidePrev()"
+        class="btn nav-prev"
+      >
+        <img src="assets/icons/icon-previous.svg" alt="" />
+      </button>
+      <button
+        [class.in-active]="activeSlideIndex === images.length - 1"
+        (click)="slideNext()"
+        class="btn nav-next"
+      >
+        <img src="assets/icons/icon-next.svg" alt="" />
+      </button>
+    </div>
+  </div>
+  <div class="carousel-thumbnails">
+    <div
+      *ngFor="let image of images; index as i"
+      class="slide"
+      [class]="'slide-' + i + 1"
+      [class.active]="i === activeSlideIndex"
+      (click)="setSlideIndex(i)"
+    >
+      <img draggable="false" [src]="image" alt="" />
+    </div>
+  </div>
+</div>
+
+<ng-template #imageViewerTemplate></ng-template>

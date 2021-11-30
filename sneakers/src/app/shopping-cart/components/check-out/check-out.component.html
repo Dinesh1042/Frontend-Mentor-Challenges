@@ -1,0 +1,31 @@
+<div class="container" *ngIf="shoppingCart">
+  <ng-container *ngIf="shoppingCart.cartQuantity; else emptyCart">
+    <header>
+      <h2>Shipping</h2>
+    </header>
+    <div class="row">
+      <ng-container>
+        <div class="col-1 check-out-form">
+          <check-out-form (placeOrder)="placeOrder($event)"></check-out-form>
+        </div>
+        <div class="col-2 order-summary">
+          <order-summary [shoppingCart]="shoppingCart"></order-summary>
+        </div>
+      </ng-container>
+    </div>
+  </ng-container>
+  <ng-template #emptyCart>
+    <div class="empty-cart">
+      <div class="empty-cart-img">
+        <img src="assets/empty-cart.png" alt="Empty Cart" />
+      </div>
+      <div class="empty-cart-body">
+        <h5>Your Cart is Empty</h5>
+        <p class="text-muted">
+          Looks like you haven't added anything to your cart.
+        </p>
+        <a routerLink="/" class="btn btn-primary-outline">Start Shopping</a>
+      </div>
+    </div>
+  </ng-template>
+</div>

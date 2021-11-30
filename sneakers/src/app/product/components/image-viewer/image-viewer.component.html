@@ -1,0 +1,51 @@
+<div class="container">
+  <div class="close-btn-wrap">
+    <button class="btn btn-close" (click)="closeImageViewer.emit(true)">
+      <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+          fill="#fff"
+          fill-rule="evenodd"
+          id="closeIcon"
+        />
+      </svg>
+    </button>
+  </div>
+  <div class="swiper-container">
+    <swiper [lazy]="true" (indexChange)="onSlideChange($event)" class="swiper">
+      <ng-template swiperSlide *ngFor="let image of images">
+        <img [src]="image" alt="" />
+      </ng-template>
+    </swiper>
+    <div class="swiper-navigation">
+      <button
+        [class.in-active]="currentActiveIndex === 0"
+        (click)="slidePrev()"
+        class="btn nav-prev"
+      >
+        <img src="assets/icons/icon-previous.svg" alt="" />
+      </button>
+      <button
+        [class.in-active]="currentActiveIndex === images.length - 1"
+        (click)="nextSlide()"
+        class="btn nav-next"
+      >
+        <img src="assets/icons/icon-next.svg" alt="" />
+      </button>
+    </div>
+  </div>
+  <div class="thumbnail-container">
+    <div
+      *ngFor="let image of images; index as i"
+      class="thumbnail"
+      (click)="changeSlide(i)"
+      [ngClass]="{
+        active: i === currentActiveIndex
+      }"
+    >
+      <img [src]="image" draggable="false" alt="" />
+    </div>
+  </div>
+</div>
+
+<div class="backdrop" (click)="closeImageViewer.emit(true)"></div>
