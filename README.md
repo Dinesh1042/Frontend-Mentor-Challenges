@@ -32,6 +32,7 @@ This repository contains only [Frontend Mentor](https://www.frontendmentor.io/ch
 | 24   | [Tip Calculator](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Tip%20Calculator)                                             |
 | 25   | [Order Summary](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Order%20Summary)                                               |
 | 26   | [Time Table Dashboard](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/Time%20Tracking%20Dashboard)                            |
+| 27   | [Sneakers](https://github.com/Dinesh1042/Frontend-Mentor-Challenges/tree/main/sneakers)                                                           |
 
 
 **These Challenges are builded with HTML, CSS (or) SCSS, JAVASCRIPT, ANGULAR.**
