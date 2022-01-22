@@ -1,0 +1,182 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Outfit", sans-serif;
+  background: #d6e2f0;
+  color: #1f3251;
+}
+
+.container {
+  min-height: 100vh;
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card {
+  max-width: 20rem;
+  background: white;
+  border-radius: 1rem;
+  padding: 1rem;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+          box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  -webkit-transition: 400ms ease-in-out transform;
+  transition: 400ms ease-in-out transform;
+  opacity: 0;
+  -webkit-animation: fadeInUpCard 1000ms ease-in-out forwards;
+          animation: fadeInUpCard 1000ms ease-in-out forwards;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.card-img-wrap {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  aspect-ratio: 1;
+  opacity: 0;
+  -webkit-animation: fadeInUp 1100ms 500ms ease-in-out forwards;
+          animation: fadeInUp 1100ms 500ms ease-in-out forwards;
+}
+
+.card-img-wrap .card-img {
+  width: 100%;
+}
+
+.qr-code-img,
+.qr-code-tile-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  inset: 0;
+}
+
+.qr-code-tile-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(5px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(5px, 1fr));
+  width: 10rem;
+  height: unset;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  aspect-ratio: 1;
+}
+
+.qr-code-tile-container .qr-code-tile {
+  height: 5px;
+  width: 5px;
+  background-color: white;
+}
+
+.card-body {
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+.card-body .card-title {
+  font-size: 1.4rem;
+  margin: 0;
+  opacity: 0;
+  -webkit-animation: fadeInUp 800ms 1200ms ease-in forwards;
+          animation: fadeInUp 800ms 1200ms ease-in forwards;
+}
+
+.card-body .card-text {
+  font-size: 0.9375rem;
+  margin: 0;
+  margin-top: 1rem;
+  color: #7b879d;
+  opacity: 0;
+  -webkit-animation: fadeInUp 800ms 1600ms ease-in forwards;
+          animation: fadeInUp 800ms 1600ms ease-in forwards;
+}
+
+@-webkit-keyframes fadeOut {
+  to {
+    opacity: 0;
+    background-color: #3785ff;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    background-color: #3785ff;
+  }
+}
+
+@-webkit-keyframes fadeInUpCard {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+            transform: translate3d(0, 10%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUpCard {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10%, 0);
+            transform: translate3d(0, 10%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 18%, 0);
+            transform: translate3d(0, 18%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 18%, 0);
+            transform: translate3d(0, 18%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+}
