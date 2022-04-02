@@ -1,0 +1,15 @@
+@use "./colors";
+@use "./fonts";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: colors.$darkBlue;
+  color: colors.$lightCyan;
+  font-family: fonts.$body;
+}

@@ -1,0 +1,112 @@
+@use "/src/styles/colors";
+
+.cube {
+  transform-style: preserve-3d;
+  height: 1.5rem;
+  width: 1.5rem;
+  position: relative;
+  transition: 500ms ease-in-out all;
+
+  > div {
+    width: 1.5rem;
+    aspect-ratio: 1;
+    background-color: colors.$darkBlue;
+    position: absolute;
+    display: block;
+    border-radius: 0.25rem;
+
+    .dot {
+      position: absolute;
+      width: 3px;
+      aspect-ratio: 1;
+      border-radius: 100%;
+      background-color: colors.$white;
+    }
+  }
+}
+
+.cube {
+  $side: 23%;
+
+  &__two,
+  &__three,
+  &__four,
+  &__five,
+  &__six {
+    .dot1 {
+      top: $side;
+      left: $side;
+    }
+
+    .dot:last-child {
+      bottom: $side;
+      right: $side;
+    }
+  }
+
+  &__four,
+  &__five,
+  &__six {
+    .dot:nth-last-child(2) {
+      bottom: $side;
+      left: $side;
+    }
+
+    .dot:nth-child(2) {
+      top: $side;
+      right: $side;
+    }
+  }
+
+  &__one .dot1,
+  &__three .dot2,
+  &__five .dot3 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__six {
+    .dot3 {
+      top: 50%;
+      left: $side;
+      transform: translateY(-50%);
+    }
+
+    .dot4 {
+      top: 50%;
+      right: $side;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__one {
+    transform: rotateY(0) translateZ(0.74rem);
+  }
+
+  &__two {
+    transform: rotateY(180deg) translateZ(0.74rem);
+  }
+
+  &__three {
+    transform: rotateY(90deg) translateZ(0.74rem);
+  }
+
+  &__four {
+    transform: rotateY(-90deg) translateZ(0.74rem);
+  }
+
+  &__five {
+    transform: rotateX(90deg) translateZ(0.74rem);
+  }
+
+  &__six {
+    transform: rotateX(-90deg) translateZ(0.74rem);
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotateY(360deg) rotateX(160deg);
+  }
+}

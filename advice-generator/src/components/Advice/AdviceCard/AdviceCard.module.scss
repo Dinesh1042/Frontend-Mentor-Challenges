@@ -1,0 +1,134 @@
+@use "/src/styles/colors";
+
+.adviceCard {
+  text-align: center;
+  position: relative;
+  padding: 2.9rem;
+}
+
+.adviceCard__header {
+  .adviceCard__Id {
+    color: colors.$neonGreen;
+    font-size: 0.875rem;
+    letter-spacing: 0.25em;
+    font-weight: bold;
+    margin: 0;
+  }
+}
+
+.adviceCard__body {
+  margin-block: 1.5rem 3rem;
+}
+
+.adviceCard__quote {
+  font-size: 1.75rem;
+  line-height: 1.36;
+  font-weight: bold;
+  margin: 0;
+}
+
+.adviceCard__divider {
+  position: relative;
+  margin-bottom: 1.5rem;
+
+  .adviceCard__loader {
+    height: 1px;
+    width: 100%;
+    background: colors.$grayishBlue;
+    position: relative;
+    overflow-x: hidden;
+    border-radius: 2px;
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 20%;
+      background-color: colors.$neonGreen;
+      top: 50%;
+      left: 0;
+      transform: translate(-105%, -50%);
+    }
+  }
+
+  .divider__icon {
+    width: 3.25rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: colors.$darkGrayishBlue;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    &::before,
+    &::after {
+      content: "";
+      height: 1rem;
+      width: 0.375rem;
+      border-radius: 9px;
+      background: colors.$lightCyan;
+    }
+  }
+
+  &.loading {
+    .adviceCard__loader::after {
+      animation: loading 1s ease-in-out infinite forwards;
+    }
+
+    .divider__icon {
+      &::before,
+      &::after {
+        animation: waves 1s infinite ease-out;
+        animation-delay: 0.3s;
+        background: linear-gradient(
+          to right,
+          colors.$neonGreen 8%,
+          colors.$lightCyan 33%
+        );
+        background-size: 800px 100px;
+      }
+    }
+  }
+}
+
+.adviceCard__diceBtn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border: none;
+  background-color: colors.$neonGreen;
+  padding: 1.25rem;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  cursor: pointer;
+  perspective: 75px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 250ms;
+  transition-property: background-color, box-shadow;
+  outline: none;
+  &:hover,
+  &:focus {
+    box-shadow: transparentize(colors.$neonGreen, 0.5) 0px 0px 24px 8px;
+    background-color: lighten(colors.$neonGreen, 2);
+  }
+}
+
+@keyframes loading {
+  to {
+    left: 100%;
+    transform: translate(0%, -50%);
+  }
+}
+
+@keyframes waves {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}

@@ -1,0 +1,10 @@
+@use "/src/styles/colors";
+
+.card {
+  position: relative;
+  border-radius: 1rem;
+  background-color: colors.$darkGrayishBlue;
+  padding: 1rem;
+  width: 95%;
+  max-width: 33.75em;
+}
