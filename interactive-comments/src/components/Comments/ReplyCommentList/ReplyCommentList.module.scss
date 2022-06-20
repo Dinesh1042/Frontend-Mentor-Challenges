@@ -1,0 +1,16 @@
+@use "/src/styles/colors";
+@use "/src/styles/breakpoints";
+
+.replyCommentList {
+  list-style: none;
+  border-left: 2px solid colors.$light-gray;
+  padding-left: 1rem;
+  @include breakpoints.create(sm) {
+    padding-left: 1.5rem;
+    margin-left: 1.5rem;
+  }
+  @include breakpoints.create(md) {
+    padding-left: 2.625rem;
+    margin-left: 2.75rem;
+  }
+}

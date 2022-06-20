@@ -1,0 +1,41 @@
+@use "/src/styles/colors";
+
+.commentUser {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .userImg {
+    width: 2rem;
+    aspect-ratio: 1;
+  }
+
+  .username {
+    font-weight: 500;
+    font-size: 1rem;
+    color: colors.$dark-blue;
+    margin: 0;
+  }
+
+  .badge {
+    display: block;
+    padding: 0 0.375rem;
+    border-radius: 0.15rem;
+    font-size: 0.875rem;
+    padding-bottom: 0.15rem;
+    font-weight: 500;
+    color: colors.$white;
+    background: colors.$moderate-blue;
+    margin-left: -0.5rem;
+  }
+
+  .createdAt {
+    margin: 0;
+  }
+
+  .isEdited {
+    font-size: 0.75rem;
+    margin: 0;
+    margin-left: -0.5rem;
+  }
+}

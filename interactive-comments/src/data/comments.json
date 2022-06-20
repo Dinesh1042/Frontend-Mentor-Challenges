@@ -1,0 +1,95 @@
+[
+  {
+    "id": "6b117477-68cf-4de6-817a-39e287605cc0",
+    "content": "Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.",
+    "createdAt": 1652885258000,
+    "isEdited": false,
+    "likes": [
+      "67e7c7aee1bc4a1281a1a5063011cf07",
+      "ad0fd0512403413f95e53121f8fb9f43",
+      "7bf2cf45aed148a0a0445bcda63e73c8",
+      "4d6d05d402604b37a18af2c2faf19cab",
+      "f51050f9c5434eab93265ffc14a2d154",
+      "cd76e7109a75497a83f981b37d72b73e",
+      "97e535a019de4878b5b2fa4fcd5fddc3",
+      "a85d0b59d1f94a75bc205e0cf2a0580c",
+      "24ab28fe31624b83b46d7bfd126444a8",
+      "f29ebd38a0524f07b4c0611e7cc58160",
+      "0af35a4a59bd413592ae845797da5a74",
+      "2e473a27cabe447fa532a3083993d157"
+    ],
+    "dislikes": [],
+    "parentId": null,
+    "replyTo": null,
+    "user": {
+      "photoURL": "images/avatars/image-amyrobson.png",
+      "uid": "67e7c7aee1bc4a1281a1a5063011cf07",
+      "username": "amyrobson"
+    }
+  },
+  {
+    "id": "85e5e1b7-e61f-42ba-b2dd-462ca7523017",
+    "content": "Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!",
+    "createdAt": 1654788693000,
+    "isEdited": false,
+    "likes": [
+      "67e7c7aee1bc4a1281a1a5063011cf07",
+      "7bf2cf45aed148a0a0445bcda63e73c8",
+      "4d6d05d402604b37a18af2c2faf19cab",
+      "f51050f9c5434eab93265ffc14a2d154",
+      "cd76e7109a75497a83f981b37d72b73e",
+      "2e473a27cabe447fa532a3083993d157"
+    ],
+    "dislikes": ["97e535a019de4878b5b2fa4fcd5fddc3"],
+    "parentId": null,
+    "replyTo": null,
+    "user": {
+      "photoURL": "images/avatars/image-maxblagun.png",
+      "uid": "fabc7c41c5044b4e9dde76402f58e325",
+      "username": "maxblagun"
+    }
+  },
+  {
+    "id": "02430c19-fa13-42ef-9f3c-3a81529574e3",
+    "content": "If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.",
+    "createdAt": 1654872458000,
+    "isEdited": false,
+    "likes": [
+      "67e7c7aee1bc4a1281a1a5063011cf07",
+      "7bf2cf45aed148a0a0445bcda63e73c8",
+      "4d6d05d402604b37a18af2c2faf19cab",
+      "f51050f9c5434eab93265ffc14a2d154",
+      "cd76e7109a75497a83f981b37d72b73e",
+      "2e473a27cabe447fa532a3083993d157"
+    ],
+    "dislikes": [
+      "97e535a019de4878b5b2fa4fcd5fddc3",
+      "9544d9906f694d7580eabd2da38fecf3"
+    ],
+    "parentId": "85e5e1b7-e61f-42ba-b2dd-462ca7523017",
+    "replyTo": "85e5e1b7-e61f-42ba-b2dd-462ca7523017",
+    "user": {
+      "photoURL": "images/avatars/image-ramsesmiron.png",
+      "uid": "1e1e099ed80a4aaea81afd5d2fd5df3c",
+      "username": "ramsesmiron"
+    }
+  },
+  {
+    "id": "8d66e40b-46c2-48bc-91d7-4926e0cde8a9",
+    "content": "I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.",
+    "createdAt": 1655563658000,
+    "isEdited": false,
+    "likes": [
+      "81754c3a256a413ab129d9db5ad7d417",
+      "44e297229e8c41d2abd78b3f2ed780dc"
+    ],
+    "dislikes": [],
+    "parentId": "85e5e1b7-e61f-42ba-b2dd-462ca7523017",
+    "replyTo": "02430c19-fa13-42ef-9f3c-3a81529574e3",
+    "user": {
+      "photoURL": "images/avatars/image-juliusomo.png",
+      "uid": "ad0fd0512403413f95e53121f8fb9f43",
+      "username": "juliusomo"
+    }
+  }
+]

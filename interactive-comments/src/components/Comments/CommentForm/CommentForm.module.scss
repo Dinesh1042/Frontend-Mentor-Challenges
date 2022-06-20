@@ -1,0 +1,35 @@
+@use "/src/styles/breakpoints";
+
+.commentForm {
+  display: grid;
+  gap: 1rem;
+  align-items: flex-start;
+  grid-template-areas:
+    "formControl formControl"
+    "userImg addCommentButton";
+
+  @include breakpoints.create(md) {
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "userImg formControl addCommentButton";
+  }
+
+  .userImgWrap {
+    grid-area: userImg;
+    .userImg {
+      width: 2.5rem;
+    }
+  }
+
+  .formControl {
+    grid-area: formControl;
+    @include breakpoints.create(md) {
+      flex: 1;
+    }
+  }
+
+  .addCommentButton {
+    grid-area: addCommentButton;
+    justify-self: flex-end;
+    letter-spacing: 0.05em;
+  }
+}

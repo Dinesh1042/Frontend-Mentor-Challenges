@@ -1,0 +1,21 @@
+@use "/src/styles/colors";
+
+.deleteCommentDialog {
+  .deleteCommentHeader {
+    margin-bottom: 1rem;
+  }
+
+  .deleteCommentTitle {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: colors.$dark-blue;
+  }
+
+  .deleteCommentActions {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,122 @@
+@use "colors";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  margin: 0;
+  background: colors.$very-light-gray;
+}
+
+p {
+  font-weight: normal;
+  font-size: 1rem;
+  color: colors.$grayish-blue;
+  line-height: 1.5;
+}
+
+a {
+  font-weight: 500;
+  font-size: 1rem;
+  color: colors.$moderate-blue;
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  border: 0;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  font-weight: 600;
+}
+
+.btn-primary-light {
+  color: colors.$moderate-blue;
+  &:hover {
+    background-color: lighten(colors.$light-grayish-blue, 11);
+  }
+}
+
+.btn-primary {
+  color: colors.$white;
+  background-color: colors.$moderate-blue;
+  &:hover {
+    background-color: lighten(colors.$moderate-blue, 10);
+  }
+
+  &:disabled {
+    opacity: 0.75;
+    cursor: not-allowed;
+    &:hover {
+      background-color: colors.$moderate-blue;
+    }
+  }
+}
+
+.btn-secondary {
+  color: colors.$white;
+  background-color: colors.$dark-blue;
+  &:hover {
+    background-color: lighten(colors.$dark-blue, 10);
+  }
+}
+
+.btn-danger {
+  color: colors.$white;
+  background-color: colors.$soft-red;
+  &:hover {
+    background-color: lighten(colors.$soft-red, 10);
+  }
+}
+
+.btn-lg {
+  padding: 0.95rem 1.85rem;
+  line-height: normal;
+}
+
+.btn-danger-light {
+  color: colors.$soft-red;
+  &:hover {
+    background-color: lighten(colors.$soft-red, 30);
+  }
+}
+
+.btn-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid colors.$light-gray;
+  appearance: none;
+  border-radius: 0.5rem;
+  transition: border-color 0.15s ease-in-out;
+  min-height: 6rem;
+  resize: vertical;
+  outline: none;
+  &:focus {
+    border-color: colors.$moderate-blue;
+  }
+}

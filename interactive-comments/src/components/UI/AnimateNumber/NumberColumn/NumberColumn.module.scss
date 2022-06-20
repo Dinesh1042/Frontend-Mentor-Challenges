@@ -1,0 +1,19 @@
+.numberColumnContainer {
+  position: relative;
+}
+
+.numberColumn {
+  height: 1000%;
+  position: absolute;
+  top: 0;
+  transition: 300ms ease-in-out transform;
+}
+
+.numberColumnDigit {
+  transition: 300ms ease-in-out transform;
+}
+
+.numberPlaceHolder {
+  visibility: hidden;
+  opacity: 0;
+}

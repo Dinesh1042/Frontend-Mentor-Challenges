@@ -1,0 +1,18 @@
+$breakpoints: (
+  xs: 0,
+  sm: 36em,
+  md: 48em,
+  lg: 62em,
+);
+
+@mixin create($key) {
+  $size: $key;
+
+  @if (map-has-key($breakpoints, $key)) {
+    $size: map-get($breakpoints, $key);
+  }
+
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}

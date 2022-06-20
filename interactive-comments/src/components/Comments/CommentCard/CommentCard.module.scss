@@ -1,0 +1,39 @@
+@use "/src/styles/breakpoints";
+
+.commentCard {
+  padding: 1rem;
+  display: grid;
+  grid-template-areas:
+    "commentUser commentUser"
+    "commentBody commentBody"
+    "commentScore commentActions";
+
+  gap: 0.9rem;
+
+  .commentUser {
+    grid-area: commentUser;
+  }
+
+  .commentBody {
+    grid-area: commentBody;
+  }
+
+  .commentScore {
+    grid-area: commentScore;
+  }
+
+  .commentActions {
+    grid-area: commentActions;
+    justify-self: flex-end;
+  }
+
+  @include breakpoints.create(md) {
+    grid-template-areas:
+      "commentScore commentUser commentActions"
+      "commentScore  commentBody commentBody";
+    grid-template-columns: auto 1fr auto;
+    .commentScore {
+      margin-right: 0.5rem;
+    }
+  }
+}

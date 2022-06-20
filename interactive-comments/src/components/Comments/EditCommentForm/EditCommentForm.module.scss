@@ -1,0 +1,9 @@
+.editCommentForm {
+  width: 100%;
+  .editCommentFormActions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}
